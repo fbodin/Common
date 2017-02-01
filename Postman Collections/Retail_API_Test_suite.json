@@ -489,6 +489,231 @@
       ]
     },
     {
+      "_postman_id": "1230022-5b569679-8a8b-b917-13e1-0098cbc18e48",
+      "name": "Basic singel tests",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1230022-05555bb7-4176-ab5a-32dc-c35625a455ac",
+          "name": "Health",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-3993f4f1-1092-321a-ea23-1379522ade7d",
+          "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var response = JSON.parse(responseBody);",
+                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
+                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com"
+              ],
+              "port": "/rest/retail/v1s/agent/SE",
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "210478",
+                  "id": "ssid"
+                },
+                {
+                  "value": "pelle10",
+                  "id": "username"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"credential\": {\"password\": \"pelle10\"}}"
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-1a4e53a5-3e98-2703-d5f1-fe989c5a1985",
+          "name": "countrycodes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "console.log(\"Got response \"+responseBody);",
+                  "if(responseCode.code==200){",
+                  "    tests[\"Check no of countries\"] = jsonData.countries >=1;",
+                  "    if(jsonData.countries.countrycodes){",
+                  "        tests[\"Check no of countries\"] = jsonData.countries.countrycodes.length >=1;",
+                  "    }",
+                  "} else if(responseCode.code==400) {",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "GET",
+            "header": [
+              {
+                "key": "ETag",
+                "value": "",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": "Get country and country codes"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-c9907072-1d84-59f8-8aa8-5f651bf16c77",
+          "name": "getIdentificationTypes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "console.log(\"Got response \"+responseBody);",
+                  "if(responseCode.code==200){",
+                  "    tests[\"Check response\"] = jsonData.identificationTypes.identificationType.length >=1;",
+                  "} else if(responseCode.code==400) {",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/identificationtypes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "GET",
+            "header": [
+              {
+                "key": "ETag",
+                "value": "",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": "Get identification validation rules"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "1230022-0c8905e9-9987-538d-d3f2-b85e1d2eb730",
       "name": "Delivery exception",
       "description": "",
@@ -502,9 +727,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 300;",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));"
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  ""
                 ]
               }
             },
@@ -660,6 +886,17 @@
         {
           "_postman_id": "1230022-578df4b2-4598-71f5-394e-f52fa4b029ce",
           "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
@@ -798,7 +1035,7 @@
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "if(responseCode.code==200){",
-                  "    console.log(\"Delivery approved\");",
+                  "    console.log(\"Arrival approved\");",
                   "}else if(responseCode.code==400){",
                   "    console.log(\"Got response \"+responseBody);",
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
@@ -872,6 +1109,18 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "1230022-bd9faaf8-2a12-434a-41c3-de3b92e027fa",
+      "name": "Error codes",
+      "description": "",
+      "item": []
+    },
+    {
+      "_postman_id": "1230022-83fae0bb-e3bf-5061-fd00-64386b4b107c",
+      "name": "Search",
+      "description": "",
+      "item": []
     }
   ]
 }
