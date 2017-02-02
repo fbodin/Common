@@ -1120,7 +1120,342 @@
       "_postman_id": "1230022-83fae0bb-e3bf-5061-fd00-64386b4b107c",
       "name": "Search",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "1230022-c54b6444-c149-c571-1e0c-e85cb87f65ca",
+          "name": "Health",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-a09e6488-6d9b-d88d-a6c9-67047ae22d56",
+          "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var response = JSON.parse(responseBody);",
+                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
+                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com"
+              ],
+              "port": "/rest/retail/v1s/agent/SE",
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "210478",
+                  "id": "ssid"
+                },
+                {
+                  "value": "pelle10",
+                  "id": "username"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"credential\": {\"password\": \"pelle10\"}}"
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-89c83a01-c7ca-04da-b7fa-f6726f8459ad",
+          "name": "Delete testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "auth": {},
+              "host": [
+                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "00000000014SE",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-cde50225-b03c-21d4-696b-ad22b17b4398",
+          "name": "Delete testitem2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "auth": {},
+              "host": [
+                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "00000000028SE",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-28d5d703-9592-1ead-c28f-f7d2f16497ed",
+          "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "auth": {},
+              "host": [
+                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "00000000014SE",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"Karl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-0a03ee05-af9d-9ee2-7095-9ed5c4c09ecb",
+          "name": "Add testitem2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "auth": {},
+              "host": [
+                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "00000000028SE",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODU5MzUyNDMsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.VQ91ZwGsdakoUHQln0YQAejClFw0NVDEHmV9tmmr_eE",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"carl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-8dcce9ff-47c3-3713-3e0a-6e890f702420",
+          "name": "Search",
+          "request": {
+            "url": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/search",
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
