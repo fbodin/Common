@@ -144,10 +144,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -164,7 +164,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -181,10 +181,10 @@
           "name": "Add testitem",
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -206,7 +206,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -292,7 +292,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -335,7 +335,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               },
               {
@@ -426,7 +426,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -469,7 +469,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               },
               {
@@ -650,7 +650,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -699,7 +699,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -851,10 +851,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -871,7 +871,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -899,10 +899,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -924,7 +924,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1010,7 +1010,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1096,7 +1096,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1254,10 +1254,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -1274,7 +1274,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1302,10 +1302,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -1322,7 +1322,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1350,10 +1350,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -1375,7 +1375,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1403,10 +1403,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
               "auth": {},
               "host": [
-                "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1"
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
                 "item",
@@ -1428,7 +1428,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODY1MzQ1NzAsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.CeGMzSBs4hGftMrZtbXt7R8MKWL9y261uOB_HQahF4Y",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODcxNDQzNDksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.wC7E6rKRdwg4_SW1n7uGdk05kCYErgF1AEe05DX9ooU",
                 "description": ""
               }
             ],
@@ -1444,7 +1444,7 @@
           "_postman_id": "1230022-8dcce9ff-47c3-3713-3e0a-6e890f702420",
           "name": "Search",
           "request": {
-            "url": "https://st2.pablo.posten.se:7014/testweb/wsservices/rest/v1/search",
+            "url": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/search",
             "method": "GET",
             "header": [],
             "body": {
