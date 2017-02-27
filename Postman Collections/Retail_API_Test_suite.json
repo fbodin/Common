@@ -1320,14 +1320,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-02-25 00:00:00:000\"}\n  ]}\n}"
             },
             "description": ""
           },
           "response": []
         },
         {
-          "_postman_id": "1230022-fdde6578-88f2-74e7-f327-d92f848acc19",
+          "_postman_id": "1230022-e84b6a86-e501-df3a-ab3e-2e84c6bc42c6",
           "name": "items return",
           "event": [
             {
@@ -1395,6 +1395,61 @@
                 }
               ]
             },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-fdde6578-88f2-74e7-f327-d92f848acc19",
+          "name": "items return pastlastduedate",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 400\"] = responseCode.code === 400;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Return approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items?filter=pastlastduedate&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [
               {
