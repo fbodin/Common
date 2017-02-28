@@ -3,14 +3,14 @@
   "info": {
     "name": "Retail API Test suite",
     "_postman_id": "1230022-e0f721f6-68d6-9779-8d80-1e20fab56d98",
-    "description": "Common scenarios as Collect in store",
+    "description": "Common scenarios as Collect in store / Retail",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
       "_postman_id": "1230022-51e4f97e-9cb3-7fae-c10a-7f46d7a0df29",
       "name": "Basic flow",
-      "description": "Arrival->Delivery of mypack product 19,24",
+      "description": "Basic flow Arrival->Delivery of mypack product 19,24",
       "item": [
         {
           "_postman_id": "1230022-567a47a7-b69f-55a9-acc2-7c5b49f7efac",
@@ -491,7 +491,7 @@
     {
       "_postman_id": "1230022-5b569679-8a8b-b917-13e1-0098cbc18e48",
       "name": "Basic singel tests",
-      "description": "",
+      "description": "Some misc independent tests. not part of a flow",
       "item": [
         {
           "_postman_id": "1230022-05555bb7-4176-ab5a-32dc-c35625a455ac",
@@ -716,7 +716,7 @@
     {
       "_postman_id": "1230022-0c8905e9-9987-538d-d3f2-b85e1d2eb730",
       "name": "Delivery exception",
-      "description": "",
+      "description": "Testsuite to check common delivery exceptions.\n- Incorrect status\n- Printing required\n- Payment not allowed\n- etc..",
       "item": [
         {
           "_postman_id": "1230022-92478744-9990-b9fa-b3bb-3b0ae26e57d1",
@@ -1119,7 +1119,7 @@
     {
       "_postman_id": "1230022-3f769f36-477c-380f-755f-a6212597463f",
       "name": "Return flow",
-      "description": "",
+      "description": "Test suite to verifiery return flow.\n",
       "item": [
         {
           "_postman_id": "1230022-1120659d-15cf-cf80-1997-12ca4c764794",
@@ -1320,7 +1320,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-02-25 00:00:00:000\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"\"}\n  ]}\n}"
             },
             "description": ""
           },
