@@ -1420,7 +1420,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Check status code is 400\"] = responseCode.code === 400;",
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
                   "var jsonData = JSON.parse(responseBody);",
                   "if(responseCode.code==200){",
