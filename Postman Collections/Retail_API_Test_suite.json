@@ -42,10 +42,7 @@
             "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -167,10 +164,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -294,10 +288,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -428,10 +419,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -522,10 +510,7 @@
             "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -652,10 +637,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get country and country codes"
           },
           "response": []
@@ -701,10 +683,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get identification validation rules"
           },
           "response": []
@@ -747,10 +726,7 @@
             "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -873,10 +849,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -1012,10 +985,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1098,10 +1068,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1149,10 +1116,7 @@
             "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -1274,10 +1238,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -1401,10 +1362,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1456,10 +1414,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1541,10 +1496,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1674,10 +1626,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
@@ -1815,10 +1764,7 @@
             "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -1941,10 +1887,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -1989,10 +1932,7 @@
                 "description": ""
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
@@ -2110,10 +2050,7 @@
             "url": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/search",
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "body": {},
             "description": ""
           },
           "response": []
