@@ -10,7 +10,7 @@
     {
       "_postman_id": "1230022-51e4f97e-9cb3-7fae-c10a-7f46d7a0df29",
       "name": "Basic flow",
-      "description": "Basic flow Arrival->Delivery of mypack product 19,24",
+      "description": "Basic flow Arrival->Delivery of mypack product 19,24\nIncluding both swe and dk ",
       "item": [
         {
           "_postman_id": "1230022-567a47a7-b69f-55a9-acc2-7c5b49f7efac",
@@ -23,7 +23,10 @@
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));"
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  "if(responseCode.code != 200){",
+                  "    postman.setNextRequest(null);",
+                  "}"
                 ]
               }
             },
@@ -57,10 +60,14 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var response = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  "}"
                 ]
               }
             },
