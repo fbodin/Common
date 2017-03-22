@@ -485,6 +485,41 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-65b826b2-8a89-7054-0f31-208e6cd80afa",
+          "name": "Health end",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-41862b2c-88aa-575c-3965-f0a87b49792b",
           "name": "events delivery Sign On Glass",
           "event": [
@@ -534,41 +569,6 @@
               "raw": "{\"eventList\": {\r\n\"deliveries\":    {\r\n      \"deliveries\": [\r\n        {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n            \"additionalRequestResponse\": {\r\n               \"id\": 1,\r\n               \"response\": \"true\"\r\n            }\r\n         }\r\n      ],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnIHN0YW5kYWxvbmU9J3llcycgPz48c3ZnIGhlaWdodD0iNDAwIiB3aWR0aD0iODY0Ij48cG9seWxpbmUgcG9pbnRzPSI3Mi41MTg4LDE2MC4zNTE1NiAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrO3N0cm9rZS13aWR0aDozIiAvPjxwb2x5bGluZSBwb2ludHM9IjcyLjUxODgsMTYwLjM1MTU2IDcyLjUxODgsMTU5LjI1MjkzIDcyLjUxODgsMTU5LjA4MDcgNzIuNTE4OCwxNTguNTkzNzUgNzIuMjg2NCwxNTguMDI4OTkgNzIuMTU3MTEsMTU3LjcxNDg0IDcxLjU4NzE3LDE1Ny41Nzk0NyA3MS4yNTI4ODQsMTU3LjcxNDg0IDY3LjQ4ODM0LDE2My44NTkxNSA2My4yOTU3MjMsMTcxLjExODE2IDUwLjgyOTM1LDE5OS40MTUxNiA0Ni4xMTU0NiwyMTEuMzI4MTMgMzQuNjc1NTY4LDI0OC4yODE2MyAzMi41NTIwOTQsMjU3LjAzMTI1IDI4Ljg4Mjc3MiwyODMuNTY0MTUgMjguMjExODAyLDI5MS4zMDg2IDI4LjkyNzgzNCwzMDkuNjA0NSAyOS4yOTY4NzUsMzEzLjI4MTI1IDMxLjUxODkzNiwzMTkuMTM0MTYgMzIuMTkwMzg0LDMyMC4zMTI1IDM2LjA1MTQ4MywzMjEuNTQ4MDcgMzcuMDczMTk2LDMyMS42MzA4NiA0My42MDAwMiwzMTguMTkxMTYgNDUuMjExMjI3LDMxNy4wMTY2IDU0LjA2MzE3LDMwNC42NjA5NSA1NS43MDAyNCwzMDIuMDc1MiA2NS40Njc1MSwyODEuOTg3MSA2Ny4wOTM0NiwyNzguMzQ0NzMgNzYuNzU4NDE1LDI1My4wNTQwNSA3Ny43NjMzMiwyNTAuMjE5NzMgODQuODA2NjUsMjI3LjIzNjYzIDg1LjcyMDQ4LDIyNC4wNzIyNyA4OS45MTkzMywyMDcuNDI1MTEgOTAuMjQxNjEsMjA2LjA1NDY5IDkxLjE0NTg0LDIwMC4xMTk1IDkxLjE0NTg0LDE5OS45MDIzNCA4OC45NjQyNiwyMDYuMTQ3OTIgODguNzk0ODYsMjA2LjcxMzg3IDg1LjMzMzExLDIyMi44NDA5NiA4NS4xNzc5NTYsMjIzLjYzMjgxIDgzLjA3OTUxLDI0My40NTA3IDgzLjAwNzgxLDI0NC4yODcxMSA4My42OTY2OSwyNjIuOTg0MjUgODMuNzMxMiwyNjMuNDAzMzIgODcuMjMzMTg1LDI3NC43NjIzMyA4OS44Nzk5MywyNzcuMDI2MzcgOTMuNTU4NDksMjc3LjQ5Njg2IDk3LjI5NDU3LDI3Ni4zNjcyIDEwMi4xNzAzMiwyNzIuOTExNSAxMDYuMzM2OCwyNjkuMTE2MiAxMTEuODc2NTIsMjYzLjQyMDkzIDExNS45MjE1ODUsMjU4LjU2OTM0IDEyMS44NjE4NSwyNTEuNjE5MjIgMTI1Ljg2ODA1LDI0Ni43MDQxIDEzMS44NTg5NSwyMzguOTA1MjYgMTM1LjgxNDUxLDIzMi44NjEzMyAxNDEuMjg2MDEsMjIzLjcyMDUgMTQzLjk1MjU1LDIxOC41NzkxIDE0OC4wNDE5OSwyMTEuMDA3NzQgMTQ5LjkyMDQ0LDIwNy44MTI1IDE1Mi44Njk5MywyMDMuMzMyOTUgMTUzLjUzNzM0LDIwMy44NTc0MiAxNTUuMTUzMjQsMjA2LjM2NjU1IDE1NS43MDc0NywyMDguMjUxOTUgMTU2LjkyNjA0LDIxNC44NDI1OCAxNTcuMzM1MDcsMjE3LjcwMDIgMTU4LjY1NTQ5LDIyNS4wOTc0NiAxNTkuMTQzNTEsMjI3LjU4Nzg5IDE2MC40ODA4MiwyMzIuNDgwOCAxNjAuOTUxOTcsMjMzLjc0MDIzIDE2My4zMjMyOSwyMzQuODM4ODcgMTY0LjIwNzE4LDIzNC44Mzg4NyAxNjcuOTA2MTksMjMyLjg0NTQzIDE2OS4wOSwyMzEuOTgyNDIgMTc0LjM4Nzc5LDIyNi41NTUxNSAxNzUuNzgxMjUsMjI0Ljk1MTE3IDE4MS40NzYyNywyMTguMjUxNDIgMTgyLjgzNDIxLDIxNi42MDE1NiAxODcuODc5NjgsMjA4Ljc3NjcgMTg4Ljk4Mjk0LDIwNi45MzM2IDE5Mi44OTg4LDE5OS45NDAxOSAxOTMuNTA0MDYsMTk4LjgwMzcxIDE5Ni4yMTQyMywxOTQuMzE4OTIgMTk2LjU3ODQxLDE5My43NSAxOTkuMDQwNzcsMTkzLjE5NDEyIDE5OS40NzE5MiwxOTMuMzEwNTUgMjAzLjA2NjQ3LDE5Ny44MTk4NSAyMDMuNDUwNTMsMTk4LjM2NDI2IDIwNy41ODc2LDIwNi45ODY5NyAyMDcuOTcxNjMsMjA3LjgxMjUgMjEyLjAzNDkxLDIxNy4zMDI4MSAyMTIuMzExOTIsMjE3LjkxOTkyIDIxNi4zMTgyNSwyMjQuMjc0OSAyMTYuNDcxMzQsMjI0LjUxMTcyIDIyMC4zNDExNCwyMjkuMjI1NTQgMjIwLjQ0OTk1LDIyOS4zNDU3IDIyNC40Mzg2OSwyMzIuNDI5NzMgMjI2Ljc3OTUzLDIzMy43NDAyMyAyMjkuNzgzMDQsMjM0Ljg4MDY1ICIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6YmxhY2s7c3Ryb2tlLXdpZHRoOjMiIC8+PHBvbHlsaW5lIHBvaW50cz0iMzA4LjM0MDU1LDE1MC45MDMzMiAiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOmJsYWNrO3N0cm9rZS13aWR0aDozIiAvPjxwb2x5bGluZSBwb2ludHM9IjMwOC4zNDA1NSwxNTAuOTAzMzIgMzA4LjM0MDU1LDE0OS44MDQ2OSAzMDcuOTU4MzcsMTQ4LjQzNjUxIDMwNy43OTgwMywxNDguMDQ2ODggMzA3LjEwMjQ1LDE0Ni42MjcwNCAzMDYuODkzODMsMTQ2LjI4OTA2IDMwNS42OTU4MywxNDUuNDg1NzMgMzA1LjQ0NzA1LDE0NS40MTAxNiAyOTIuMzA2OTIsMTU0LjIzNTQ2IDI4OS43MTM1NiwxNTYuNjE2MjEgMjc0LjYyNzcyLDE4MC40MDIyNyAyNzEuOTkwNzUsMTg1LjQwMDM5IDI2NS4yNDk0OCwyMDguNTA1NzggMjY0LjM5NTIzLDIxMi40MjY3NiAyNjAuNzgyNjUsMjM1Ljg3ODc1IDI2MC40MTY3LDIzOC43OTM5NSAyNjAuNTEzNjcsMjU0LjAxODk3IDI2MC41OTc1MywyNTQuODM0IDI2Mi45MTQ0NiwyNjAuNDA3NiAyNjMuMTI5MzYsMjYwLjc2NjYgMjY5LjI3MTQ1LDI2My4xMDU3NyAyNjkuNjM5NzcsMjYzLjE4MzYgMjg1LjYzNjE0LDI2Mi4xMDk2OCAyODUuOTE1OCwyNjIuMDg0OTYgMzE2LjQ3Nzk3LDI1OC4zOTU5NyAzMTYuODQwMywyNTguMzQ5NiAzNDMuOTc0NjQsMjU0LjQyNjU0IDM0NC4xNDc4NiwyNTQuMzk0NTMgMzUxLjI2MTI2LDI1MS4yODE2MiAzNTEuNTYyNSwyNTEuMDk4NjMgMzUwLjgwMDEsMjUwLjg2NzAzIDM0OS4yMTE1MiwyNTAuNjU5MTYgMzQ2LjY1NzE3LDI1MC44OTc5MiAzNDQuMzI4NywyNTEuNTM4MSAzNDEuODcxNjcsMjUyLjAzNTY0IDM0MC43MTE4LDI1Mi40MTY5OSAzNDAuOTA0ODgsMjUyLjY1MTU3IDM0NC41MDk1NSwyNTEuOTc3NTQgMzU2LjE0ODcsMjUxLjE3NzA4IDM3Mi4zNTk2NSwyNTEuNTM4MSAzOTEuMjY3NzYsMjU0LjA1OTU2IDQwMS44MzczNywyNTUuMjczNDQgNDE4LjI2Njk0LDI2MC4wNTMwNyA0MjUuMTY2MzgsMjYzLjQwMzMyICIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6YmxhY2s7c3Ryb2tlLXdpZHRoOjMiIC8+PC9zdmc+\",\r\n          \"recipientFirstName\":\"Test\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visable\":false\r\n        }\r\n   }\r\n}\r\n}\r\n"
             },
             "description": "Events on items"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1230022-94ff42fe-710e-b5f3-9348-bafa54e6e86b",
-          "name": "Health end",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Health check\");",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "description": ""
           },
           "response": []
         }
