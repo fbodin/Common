@@ -391,12 +391,11 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com"
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
-              "port": "/rest/retail/v1s/agent/SE",
               "path": [
                 "items",
                 ":itemid"
@@ -462,7 +461,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "PUT",
             "header": [
               {
