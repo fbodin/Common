@@ -212,7 +212,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Saman Hadiani\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Hedegaardsvej\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"2300\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"København\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"}\n  ]}\n}"
             },
             "description": ""
           },
