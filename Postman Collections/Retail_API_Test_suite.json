@@ -2202,7 +2202,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n   \"receivedItemEvents\":[\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"productCode\": \"19\",\r\n         \"timeStamp\": \"00000000014SE\",\r\n         \"emailAddresses\":          [\r\n            \"jp@jknowledge.se\"\r\n         ]\r\n      }\r\n   ]  \r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n   \"receivedItemEvents\":[\r\n      {\r\n         \"itemId\": \"86505919118SE\",\r\n         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n         \"emailAddresses\":          [\r\n         ]\r\n      }\r\n   ]  \r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
           },
