@@ -1998,7 +1998,7 @@
         },
         {
           "_postman_id": "1230022-2c95d24c-4744-7f3f-d18d-939b368accae",
-          "name": "login copy",
+          "name": "login",
           "event": [
             {
               "listen": "test",
@@ -2010,9 +2010,9 @@
                   "    console.log(\"Login failed\");",
                   "    postman.setNextRequest(null);",
                   "}else{",
-                  "    var response = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
                   "}"
                 ]
               }
@@ -2071,7 +2071,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"credential\": {\r\n\t\"password\":\"pelle10\"\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -2202,7 +2202,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n   \"receivedItemEvents\":[\r\n      {\r\n         \"itemId\": \"86505919118SE\",\r\n         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n         \"emailAddresses\":          [\r\n         ]\r\n      }\r\n   ]  \r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n   \"receivedItemEvents\":[\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n         \"emailAddresses\":          [\r\n         \t\"test\"\r\n         ]\r\n      }\r\n   ]  \r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
           },
