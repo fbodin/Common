@@ -1,7 +1,7 @@
 {
   "variables": [],
   "info": {
-    "name": "Retail API Test suite",
+    "name": "Retail API Test suite v2",
     "_postman_id": "1230022-e0f721f6-68d6-9779-8d80-1e20fab56d98",
     "description": "Common scenarios as Collect in store / Retail",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
