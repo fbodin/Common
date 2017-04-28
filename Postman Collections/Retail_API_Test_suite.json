@@ -640,7 +640,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [
               {
@@ -664,10 +664,14 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
                 ]
               }
             },
@@ -737,88 +741,6 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-4e4fd894-a9d8-91c4-2fff-85eb88645abc",
-          "name": "loginExtended",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.response.jwttoken.token);"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Login using ssid: \"+data.ssid);",
-                  "console.log(\"            user: \"+data.user);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/loginextended/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "auth": {},
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
-              ],
-              "path": [
-                "loginextended",
-                ":ssid",
-                ":username"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en"
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ],
-              "variable": [
-                {
-                  "value": "210478",
-                  "id": "ssid"
-                },
-                {
-                  "value": "pelle10",
-                  "id": "username"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{Device-ID}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\t\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
-            },
-            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "1230022-86310bf3-f00a-78e8-084f-229c64799248",
           "name": "countrycodes",
           "event": [
@@ -840,15 +762,13 @@
                   "    console.log(\"Got response \"+responseBody);",
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
                   "}",
-                  "",
-                  "",
                   ""
                 ]
               }
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [
               {
@@ -920,60 +840,6 @@
             ],
             "body": {},
             "description": "Get identification validation rules"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1230022-f7290e81-0168-5cea-49f7-9a7f35587d58",
-          "name": "events recieveitem",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "postman.setNextRequest(\"Health end\");",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
-                "description": ""
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"eventList\": {\r\n   \"receivedItemEvents\":[\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"productCode\": \"19\",\r\n         \"timeStamp\": \"00000000014SE\",\r\n         \"emailAddresses\":          [\r\n            \"jp@jknowledge.se\"\r\n         ]\r\n      }\r\n   ]  \r\n  }\r\n}\r\n\r\n"
-            },
-            "description": "Events on items"
           },
           "response": []
         },
@@ -1148,9 +1014,9 @@
                   "    console.log(\"Login failed\");",
                   "    postman.setNextRequest(null);",
                   "}else{",
-                  "    var response = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
                   "}"
                 ]
               }
@@ -1705,7 +1571,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [
               {
@@ -1729,10 +1595,14 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
                 ]
               }
             },
@@ -1749,12 +1619,11 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com"
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
-              "port": "/rest/retail/v1s/agent/SE",
               "path": [
                 "login",
                 ":ssid",
@@ -1949,12 +1818,11 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com"
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
-              "port": "/rest/retail/v1s/agent/SE",
               "path": [
                 "items",
                 ":itemid"
@@ -2037,12 +1905,11 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/items/:itemid?context=arrival&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=arrival&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com"
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
-              "port": "/rest/retail/v1s/agent/SE",
               "path": [
                 "items",
                 ":itemid"
@@ -2430,10 +2297,14 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
                 ]
               }
             },
@@ -3105,7 +2976,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
             "method": "GET",
             "header": [
               {
@@ -3129,10 +3000,14 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var response = JSON.parse(responseBody);",
-                  "console.log(\"Login got authorization key \"+response.jwttoken.token);",
-                  "postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);"
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
                 ]
               }
             },
@@ -3149,12 +3024,11 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com:/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com"
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
-              "port": "/rest/retail/v1s/agent/SE",
               "path": [
                 "login",
                 ":ssid",
