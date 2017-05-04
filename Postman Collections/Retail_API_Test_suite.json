@@ -366,7 +366,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE \",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
             },
             "description": "Events on items"
           },
@@ -3261,6 +3261,56 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-97ef6b07-ae37-61da-fb98-6542edbdeb38",
+          "name": "Delete testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "auth": {},
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "00000000014SE",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-d95a19da-f02c-7bc4-0f2c-07363574ffa6",
           "name": "items Receiveitem",
           "event": [
@@ -3357,8 +3407,15 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "postman.setNextRequest(\"Health end\");",
-                  ""
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions.printid);",
+                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions.printid);",
+                  "}"
                 ]
               }
             },
@@ -3395,9 +3452,121 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"AP00000023XSE\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-088561ff-3887-0ee0-aa43-5fc7dbf00495",
+          "name": "print zpl",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Data to print \"+responseObj.printresponse.data);",
+                  "    //var decrypt = CryptoJS.enc.Base64.parse(responseObj.printresponse.data);",
+                  "    //console.log(\"------------------------------------\");",
+                  "    //console.log( decrypt.toString(CryptoJS.enc.Utf8));",
+                  "    postman.setEnvironmentVariable(\"printData\", responseObj.printresponse.data);",
+                  "}",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/print/:printid/zpl?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "print",
+                ":printid",
+                "zpl"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "sv"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "{{printid}}",
+                  "id": "printid"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-5db979ce-4977-fa08-cc52-9c13fd1d84ed",
+          "name": "ZPL viewer",
+          "request": {
+            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x10/0/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{{printData}}"
+            },
+            "description": ""
           },
           "response": []
         }
