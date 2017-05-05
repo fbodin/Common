@@ -63,7 +63,7 @@
                   "if(responseCode.code != 200){",
                   "    console.log(\"Login failed\");",
                   "    postman.setNextRequest(null);",
-                  "}else{",
+                  "} else {",
                   "    var responseObj = JSON.parse(responseBody);",
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
                   "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
@@ -145,7 +145,12 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
                 ]
               }
             }
@@ -189,6 +194,22 @@
         {
           "_postman_id": "1230022-f687ceba-d102-25c1-d8be-83e28ecead16",
           "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -366,7 +387,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE \",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
             },
             "description": "Events on items"
           },
@@ -749,7 +770,14 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
                 ]
               }
             }
@@ -799,7 +827,13 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
                 ]
               }
             }
@@ -2244,6 +2278,22 @@
         {
           "_postman_id": "1230022-0aa9667e-ab06-dae8-dc7c-507455185b11",
           "name": "Delete testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -2298,6 +2348,10 @@
                   "}else if(responseCode.code==400){",
                   "    console.log(\"Got response \"+responseBody);",
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "    if(jsonData.Fault.faultCode==3){",
+                  "        console.log(\"Check out not supported at this service point quit\");",
+                  "        postman.setNextRequest(null);",
+                  "    }",
                   "}",
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
@@ -2371,6 +2425,22 @@
         {
           "_postman_id": "1230022-bc2a79e3-55ae-c849-6ba6-c3ef0ceeae87",
           "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -3269,7 +3339,12 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
                 ]
               }
             }
@@ -3553,7 +3628,7 @@
           "_postman_id": "1230022-5db979ce-4977-fa08-cc52-9c13fd1d84ed",
           "name": "ZPL viewer",
           "request": {
-            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x10/0/",
+            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/3x6/0/",
             "method": "POST",
             "header": [
               {
