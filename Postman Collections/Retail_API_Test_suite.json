@@ -3628,7 +3628,7 @@
           "_postman_id": "1230022-5db979ce-4977-fa08-cc52-9c13fd1d84ed",
           "name": "ZPL viewer",
           "request": {
-            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/3x6/0/",
+            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x8/0/",
             "method": "POST",
             "header": [
               {
