@@ -42,7 +42,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [],
             "body": {},
@@ -52,7 +52,7 @@
         },
         {
           "_postman_id": "1230022-b12912cd-6906-22b0-6149-a4ca7b2a9b2d",
-          "name": "login",
+          "name": "login-V2",
           "event": [
             {
               "listen": "test",
@@ -84,10 +84,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -97,20 +97,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -130,7 +130,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"{{password}}\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -157,10 +157,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -168,7 +168,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -177,7 +177,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -212,10 +212,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -223,7 +223,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -237,7 +237,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -248,7 +248,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"{{productCode}}\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"}\n  ]}\n}"
             },
             "description": ""
           },
@@ -293,10 +293,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=arrival&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=arrival&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -309,16 +309,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -327,7 +327,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -366,12 +366,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -387,7 +387,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"{{itemId}}\",\r\n\t\t         \"shelfNo\": \"A12\",\r\n\t\t         \"timeStamp\": \"{{currentTimeStmp}}\"\r\n\t\t      }\r\n\t\t\t\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
             },
             "description": "Events on items"
           },
@@ -436,10 +436,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=delivery&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -452,16 +452,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -470,7 +470,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -511,12 +511,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -532,7 +532,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n\t\t      \"deliveries\": [\r\n\t\t                  {\r\n\t\t            \"itemId\": \"00000000014SE\",\r\n\t\t            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t            \"additionalRequestResponse\":             {\r\n\t\t               \"id\": 1,\r\n\t\t               \"response\": \"true\"\r\n\t\t            }\r\n\t\t         }\r\n\t\t      ],\r\n\t\t      \"identifications\":       [\r\n\t\t            {\r\n\t\t            \"idNumber\": \"1212121212\",\r\n\t\t            \"identificationTypeId\": 1,\r\n\t\t            \"courier\": false\r\n\t\t         }\r\n\t\t      ]\r\n\t\t   }\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n\t\t      \"deliveries\": [\r\n\t\t                  {\r\n\t\t            \"itemId\": \"{{itemId}}\",\r\n\t\t            \"timeStamp\": \"{{currentTimeStmp}}\",\r\n\t\t            \"additionalRequestResponse\":             {\r\n\t\t               \"id\": 1,\r\n\t\t               \"response\": \"true\"\r\n\t\t            }\r\n\t\t         }\r\n\t\t      ],\r\n\t\t      \"identifications\":       [\r\n\t\t            {\r\n\t\t            \"idNumber\": \"1212121212\",\r\n\t\t            \"identificationTypeId\": 1,\r\n\t\t            \"courier\": false\r\n\t\t         }\r\n\t\t      ]\r\n\t\t   }\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
             },
             "description": "Events on items"
           },
@@ -564,12 +564,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -579,13 +579,13 @@
               },
               {
                 "key": "Device-ID",
-                "value": "{{Device-ID}}",
+                "value": "{{deviceid}}",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n    \t \"deliveries\": [\r\n        \t{\r\n\t            \"itemId\": \"00000000014SE\",\r\n\t            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t            \"additionalRequestResponse\": {\r\n\t               \"id\": 1,\r\n\t               \"response\": \"true\"\r\n\t            }\r\n        \t}\r\n    \t],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n    \t \"deliveries\": [\r\n        \t{\r\n\t            \"itemId\": \"{{itemId}}\",\r\n\t            \"timeStamp\": \"{{currentTimeStmp}}\",\r\n\t            \"additionalRequestResponse\": {\r\n\t               \"id\": 1,\r\n\t               \"response\": \"true\"\r\n\t            }\r\n        \t}\r\n    \t],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
             },
             "description": "Events on items"
           },
@@ -618,7 +618,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [],
             "body": {},
@@ -661,7 +661,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -709,10 +709,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -722,20 +722,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -755,7 +755,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -784,10 +784,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -795,7 +795,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -804,7 +804,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -840,10 +840,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -851,7 +851,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -865,7 +865,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -876,7 +876,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"} \n\t]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"{{productCode}}\"} \n\t]}\n}"
             },
             "description": ""
           },
@@ -921,10 +921,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=delivery&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=delivery&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -937,16 +937,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -955,7 +955,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1008,10 +1008,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=arrival&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=arrival&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -1024,16 +1024,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1042,7 +1042,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1096,7 +1096,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -1144,10 +1144,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -1157,20 +1157,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -1190,7 +1190,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -1212,10 +1212,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -1223,7 +1223,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1232,7 +1232,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1251,10 +1251,10 @@
           "name": "Add testitem",
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -1262,7 +1262,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1276,7 +1276,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               }
             ],
@@ -1327,10 +1327,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=returnitem&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=returnitem&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -1343,16 +1343,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1361,7 +1361,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1413,12 +1413,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items?filter=pastlastduedate&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/items?filter=pastlastduedate&language={{language}}&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1471,10 +1471,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=arrival&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=arrival&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -1487,16 +1487,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1505,7 +1505,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1545,12 +1545,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1566,7 +1566,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"{{itemId}}\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"{{currentTimeStmp}}\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "description": "Events on items"
           },
@@ -1611,10 +1611,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=returnitem&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=returnitem&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -1627,16 +1627,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -1645,7 +1645,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1685,12 +1685,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1706,7 +1706,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]  \r\n\t}]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"{{itemId}}\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"\",\r\n        \t\"timeStamp\": \"{{currentTimeStmp}}\"\r\n    \t}\r\n\t\t]  \r\n\t}]\r\n  }\r\n}"
             },
             "description": "Events on items"
           },
@@ -1737,12 +1737,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1758,7 +1758,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"{{itemId}}\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"{{currentTimeStmp}}\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n  }\r\n}"
             },
             "description": "Events on items"
           },
@@ -1799,7 +1799,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -1847,10 +1847,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -1860,20 +1860,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -1893,7 +1893,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -1915,10 +1915,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -1935,7 +1935,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -1965,10 +1965,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -1985,7 +1985,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2015,10 +2015,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -2040,7 +2040,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2051,7 +2051,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"Karl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"{{productCode}}\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"Karl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
             },
             "description": ""
           },
@@ -2073,10 +2073,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -2098,7 +2098,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2109,7 +2109,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"carl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"{{productCode}}\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"carl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
             },
             "description": ""
           },
@@ -2119,7 +2119,7 @@
           "_postman_id": "1230022-8dcce9ff-47c3-3713-3e0a-6e890f702420",
           "name": "Search",
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:Jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+            "url": "{{server}}{{path}}/search?type=item&query=recipientname:Jörgen&language={{language}}&Content-Type=application/json;charset=UTF-8",
             "method": "GET",
             "header": [
               {
@@ -2129,7 +2129,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               }
             ],
@@ -2175,7 +2175,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -2223,10 +2223,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -2236,20 +2236,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -2269,7 +2269,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -2296,10 +2296,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -2307,7 +2307,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -2316,7 +2316,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2374,10 +2374,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=checkout&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=checkout&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -2390,16 +2390,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -2408,7 +2408,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2443,10 +2443,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -2454,7 +2454,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -2468,7 +2468,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               }
             ],
@@ -2519,10 +2519,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=checkout&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=checkout&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -2535,16 +2535,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -2553,7 +2553,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2593,12 +2593,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2614,7 +2614,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"{{itemId}}\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"{{currentTimeStmp}}\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "description": "Events on items"
           },
@@ -2659,10 +2659,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=checkout&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=checkout&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -2675,16 +2675,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -2693,7 +2693,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2717,7 +2717,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "postman.setNextRequest(\"Health end\");",
+                  "//postman.setNextRequest(\"Health end\");",
                   ""
                 ]
               }
@@ -2734,12 +2734,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2755,7 +2755,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"checkoutItemEvents\": [\r\n    \t{\r\n    \t\t\"itemId\": \"00000000014SE\",\r\n    \t\t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n    \t\t\"checkoutReason\": \"itemlost\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n\t}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"checkoutItemEvents\": [\r\n    \t{\r\n    \t\t\"itemId\": \"{{itemId}}\",\r\n    \t\t\"timeStamp\": \"{{currentTimeStmp}}\",\r\n    \t\t\"checkoutReason\": \"itemlost\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n\t}\r\n}\r\n"
             },
             "description": "Events on items"
           },
@@ -2796,7 +2796,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -2844,10 +2844,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -2857,20 +2857,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -2890,7 +2890,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -2924,7 +2924,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/countrycodes?language={{language}}&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -2934,7 +2934,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -2975,7 +2975,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/identificationtypes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/identificationtypes?language={{language}}&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -2985,7 +2985,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3025,12 +3025,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3046,7 +3046,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"{{itemId}}\",\r\n        \t\"timeStamp\": \"{{currentTimeStmp}}\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "description": "Events on items"
           },
@@ -3078,12 +3078,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3099,7 +3099,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n   \"returns\":    [\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"returnReason\": \"senderdemand\",\r\n         \"missing\": false,\r\n         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n   ]\r\n}}"
+              "raw": "{\"eventList\": {\r\n   \"returns\":    [\r\n      {\r\n         \"itemId\": \"{{itemId}}\",\r\n         \"returnReason\": \"senderdemand\",\r\n         \"missing\": false,\r\n         \"timeStamp\": \"{{currentTimeStmp}}\"\r\n      }\r\n   ]\r\n}}"
             },
             "description": "Events on items"
           },
@@ -3139,10 +3139,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -3152,20 +3152,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -3185,7 +3185,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"{{password}}\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -3230,7 +3230,7 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
             "method": "GET",
             "header": [
               {
@@ -3278,10 +3278,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "login",
@@ -3291,20 +3291,20 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "pelle10",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -3324,7 +3324,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"{{password}}\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
@@ -3351,10 +3351,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "raw": "{{testDataEndpoint}}/item/:itemid",
               "auth": {},
               "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                "{{testDataEndpoint}}"
               ],
               "path": [
                 "item",
@@ -3362,7 +3362,7 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -3371,7 +3371,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3424,10 +3424,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/:itemid?context=receive&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/items/:itemid?context=receive&language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "items",
@@ -3440,16 +3440,16 @@
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "{{language}}"
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -3458,7 +3458,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3506,12 +3506,12 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3527,7 +3527,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"{{itemId}}\",\r\n\t         \"timeStamp\": \"{{currentTimeStmp}}\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
           },
@@ -3574,10 +3574,10 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/print/:printid/zpl?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "{{server}}{{path}}/print/:printid/zpl?language=sv&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+                "{{server}}{{path}}"
               ],
               "path": [
                 "print",
@@ -3591,7 +3591,7 @@
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "{{apikey}}"
                 }
               ],
               "variable": [
@@ -3605,7 +3605,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "value": "{{authorization}}",
                 "description": ""
               },
               {
@@ -3640,6 +3640,359 @@
             "body": {
               "mode": "raw",
               "raw": "{{printData}}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1230022-975fa610-9d3a-60fb-3a63-086eaf142eb4",
+      "name": "GTT Production Request",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1230022-4ad9a194-3393-a56d-9c8d-cfbd84d27e41",
+          "name": "login-V1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.jwttoken.token);",
+                  "}"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "030819",
+                  "id": "ssid"
+                },
+                {
+                  "value": "admin",
+                  "id": "username"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"credential\":{\n    \"password\":\"admin\"\n}\n}"
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-13ae7230-c5ea-ed89-ea3b-bb79b9a2d34a",
+          "name": "items arrival",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{server}}{{path}}/items/:itemid?context=arrival&language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "items",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "context",
+                  "value": "arrival"
+                },
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "{{itemId}}",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-fc0d18e6-50fd-a83f-7af8-7c8dd071887b",
+          "name": "events arrival-V1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00373500454553386959\",\r\n             \"shelfNo\": \"A12\",\r\n             \"timeStamp\": \"{{currentTimeStmp}}\"\r\n          }\r\n      \r\n      ]\r\n  }]\r\n}\r\n}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-0207c8ad-f66c-c043-b261-11ef0174e6c0",
+          "name": "items",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{server}}{{path}}/items/:itemid?language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "items",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "00373500454553386959",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-80ad3e7a-2fbb-b823-75ab-a8ded96f0f59",
+          "name": "CEM/NTT",
+          "request": {
+            "url": "https://api2.postnord.com/rest/shipment/v1/trackandtrace/findByIdentifier.json?id=00373500454553386959&locale=en&apikey=91f146137449a4068b3523a80b13609c",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-a6581bed-cd70-95ee-77ab-fc722335b259",
+          "name": "Add testitem",
+          "request": {
+            "url": "{{testDataEndpoint}}/item/00073942910051119273",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Grejsvig Test\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"test\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.telefon\",\"value\":\"0100000000\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-02-24 00:00:00:000\"}\n  ]}\n}"
             },
             "description": ""
           },
