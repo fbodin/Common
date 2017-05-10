@@ -2350,7 +2350,7 @@
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
                   "    if(jsonData.Fault.faultCode==3){",
                   "        console.log(\"Check out not supported at this service point quit\");",
-                  "        postman.setNextRequest(null);",
+                  "        postman.setNextRequest(\"end checkout\");",
                   "    }",
                   "}",
                   "",
@@ -2758,6 +2758,48 @@
               "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"checkoutItemEvents\": [\r\n    \t{\r\n    \t\t\"itemId\": \"{{itemId}}\",\r\n    \t\t\"timeStamp\": \"{{currentTimeStmp}}\",\r\n    \t\t\"checkoutReason\": \"itemlost\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n\t}\r\n}\r\n"
             },
             "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-26127ca9-f6e9-ddb9-478c-29341412c9b6",
+          "name": "end checkout",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
           },
           "response": []
         }
