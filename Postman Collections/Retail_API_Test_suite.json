@@ -265,10 +265,11 @@
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "var jsonData = JSON.parse(responseBody);",
+                  "",
                   "if(responseCode.code==200){",
                   "    console.log(\"Arrival approved\");",
                   "}else if(responseCode.code==400){",
+                  "    var jsonData = JSON.parse(responseBody);",
                   "    console.log(\"Got response \"+responseBody);",
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
                   "}",
@@ -404,14 +405,15 @@
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "var jsonData = JSON.parse(responseBody);",
                   "if(responseCode.code==200){",
+                  "    var jsonData = JSON.parse(responseBody);",
                   "    console.log(\"Delivery approved\");",
                   "    if(jsonData.itemList.items.delivery.signonglass){",
                   "        console.log(\"signonglass true\");",
                   "        postman.setNextRequest(\"events delivery Sign On Glass\");",
                   "    }",
                   "}else if(responseCode.code==400){",
+                  "    var jsonData = JSON.parse(responseBody);",
                   "    console.log(\"Got response \"+responseBody);",
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
                   "}",
@@ -762,63 +764,6 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-0cdddcdf-0d69-248f-276d-2701d92f8e6d",
-          "name": "Delete testitem",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"failed\");",
-                  "    postman.setNextRequest(null);",
-                  "}"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{testDataEndpoint}}/item/:itemid",
-              "auth": {},
-              "host": [
-                "{{testDataEndpoint}}"
-              ],
-              "path": [
-                "item",
-                ":itemid"
-              ],
-              "variable": [
-                {
-                  "value": "{{itemId}}",
-                  "id": "itemid"
-                }
-              ]
-            },
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{authorization}}",
-                "description": ""
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}",
-                "description": ""
-              }
-            ],
-            "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
           "_postman_id": "1230022-578df4b2-4598-71f5-394e-f52fa4b029ce",
           "name": "Add testitem",
           "event": [
@@ -884,7 +829,7 @@
         },
         {
           "_postman_id": "1230022-50d4c30a-9f19-55c5-e0a8-92e0a0c729f7",
-          "name": "items delievry reject",
+          "name": "items delivery reject",
           "event": [
             {
               "listen": "test",
@@ -3146,92 +3091,6 @@
             "description": "Events on items"
           },
           "response": []
-        },
-        {
-          "_postman_id": "1230022-840ef01b-6aea-6a51-9d16-469a4b783603",
-          "name": "login copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"Login failed\");",
-                  "    postman.setNextRequest(null);",
-                  "}else{",
-                  "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
-                  "}"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Login using ssid: \"+data.ssid);",
-                  "console.log(\"            user: \"+data.user);"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
-              "auth": {},
-              "host": [
-                "{{server}}{{path}}"
-              ],
-              "path": [
-                "login",
-                ":ssid",
-                ":username"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "{{language}}"
-                },
-                {
-                  "key": "apikey",
-                  "value": "{{apikey}}"
-                }
-              ],
-              "variable": [
-                {
-                  "value": "{{ssid}}",
-                  "id": "ssid"
-                },
-                {
-                  "value": "{{user}}",
-                  "id": "username"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"{{password}}\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
-            },
-            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
-          },
-          "response": []
         }
       ]
     },
@@ -3695,8 +3554,8 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "1230022-4ad9a194-3393-a56d-9c8d-cfbd84d27e41",
-          "name": "login-V1",
+          "_postman_id": "1230022-3efa5b4a-8713-73cb-3192-d2e59a07fa71",
+          "name": "login-v2",
           "event": [
             {
               "listen": "test",
@@ -3707,10 +3566,10 @@
                   "if(responseCode.code != 200){",
                   "    console.log(\"Login failed\");",
                   "    postman.setNextRequest(null);",
-                  "} else {",
+                  "}else{",
                   "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+responseObj.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.jwttoken.token);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
                   "}"
                 ]
               }
@@ -3750,11 +3609,11 @@
               ],
               "variable": [
                 {
-                  "value": "030819",
+                  "value": "{{ssid}}",
                   "id": "ssid"
                 },
                 {
-                  "value": "admin",
+                  "value": "{{user}}",
                   "id": "username"
                 }
               ]
@@ -3774,15 +3633,98 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"credential\":{\n    \"password\":\"admin\"\n}\n}"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"{{password}}\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
           "response": []
         },
         {
+          "_postman_id": "1230022-0cdddcdf-0d69-248f-276d-2701d92f8e6d",
+          "name": "Delete testitem {{itemId}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{testDataEndpoint}}/item/:itemid",
+              "auth": {},
+              "host": [
+                "{{testDataEndpoint}}"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "value": "{{itemId}}",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-a6581bed-cd70-95ee-77ab-fc722335b259",
+          "name": "Add testitem {{itemId}}",
+          "request": {
+            "url": "{{testDataEndpoint}}/item/{{itemId}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"CiS\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Jens Peter Kofoed\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Hedegaardsvej 88\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"2300\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"KÖBENHAVN S\"},\n  {\"key\":\"mottagaradress.landskod\",\"value\":\"DK\"},\n  {\"key\":\"mottagaradress.telefon\",\"value\":\"0100000000\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-06-12 00:00:00:000\"}\n  ]}\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-13ae7230-c5ea-ed89-ea3b-bb79b9a2d34a",
-          "name": "items arrival",
+          "name": "items arrival {{itemId}}",
           "event": [
             {
               "listen": "test",
@@ -3869,7 +3811,7 @@
         },
         {
           "_postman_id": "1230022-fc0d18e6-50fd-a83f-7af8-7c8dd071887b",
-          "name": "events arrival-V1",
+          "name": "events arrival {{itemId}}",
           "event": [
             {
               "listen": "test",
@@ -3913,7 +3855,359 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00373500454553386959\",\r\n             \"shelfNo\": \"A12\",\r\n             \"timeStamp\": \"{{currentTimeStmp}}\"\r\n          }\r\n      \r\n      ]\r\n  }]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"{{itemId}}\",\r\n             \"shelfNo\": \"A12\",\r\n             \"timeStamp\": \"{{currentTimeStmp}}\"\r\n          }\r\n      \r\n      ]\r\n  }]\r\n}\r\n}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-5a128ab4-f89c-ed57-5487-bd775881a7c9",
+          "name": "items delivery {{itemId}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{server}}{{path}}/items/:itemid?context=delivery&language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "items",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "context",
+                  "value": "delivery"
+                },
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "{{itemId}}",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-e957ce2e-a688-beed-0d0e-39e0c688e582",
+          "name": "events delivery Sign On Glass {{itemId}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"{{itemId}}\",\r\n              \"timeStamp\": \"{{currentTimeStmp}}\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"iVBORw0KGgoAAAANSUhEUgAAAhIAAAD1CAYAAAAF4xysAAAABHNCSVQICAgIfAhkiAAACUhJREFUeJzt3WuM5Xddx/H3dnfbQpdLK1qM3LQqWmwEq8agNd6Corbi7UFJqmLihVDxAWpiDAoxogneMKYgkvCgAe0TjE2qIJqKIKmIaU2QEiottNK0eGGVS+9bH/x36HbmnLMzO5ffOTOvV/LPbGbO+Z/P/Gd2ft/z+/8uBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAh0YHAHbchdU5Tf+//6v63Ng4B9a5pxwXVN9V/Up1b/W+Oc+5acbn7jj5nAeq+6vPVg/vdFg4UwoJ2B+eUb2uumrG195XXba3cfatI9Wzqq+qvvLkx+dWX119xaBM91U3V7dUH61ur247eTwyKBMAK+Dc6rrqRPXoguO+UQFXzKXVtdVfNBVfn6gebPG1XaXjweo91ct26oIBsJr+uqlrezONxy8MyrjMnlb9cXW86XbBTjbW76peUX1Ndayp2DuyQ7mPnDzfU6ofqH67eu82836++mD1zB3KCMASuqD6g+Y3BndUb1/3uduGJF0e5zc15r9RfaatN7D/V91Vfaipl+Lnq2/c0+9gZ3xH0y2vd1Z3tvkC9LVNt27O2vPEAOyIJzQ1APP+0P9r9eKmd7/rv/aTA/KOcmF1efX71f+2tWLhgervmxrNH9zj3KM9r3p99ZE2d61uqX6xumhEWAA256zqmubfl7+j+taTj728je8u723qvdiPnl69sumd9X+09R6GG5vGBlzSzt1q2E/Orl5YvbHNXc8Hmz3DBIAB3t/iP9rPPuWxXz/nMfvRx9t6wfDp6kcGZN2vntPmei2ODcoHcCB9efXnzf+jfFv1Peuec/GMxx1v6qLeLy5tuo+/qMF6uGmK4w3VD4+JeeBdXX242T+f7xuYC2Bfu6ype31eA3m8umLG857btADR+sfvl3fdV1WfbPEtiSsz6G9ZvbbZP7drRoYC2C9+qOnd87xG8iPVt8x57vnVPTOe8/27G3nXHWoaGPnp5l+X6xq3uBNn5pub/bP8x5GhAFbRj7W4a/7fq6OnOcestQ1eukt598rftfi6/N64aOygs5s93fa9I0MBLLPzq19t8ej26zp91/zTqv9e99xHmqaArqLnNa0OOe+63F29alg69sI/t/Hn/rZOX0gD7HuXVdc3v5H8TNOc+7M3ca4Lqn+bcY5VXJHy6upTzb8uN2cw3kFztHpHG38X3jEyFMAIb2pjj8H644XV4S2c850zzvHqVmczvSdUf9W0zPK8a/I3TbNUONiONi3+tf7344MDMwHsmiNNgyAXFQ0nmmZaPOsMzn+4jYtJrcIo98NNtywWXZcHq38ZFZCVMGsA8r1trQgHWDrnN23ktKiRvLtpWeHtrIz4devOefs2zrUXvqzFS3U/Wt3a7O3LYZFZa1H8Wab6Aivmd6uHmt9IXtvObdb01HXn/qUdOu9Ou7rTr7b55qZFsmA7nlx9rI2/X38yMhTA6by6+TtCPtS0n8VmBkpu1amvs0yN8MXVPzV/j4+1AaSXN42LgJ12rNlLcf/syFAAa45WP978RvI/qxfs4uuft+71nr+Lr3U6h5puV5xuXYeHmxYTMlWPvXZrj/0e3j84C3DALVoc6u7qp/Yox4lTXvcle/SaNfU0XNk0d/94iwuHR6t/aCq4YLSzmsZLPGl0EODgeWmLd40c0VCuvfa7d+n8VzRNT72p2atizjs+1FRo6HUA4EC7pNn7UqwdP9fujHnYrLUcf7qNcxyqfrmp8f+fNl8snHpc37Rj5pO3kQMA9oXnNH+BqPuqtwxLttG8QuJQU9fthdWzq5+p3tWZFQlrAyLvatq34pLd/IYAYBV9Q7NXx1sbHPjWYckWO9PCYN5xa9P+HT9dffEefh8AsHKe0bRz4LxG9Q3VlwxLtzmnDrbc7PHh6oamMQwvyLRLANi0w01jAR5pdiP7nuqJw9Jt3ZHqKeuOl538+MS2t1ImAFB9UfX2ZhcOjzTNSDg2LB0AsHTOq/6o+d37NzaNiwAA+II3NK1YN6t4uLm6dFw0AGAZvab5m2M9XF00LBkAsHTOa1pAad5tizuq7x6WDgBYOudUv9n82Rb3Vi8flg4AWEpvrD7X7OLh89W3j4sGACyjN7V4QaXvHBcNAFg2T6p+vfmFw13VVcPSAQBL55zqdU2zKmYVD/dUPzEsHQCwlK6rHmj+mIdvGhcNAFg251TXtHh76ouHpQMAltIrml88fLS6Ylw0AGAZvbj6WLOLh09ULxkXDQBYVrc0u3i4v/q2gbkAgCV0uPlLVD/UNCYCAOBxLq+ON7uAuKF66rhoAMAyuqi6sfn7W1hlEgDY4A+bv97DK5tubwAAfMEzm9Z1mFU8fGBgLgBgSZ1dvb7ZxcMnq+8dFw0AWFYvqu5sdgHxO9XRcdEAgGX1/upEswuIYwNzAQBL6FDT7YlZxcP91a+NiwYALLOPN7vn4W+rC8bFAgCW2bXNLiB+dGQoAGC5vbyNtzDuqc4dGQoAWG6XtrH34fahiQCAlfBbPb6AuLN6+tBEAMBKeFuPLyIuGRsHAHbOodEBDoBHT/m36w3AvnLW6AAHyGtGBwAAVs/aLY2vHR0EAFgt1/RYIQEAsCWfaioiTowOAgC7wRiJ3fWBkx8NsgQAtuzK3NoAAM7QkRQSAMA2rBUSXzo6CACwetYKiZtGBwEAVs9f9lgx8fzBWQBgR5lNsDcskw3AvmT659540egAALAbjowOcEC8u7o+szcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDt+H/OpfvMUlrOsgAAAABJRU5ErkJg\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-f2289d2d-9dd1-de43-0f52-99eaef5e10a7",
+          "name": "events wronglysorted {{itemId}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"wronglySortedItemEvents\":    [\r\n      {\r\n          \"itemId\": \"{{itemId}}\",\r\n          \"timeStamp\": \"{{currentTimeStmp}}\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-576bfc3e-5016-e008-24eb-e8fe28740fc0",
+          "name": "events return {{itemId}} Reason: senderdemand",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"{{itemId}}\",\r\n          \"returnReason\": \"senderdemand\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"{{currentTimeStmp}}\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-a05f07f7-467e-7891-aeae-29701b0f1b09",
+          "name": "events return {{itemId}} Reason: damaged",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"{{itemId}}\",\r\n          \"returnReason\": \"damaged\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"{{currentTimeStmp}}\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-f3e11df2-9acf-b0ed-f4b6-0667144a95de",
+          "name": "events return {{itemId}} Reason: receivermoved",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server}}{{path}}/events?language={{language}}&apikey={{apikey}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"{{itemId}}\",\r\n          \"returnReason\": \"receivermoved\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"{{currentTimeStmp}}\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "description": "Events on items"
           },
@@ -3979,7 +4273,7 @@
               ],
               "variable": [
                 {
-                  "value": "00373500454553386959",
+                  "value": "{{itemId}}",
                   "id": "itemid"
                 }
               ]
@@ -4015,11 +4309,71 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-a6581bed-cd70-95ee-77ab-fc722335b259",
-          "name": "Add testitem",
+          "_postman_id": "1230022-4ad9a194-3393-a56d-9c8d-cfbd84d27e41",
+          "name": "login-V1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.jwttoken.token);",
+                  "}"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            }
+          ],
           "request": {
-            "url": "{{testDataEndpoint}}/item/00073942910051119273",
-            "method": "PUT",
+            "url": {
+              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "030819",
+                  "id": "ssid"
+                },
+                {
+                  "value": "admin",
+                  "id": "username"
+                }
+              ]
+            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -4027,16 +4381,16 @@
                 "description": ""
               },
               {
-                "key": "Authorization",
-                "value": "{{authorization}}",
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
                 "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Grejsvig Test\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"test\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.telefon\",\"value\":\"0100000000\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-02-24 00:00:00:000\"}\n  ]}\n}"
+              "raw": "{\"credential\":{\n    \"password\":\"admin\"\n}\n}"
             },
-            "description": ""
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
           },
           "response": []
         }
