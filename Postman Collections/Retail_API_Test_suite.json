@@ -35,14 +35,13 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "console.log(\"Health check\");",
-                  ""
+                  "console.log(\"Health check\");"
                 ]
               }
             }
           ],
           "request": {
-            "url": "{{server}}{{path}}/health?language=sv&apikey={{apikey}}",
+            "url": "{{server}}{{path}}/health?language={{language}}&apikey={{apikey}}",
             "method": "GET",
             "header": [],
             "body": {},
