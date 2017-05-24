@@ -3427,7 +3427,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"{{itemId}}\",\r\n\t         \"timeStamp\": \"{{currentTimeStmp}}\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"{{itemId}}\",\r\n\t         \"timeStamp\": \"{{currentTimeStmp}}\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"test@postnord.com\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
           },
@@ -4341,12 +4341,17 @@
           ],
           "request": {
             "url": {
-              "raw": "{{server}}{{path}}/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
+              "raw": "{{server}}/retailapi/wsservices/rest/retail/v1/login/:ssid/:username?language={{language}}&apikey={{apikey}}",
               "auth": {},
               "host": [
-                "{{server}}{{path}}"
+                "{{server}}"
               ],
               "path": [
+                "retailapi",
+                "wsservices",
+                "rest",
+                "retail",
+                "v1",
                 "login",
                 ":ssid",
                 ":username"
