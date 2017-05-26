@@ -3556,6 +3556,93 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "1230022-45a85144-8b84-380e-de92-a998aeeb6d74",
+          "name": "items Deliveritem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{server}}{{path}}/items/:itemid?context=delivery&language={{language}}&apikey={{apikey}}",
+              "auth": {},
+              "host": [
+                "{{server}}{{path}}"
+              ],
+              "path": [
+                "items",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "context",
+                  "value": "delivery"
+                },
+                {
+                  "key": "language",
+                  "value": "{{language}}"
+                },
+                {
+                  "key": "apikey",
+                  "value": "{{apikey}}"
+                }
+              ],
+              "variable": [
+                {
+                  "value": "{{itemId}}",
+                  "id": "itemid"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{authorization}}",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
         }
       ]
     },
