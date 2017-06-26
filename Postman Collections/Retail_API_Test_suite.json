@@ -249,7 +249,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"AP\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n\t{\"attributes\":[ \n\t  {\"key\":\"produktkod\",\"value\":\"19\"},\n\t  {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n\t  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n\t  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n\t  {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n\t  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n\t  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n\t  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n\t  ]}\n}"
             },
             "description": ""
           },
