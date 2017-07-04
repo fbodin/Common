@@ -535,7 +535,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n\t\t      \"deliveries\": [\r\n\t\t                  {\r\n\t\t            \"itemId\": \"00000000014SE\",\t\r\n\t\t            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t            \"additionalRequestResponse\":             {\r\n\t\t               \"id\": 2,\r\n\t\t               \"response\": \"true\"\r\n\t\t            }\r\n\t\t         }\r\n\t\t      ],\r\n\t\t      \"identifications\":       [\r\n\t\t            {\r\n\t\t            \"idNumber\": \"7007046696\",\r\n\t\t            \"identificationTypeId\": 1,\r\n\t\t            \"courier\": false\r\n\t\t         }\r\n\t\t      ]\r\n\t\t   }\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n\t\t\t\"deliveries\": [\r\n\t\t\t    {\r\n\t\t\t    \t\"itemId\": \"00000000014SE\",\t\r\n\t\t\t        \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t\t        \"additionalRequestResponse\":             {\r\n\t\t\t        \t\"id\": 2,\r\n\t\t\t            \t\"response\": \"true\"\r\n\t\t\t            }\r\n\t\t\t\t}\r\n\t\t      ],\r\n\t\t      \"identifications\":       [\r\n\t\t            {\r\n\t\t            \"idNumber\": \"7007046696\",\r\n\t\t            \"identificationTypeId\": 1,\r\n\t\t            \"courier\": false\r\n\t\t         }\r\n\t\t      ]\r\n\t\t   }\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
             },
             "description": "Events on items"
           },
