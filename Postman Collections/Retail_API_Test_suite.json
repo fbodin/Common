@@ -249,7 +249,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n\t{\"attributes\":[ \n\t  {\"key\":\"produktkod\",\"value\":\"19\"},\n\t  {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n\t  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n\t  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n\t  {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n\t  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n\t  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n\t  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n\t  ]}\n}"
+              "raw": "{\"testitem\":\n\t{\"attributes\":[ \n\t  {\"key\":\"produktkod\",\"value\":\"19\"},\n\t  {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n\t  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n\t  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n\t  {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n\t  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n\t  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n\t  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n\t  ]}\n}"
             },
             "description": ""
           },
@@ -5531,6 +5531,59 @@
             "body": {
               "mode": "raw",
               "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-d6e60cea-dfa5-1707-9c04-c455fa053d57",
+          "name": "events wronglysorted",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "description": "Events on items"
           },
