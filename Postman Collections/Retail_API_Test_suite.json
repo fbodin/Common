@@ -4029,7 +4029,62 @@
           "_postman_id": "1230022-80ad3e7a-2fbb-b823-75ab-a8ded96f0f59",
           "name": "CEM/NTT",
           "request": {
-            "url": "https://api2.postnord.com/rest/shipment/v1/trackandtrace/findByIdentifier.json?id=00373500454553386959&locale=en&apikey=91f146137449a4068b3523a80b13609c",
+            "url": {
+              "raw": "https://api2.postnord.com/rest/shipment/v4/trackandtrace/findByIdentifier.json?id=00373400306993535354&locale=en&apikey=91f146137449a4068b3523a80b13609c&consumerId=0e324149-c4ca-429b-966e-5ca10d41fcf1&channelId=CustomerView&apikey=04e097dd5a88bafa40abc79c10ab1bf2",
+              "protocol": "https",
+              "auth": {},
+              "host": [
+                "api2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "shipment",
+                "v4",
+                "trackandtrace",
+                "findByIdentifier.json"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "00373400306993535354",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "locale",
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "apikey",
+                  "value": "91f146137449a4068b3523a80b13609c",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "consumerId",
+                  "value": "0e324149-c4ca-429b-966e-5ca10d41fcf1",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "channelId",
+                  "value": "CustomerView",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "apikey",
+                  "value": "04e097dd5a88bafa40abc79c10ab1bf2",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [],
             "body": {},
