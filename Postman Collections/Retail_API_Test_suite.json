@@ -96,21 +96,27 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": [
                 {
-                  "value": "210478",
-                  "id": "ssid"
+                  "description": "",
+                  "key": "ssid",
+                  "value": "210478"
                 },
                 {
-                  "value": "pelle10",
-                  "id": "username"
+                  "description": "",
+                  "key": "username",
+                  "value": "pelle10"
                 }
               ]
             },
