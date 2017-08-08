@@ -314,21 +314,28 @@
               "query": [
                 {
                   "key": "context",
-                  "value": "arrival"
+                  "value": "arrival",
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true,
+                  "description": ""
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "description": "",
+                  "key": "itemid",
+                  "value": "00373739317328073952"
                 }
               ]
             },
