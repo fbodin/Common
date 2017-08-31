@@ -4125,7 +4125,7 @@
           "name": "CEM/NTT",
           "request": {
             "url": {
-              "raw": "https://api2.postnord.com/rest/shipment/v1/trackandtrace/findByIdentifier.json?id=00000000014SE&locale=en&apikey=91f146137449a4068b3523a80b13609c",
+              "raw": "https://api2.postnord.com/rest/shipment/v4/trackandtrace/findByIdentifier.json?id=00000000014SE&locale=en&apikey=91f146137449a4068b3523a80b13609c",
               "protocol": "https",
               "auth": {},
               "host": [
@@ -4136,7 +4136,7 @@
               "path": [
                 "rest",
                 "shipment",
-                "v1",
+                "v4",
                 "trackandtrace",
                 "findByIdentifier.json"
               ],
