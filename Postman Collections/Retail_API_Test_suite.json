@@ -198,8 +198,9 @@
               "query": [],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "description": "",
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -7202,6 +7203,62 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "1230022-3fa617d3-2bd6-fe86-d79b-3941e71aa175",
+      "name": "Delete testitem copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "if(responseCode.code != 200){",
+              "    console.log(\"failed\");",
+              "    postman.setNextRequest(null);",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+          "auth": {},
+          "host": [
+            "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+          ],
+          "path": [
+            "item",
+            ":itemid"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "value": "00000000014SE",
+              "id": "itemid"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+            "description": ""
+          },
+          {
+            "key": "Device-ID",
+            "value": "{{deviceid}}",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
