@@ -1020,7 +1020,31 @@
             }
           ],
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=da&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "countrycodes"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "da",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
