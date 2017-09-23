@@ -280,7 +280,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n\t{\"attributes\":[ \n\t  {\"key\":\"produktkod\",\"value\":\"19\"},\n\t  {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n\t  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n\t  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n\t  {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n\t  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n\t  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n\t  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n\t  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n\t  ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"98\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"}\n    ]}\n}"
             },
             "description": ""
           },
@@ -633,6 +633,84 @@
             "body": {
               "mode": "raw",
               "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n            \"additionalRequestResponse\": {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n            }\r\n        }\r\n        ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             },    \r\n            {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 4,\r\n                \"courier\": true\r\n             }  \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-b10b26d7-cf07-7f35-9c0e-2f031bb0a458",
+          "name": "events delivery TEST",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "postman.setNextRequest(\"Health end\");",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\":{\"customersessions\":[\r\n    {\"deliveries\":{\"deliveries\":[\r\n        {\"itemId\":\"CK020009349GB\",\"timeStamp\":\"2017-09-21T13:42:32+0200\"}]\r\n        ,\"identifications\":[\r\n            {\"courier\":false,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"5811192656\",\"identificationTypeId\":1}]\r\n},\"id\":\"1\"}]}}\r\n"
             },
             "description": "Events on items"
           },
@@ -1021,7 +1099,7 @@
           ],
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=da&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/countrycodes?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "auth": {},
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
@@ -1032,7 +1110,7 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "da",
+                  "value": "sv",
                   "equals": true,
                   "description": ""
                 },
@@ -5939,7 +6017,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"jp@jknowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "description": "Events on items"
           },
