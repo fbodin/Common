@@ -640,7 +640,7 @@
         },
         {
           "_postman_id": "1230022-b10b26d7-cf07-7f35-9c0e-2f031bb0a458",
-          "name": "events delivery TEST",
+          "name": "events delivery empty error message",
           "event": [
             {
               "listen": "test",
@@ -710,7 +710,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\":{\"customersessions\":[\r\n    {\"deliveries\":{\"deliveries\":[\r\n        {\"itemId\":\"CK020009349GB\",\"timeStamp\":\"2017-09-21T13:42:32+0200\"}]\r\n        ,\"identifications\":[\r\n            {\"courier\":false,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"5811192656\",\"identificationTypeId\":1}]\r\n},\"id\":\"1\"}]}}\r\n"
+              "raw": "{\"eventList\":\r\n{\"customersessions\":[\r\n    {\"deliveries\":{\"deliveries\":[\r\n        {\"itemId\":\"CK020009349GB\",\"timeStamp\":\"2017-09-21T13:42:32+0200\"}]\r\n        ,\"identifications\":[\r\n            {\"courier\":false,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"9304150049\",\"identificationTypeId\":4},\r\n            {\"courier\":true,\"idNumber\":\"5811192656\",\"identificationTypeId\":1}]\r\n}\r\n,\"id\":\"1\"}]}}\r\n"
             },
             "description": "Events on items"
           },
@@ -7490,6 +7490,65 @@
           "name": "Search",
           "request": {
             "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:Jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-795a685d-6969-cb31-6bf9-3a23ef84817d",
+          "name": "Search copy",
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=event&query=recipientname:Jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "event",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "query",
+                  "value": "recipientname:Jörgen",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
