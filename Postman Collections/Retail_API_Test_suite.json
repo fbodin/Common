@@ -548,11 +548,6 @@
                 "key": "Device-ID",
                 "value": "{{deviceid}}",
                 "description": ""
-              },
-              {
-                "key": "itemid",
-                "value": "00000000014SE",
-                "description": ""
               }
             ],
             "body": {},
