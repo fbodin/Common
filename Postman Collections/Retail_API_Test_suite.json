@@ -2563,7 +2563,7 @@
         },
         {
           "_postman_id": "1230022-46c689ea-a374-5e79-a704-c2c1e5cec459",
-          "name": "events checkout copy",
+          "name": "events checkout multi",
           "event": [
             {
               "listen": "test",
