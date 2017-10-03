@@ -458,6 +458,89 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-514e46f0-df12-7f9c-ebe1-b218899fa3b9",
+          "name": "items filter:arrived",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/arrived?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "items",
+                "arrived"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc",
+                "description": ""
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-df5c8a2b-9d8f-40ec-8a3c-5917d8e0128e",
           "name": "items delievry",
           "event": [
@@ -3865,7 +3948,7 @@
         },
         {
           "_postman_id": "1230022-8defaf26-d990-85ad-8f5a-08da30c01a6c",
-          "name": "events handled deliverybooking handover to driver",
+          "name": "events handover to driver",
           "event": [
             {
               "listen": "test",
@@ -3934,7 +4017,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"handoverToDriverEvents\": [\r\n\t    \t{\r\n\t        \t\"itemId\": \"00000000014SEXX\",\r\n\t        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t    \t}\r\n\t\t]\r\n\t}] \r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"handoverToDriverEvents\": [\r\n\t    \t{\r\n\t        \t\"itemId\": \"00000000014SE\",\r\n\t        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t    \t}\r\n\t\t]\r\n\t}] \r\n}}"
             },
             "description": "Events on items"
           },
@@ -7727,7 +7810,43 @@
           "_postman_id": "1230022-8dcce9ff-47c3-3713-3e0a-6e890f702420",
           "name": "Search",
           "request": {
-            "url": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:Jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:tasd&language=en&Content-Type=application/json;charset=UTF-8",
+              "auth": {},
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "item",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "query",
+                  "value": "recipientname:tasd",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "GET",
             "header": [
               {
@@ -7747,11 +7866,11 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-795a685d-6969-cb31-6bf9-3a23ef84817d",
-          "name": "Search copy",
+          "_postman_id": "1230022-3173926c-107e-03ab-b7b0-b0db3b20b20a",
+          "name": "Search event",
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=event&query=recipientname:Jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=event&query=itemid:00000000014SE&language=en&Content-Type=application/json;charset=UTF-8",
               "auth": {},
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
@@ -7768,7 +7887,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "recipientname:Jörgen",
+                  "value": "itemid:00000000014SE",
                   "equals": true,
                   "description": ""
                 },
