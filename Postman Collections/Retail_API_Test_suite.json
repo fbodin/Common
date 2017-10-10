@@ -1419,31 +1419,6 @@
           "name": "items",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "if(responseCode.code==200){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Delivery approved\");",
-                  "    if(jsonData.itemList.items.delivery.signonglass){",
-                  "        console.log(\"signonglass true\");",
-                  "        postman.setNextRequest(\"events delivery Sign On Glass\");",
-                  "    }",
-                  "}else if(responseCode.code==400){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Got response \"+responseBody);",
-                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
-                  "}",
-                  "",
-                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
-                  ""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1484,7 +1459,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "3758"
+                  "value": "4280"
                 }
               ]
             },
