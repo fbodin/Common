@@ -653,7 +653,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00148OPRMC"
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -8011,7 +8011,7 @@
           "name": "Search",
           "request": {
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:tasd&language=en&Content-Type=application/json;charset=UTF-8",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=item&query=recipientname:jörgen&language=en&Content-Type=application/json;charset=UTF-8",
               "auth": {},
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
@@ -8028,7 +8028,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "recipientname:tasd",
+                  "value": "recipientname:jörgen",
                   "equals": true,
                   "description": ""
                 },
