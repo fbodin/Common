@@ -192,6 +192,76 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-f15643ae-fef2-6d20-1189-bff4510b36da",
+          "name": "me",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  " "
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/me?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "me"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-fd01ba79-2643-728d-de83-70e577b22c24",
           "name": "Delete testitem",
           "event": [
@@ -1448,25 +1518,24 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items?filter=pastlastduedate&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/pastlastduedate?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
               "path": [
-                "items"
+                "items",
+                "pastlastduedate"
               ],
               "query": [
                 {
-                  "key": "filter",
-                  "value": "pastlastduedate"
-                },
-                {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ]
             },
@@ -6147,7 +6216,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientAppOS\":\"Android\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6376,7 +6445,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"jp@jnowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9413,7 +9482,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=event&query=accountday:20171026&language=en&Content-Type=application/json;charset=UTF-8",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/search?type=event&query=accountday:20171031&language=en&Content-Type=application/json;charset=UTF-8",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
@@ -9428,7 +9497,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "accountday:20171026",
+                  "value": "accountday:20171031",
                   "equals": true
                 },
                 {
