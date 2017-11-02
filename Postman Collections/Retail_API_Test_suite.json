@@ -3649,8 +3649,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -3790,15 +3790,18 @@
               "query": [
                 {
                   "key": "filter",
-                  "value": "deliveryBooking"
+                  "value": "deliveryBooking",
+                  "equals": true
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ]
             },
@@ -3934,7 +3937,7 @@
                 "exec": [
                   "//2017-06-15 00:00:00:000\r",
                   "var date = new Date();\r",
-                  "var str = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+' 00:00:00:000';\r",
+                  "var str = date.getFullYear()+'-'+(date.getMonth()+1)+'-0'+date.getDate()+' 00:00:00:000';\r",
                   "postman.setEnvironmentVariable(\"deliveryBookingDate\", str);\r",
                   "\r",
                   "\r",
@@ -3970,8 +3973,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
