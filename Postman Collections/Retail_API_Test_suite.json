@@ -82,11 +82,12 @@
             "header": [],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
               ],
               "path": [
+                "manage",
                 "health"
               ],
               "query": [
