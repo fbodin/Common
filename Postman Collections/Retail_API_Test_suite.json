@@ -6308,6 +6308,65 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-24573d6f-02a0-4793-06ca-d0afe54bb820",
+          "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-d95a19da-f02c-7bc4-0f2c-07363574ffa6",
           "name": "items Receiveitem",
           "event": [
@@ -6560,6 +6619,95 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-92fa7027-4c1f-b247-2243-717c041fb5cb",
+          "name": "print pdf",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Data to print \"+responseObj.printresponse.data);",
+                  "    //var decrypt = CryptoJS.enc.Base64.parse(responseObj.printresponse.data);",
+                  "    //console.log(\"------------------------------------\");",
+                  "    //console.log( decrypt.toString(CryptoJS.enc.Utf8));",
+                  "    postman.setEnvironmentVariable(\"printData\", responseObj.printresponse.data);",
+                  "}",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/print/:printid/pdf?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "print",
+                ":printid",
+                "pdf"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "sv",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "printid",
+                  "value": "{{printid}}"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-5db979ce-4977-fa08-cc52-9c13fd1d84ed",
           "name": "ZPL viewer",
           "request": {
@@ -6663,65 +6811,6 @@
               ]
             },
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1230022-24573d6f-02a0-4793-06ca-d0afe54bb820",
-          "name": "Add testitem",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"failed\");",
-                  "    postman.setNextRequest(null);",
-                  "}"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0ODc3MzkzNzIsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.2ZskVJtUsarYBEzFWqDJ9esZoCkwx1LjQwu82PVM4yc"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
-            },
-            "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
-              "host": [
-                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
-              ],
-              "path": [
-                "item",
-                ":itemid"
-              ],
-              "variable": [
-                {
-                  "key": "itemid",
-                  "value": "00000000014SE"
-                }
-              ]
-            },
-            "description": ""
           },
           "response": []
         }
