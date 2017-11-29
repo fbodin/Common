@@ -290,6 +290,11 @@
               {
                 "key": "Device-ID",
                 "value": "{{deviceid}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
               }
             ],
             "body": {},
@@ -350,7 +355,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"UN\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"notificationCode\",\"value\":\"9797\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"notificationCode\",\"value\":\"9797\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -1533,6 +1538,85 @@
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362",
                   "equals": true
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-00c97fd7-495f-b5cf-105c-63a81671e21f",
+          "name": "items arrived",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code==200){",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    console.log(\"Delivery approved\");",
+                  "    if(jsonData.itemList.items.delivery.signonglass){",
+                  "        console.log(\"signonglass true\");",
+                  "        postman.setNextRequest(\"events delivery Sign On Glass\");",
+                  "    }",
+                  "}else if(responseCode.code==400){",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTE5Mjk0NjUsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6jrJR45F6rRYtYsoDLyq1aFSAkE8lDTCw72zAHXqLcw"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/items/arrived?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "items",
+                "arrived"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
             },
