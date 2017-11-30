@@ -710,7 +710,8 @@
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", \"2016-12-13T16:25:39.611+02:00\");"
                 ]
               }
             },
@@ -9876,7 +9877,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "1j64bdp0rkae"
+                  "value": "1j64ooc7yq3r"
                 }
               ]
             },
@@ -9953,7 +9954,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "1j64bdp0rkae"
+                  "value": "1j64ooc7yq3r"
                 }
               ]
             },
