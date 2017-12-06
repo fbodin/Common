@@ -6620,6 +6620,84 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-c9081612-dbee-3c0b-cddd-7d77c39285c1",
+          "name": "events recieveitem copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions.printid);",
+                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions.printid);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTI1Mzg5MjEsImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5aIocYP0d7v4MlCe43WVViMQEvAIzqtBwiYuk_sDAc8"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"mappedReceivedItemEvents\":[\r\n\t\t     {\r\n\t\t     \t \"newItemId\": \"00000000014SE\", \r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"productCode\":\"19\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t         \"emailAddresses\":          [\r\n\t\t         \t\"jp@jnowledge.se\"\r\n\t\t         ]\r\n\t\t     }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v1s/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v1s/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-088561ff-3887-0ee0-aa43-5fc7dbf00495",
           "name": "print zpl",
           "event": [
