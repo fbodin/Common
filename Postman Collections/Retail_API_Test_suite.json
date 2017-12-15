@@ -81,8 +81,7 @@
             "header": [
               {
                 "key": "X-Request-ID",
-                "value": "jope_33",
-                "disabled": true
+                "value": "jope_33"
               },
               {
                 "key": "X-External -Request-ID",
