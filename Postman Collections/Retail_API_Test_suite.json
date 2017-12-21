@@ -356,7 +356,7 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json;charset=UTF-8"
               },
               {
                 "key": "Authorization",
@@ -467,7 +467,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "86512800391SE"
                 }
               ]
             },
@@ -518,7 +518,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"UA879091855SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"AP129886575SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"BM113847092SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"BM114215772SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"AV467463995SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"AP739491857SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"AF838470283SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"86514319678SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"86515654171SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      },\r\n\t\t      {\r\n\t\t         \"itemId\": \"86512800391SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -759,7 +759,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n            \"additionalRequestResponse\": {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n            }\r\n        }\r\n        ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             },    \r\n            {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 4,\r\n                \"courier\": true\r\n             }  \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\r\n    \"eventList\": {\r\n        \"customersessions\": [\r\n            {\r\n                \"deliveries\": {\r\n                    \"identifications\": [\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        },\r\n                        {\r\n                            \"courier\": false,\r\n                            \"idNumber\": \"8206084132\",\r\n                            \"identificationTypeId\": 1\r\n                        }\r\n                    ],\r\n                    \"deliveries\": [\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.150+01:00\",\r\n                            \"itemId\": \"UA879091855SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.153+01:00\",\r\n                            \"itemId\": \"AP129886575SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.153+01:00\",\r\n                            \"itemId\": \"BM113847092SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.154+01:00\",\r\n                            \"itemId\": \"BM114215772SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.154+01:00\",\r\n                            \"itemId\": \"AV467463995SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.154+01:00\",\r\n                            \"itemId\": \"AP739491857SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.154+01:00\",\r\n                            \"itemId\": \"AF838470283SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.155+01:00\",\r\n                            \"itemId\": \"86514319678SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.155+01:00\",\r\n                            \"itemId\": \"86515654171SE\"\r\n                        },\r\n                        {\r\n                            \"timeStamp\": \"2017-12-21T10:07:24.155+01:00\",\r\n                            \"itemId\": \"86512800391SE\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1567,6 +1567,7 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "19a5f27b-c569-4939-9980-689d0f98f651",
                 "type": "text/javascript",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
@@ -1579,6 +1580,7 @@
             {
               "listen": "test",
               "script": {
+                "id": "e7653048-7924-4edf-b776-4870ec64e764",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
@@ -1586,7 +1588,7 @@
                   "if(responseCode.code==200){",
                   "    var jsonData = JSON.parse(responseBody);",
                   "    console.log(\"Delivery approved\");",
-                  "    if(jsonData.itemList.items.delivery.signonglass){",
+                  "    if(jsonData.itemList.items[0].delivery.signonglass){",
                   "        console.log(\"signonglass true\");",
                   "        postman.setNextRequest(\"events delivery Sign On Glass\");",
                   "    }",
