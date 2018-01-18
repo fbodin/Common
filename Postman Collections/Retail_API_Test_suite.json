@@ -607,7 +607,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t\t{\r\n\t\t\t\"id\":\"1\",\t\r\n\t\t\t\"arrivals\":    [\r\n\t\t\t      {\r\n\t\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t\t         \"shelfNo\": \"SEPARLA1\",\r\n\t\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t\t      }\r\n\t\t\t\t]\r\n\t\t}]\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t\t{\r\n\t\t\t\"id\":\"1\",\t\r\n\t\t\t\"arrivals\":    [\r\n\t\t\t      {\r\n\t\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t\t         \"shelfNo\": \"A11\",\r\n\t\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t\t      }\r\n\t\t\t\t]\r\n\t\t}]\r\n\t}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -795,7 +795,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "19992"
+                  "value": "0028ABCDEF"
                 }
               ]
             },
@@ -810,10 +810,11 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "e6e03a1e-9201-4c9d-a617-c90ce7df98a8",
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", \"2016-12-13T16:25:39.611+02:00\");"
                 ]
               }
@@ -821,6 +822,7 @@
             {
               "listen": "test",
               "script": {
+                "id": "b0cb4dba-b504-4cee-bf7f-5f62ba5339d1",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
@@ -882,16 +884,18 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "4ca990cb-1197-44e8-9fb4-98cfcc8a4ef9",
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "dbdbb073-10a5-4e46-8d98-69fd89646c82",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
@@ -919,7 +923,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n        }\r\n        ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"0028ABCDEF\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n        }\r\n        ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
