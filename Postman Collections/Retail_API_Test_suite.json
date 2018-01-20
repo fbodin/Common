@@ -779,23 +779,23 @@
                 {
                   "key": "context",
                   "value": "delivery",
-                  "type": "text"
+                  "equals": true
                 },
                 {
                   "key": "language",
                   "value": "en",
-                  "type": "text"
+                  "equals": true
                 },
                 {
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362",
-                  "type": "text"
+                  "equals": true
                 }
               ],
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "41988"
                 }
               ]
             },
