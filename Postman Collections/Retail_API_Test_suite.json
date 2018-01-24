@@ -166,7 +166,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"1.1.1\",\n      \"clientAppPlatform\":\"IOS\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}"
+              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"1.1.1\",\n      \"clientAppPlatform\":\"IOS\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6543,7 +6543,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -9852,7 +9852,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday:20171203&language=en&Content-Type=application/json;charset=UTF-8",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday:20180122&language=en&Content-Type=application/json;charset=UTF-8",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -9867,7 +9867,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "accountday:20171203",
+                  "value": "accountday:20180122",
                   "equals": true
                 },
                 {
@@ -10070,7 +10070,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "btp4s7wmqdw7sb"
+                  "value": "btvws6yp16gqin"
                 }
               ]
             },
