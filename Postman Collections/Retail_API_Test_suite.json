@@ -166,7 +166,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"1.1.1\",\n      \"clientAppPlatform\":\"IOS\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}\n"
+              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
