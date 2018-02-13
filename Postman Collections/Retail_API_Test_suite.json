@@ -3999,16 +3999,18 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "49740ea4-b252-4bd6-8329-3bb781eed504",
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "48b14183-9a4b-4d85-a098-b9460d4694b9",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
@@ -4148,7 +4150,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
                 ]
               }
             },
@@ -4549,16 +4551,18 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "e4e1ce69-2c70-4232-a847-dbebe7a6c1eb",
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\",  (new Date()).toISOString());"
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "e821490e-182a-4cc0-85fe-741d21251984",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
