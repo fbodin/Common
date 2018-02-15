@@ -153,7 +153,7 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json;charset=UTF-8"
+                "value": "application/json"
               },
               {
                 "key": "Device-ID",
@@ -161,7 +161,8 @@
               },
               {
                 "key": "X-Request-ID",
-                "value": "JOPE_1"
+                "value": "JOPE_1",
+                "disabled": true
               }
             ],
             "body": {
@@ -934,6 +935,80 @@
             "body": {
               "mode": "raw",
               "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"deliveries\":    {\r\n\t\t      \"deliveries\": [\r\n\t\t                  {\r\n\t\t            \"itemId\": \"00000000014SE\",\r\n\t\t            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t            \"additionalRequestResponse\":             {\r\n\t\t               \"id\": 1,\r\n\t\t               \"response\": \"true\"\r\n\t\t            }\r\n\t\t         }\r\n\t\t      ],\r\n\t\t      \"identifications\":       [\r\n\t\t    \t{\r\n\t\t            \"idNumber\": \"9806180031\",\r\n\t\t            \"identificationTypeId\": 1,\r\n\t\t            \"courier\": false\r\n\t\t        }\r\n\t\t      ]\r\n\t\t   }\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-55d882d6-8cac-bc3a-7ff0-f313bf9f76e2",
+          "name": "events delivery -addproductCode",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6f46155c-3c24-4255-9b9a-871ea3a63e84",
+                "type": "text/javascript",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b0cb4dba-b504-4cee-bf7f-5f62ba5339d1",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "postman.setNextRequest(\"Health end\");",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n                \"additionalRequestResponse\":             {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                },\r\n                \"productCode\":24\r\n             }\r\n          ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"9806180031\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
