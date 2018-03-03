@@ -4043,7 +4043,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"{{deliveryBookingDate}}\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2018-03-01 00:00:00:000\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -4393,16 +4393,18 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "d0175fe4-7e69-4ed3-ba46-43031385a561",
                 "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "7ea8324d-f8ab-45a6-96d2-85849cbbef79",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
