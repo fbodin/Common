@@ -1,7 +1,7 @@
 {
   "info": {
-    "name": "Retail API Test suite v2",
     "_postman_id": "1230022-e0f721f6-68d6-9779-8d80-1e20fab56d98",
+    "name": "Retail API Test suite v2",
     "description": "Common scenarios as Collect in store / Retail",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -43,8 +43,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://atapi2.postnord.com/ping-retail",
-            "description": ""
+            "url": "https://atapi2.postnord.com/ping-retail"
           },
           "response": []
         },
@@ -111,8 +110,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -403,8 +401,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -445,7 +442,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n     {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"15395\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"notificationCode\",\"value\":\"9797\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n     {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"15395\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"notificationCode\",\"value\":\"9797\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -462,8 +459,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -597,7 +593,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t\t{\r\n\t\t\t\"id\":\"1\",\t\r\n\t\t\t\"arrivals\":    [\r\n\t\t\t      {\r\n\t\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t\t         \"shelfNo\": \"A12\",\r\n\t\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t\t      }\r\n\t\t\t\t]\r\n\t\t}]\r\n\t}\r\n}"
+              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t\t{\r\n\t\t\t\"id\":\"1\",\t\r\n\t\t\t\"arrivals\":    [\r\n\t\t\t      {\r\n\t\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t\t         \"shelfNo\": \"A11\",\r\n\t\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t\t      }\r\n\t\t\t\t]\r\n\t\t}]\r\n\t}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1364,8 +1360,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -1432,8 +1427,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -2272,8 +2266,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -2635,8 +2628,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -2703,8 +2695,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -2840,8 +2831,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -2984,8 +2974,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -3425,8 +3414,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -3491,8 +3479,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -3636,8 +3623,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -3872,8 +3858,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4004,8 +3989,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4060,8 +4044,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4325,8 +4308,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4381,8 +4363,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4744,8 +4725,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -4899,8 +4879,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -4923,8 +4902,7 @@
               "mode": "raw",
               "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"CiS\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Inge\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Hedegaardsvej 88\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"6300\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"Åndalsnes\"},\n  {\"key\":\"mottagaradress.landskod\",\"value\":\"NO\"},\n  {\"key\":\"mottagaradress.telefon\",\"value\":\"0100000000\"},\n  {\"key\":\"lovatSistaLiggedatum\",\"value\":\"2017-09-12 00:00:00:000\"}\n  ]}\n}"
             },
-            "url": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/00000000014SE",
-            "description": ""
+            "url": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/00000000014SE"
           },
           "response": []
         },
@@ -5642,8 +5620,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -6436,8 +6413,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -6651,8 +6627,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -6721,8 +6696,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -6858,8 +6832,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -6900,7 +6873,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"13\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson2\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -6917,8 +6890,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -7062,7 +7034,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"24\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\": [\r\n\t         \t\"jp@jknowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\": [\r\n\t         \t\"jp@jknowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -7251,8 +7223,7 @@
                   "id": "printid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -7340,8 +7311,7 @@
                   "value": "{{printid}}"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -7360,8 +7330,7 @@
               "mode": "raw",
               "raw": "{{printData}}"
             },
-            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x8/0/",
-            "description": ""
+            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x8/0/"
           },
           "response": []
         },
@@ -7512,8 +7481,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -7644,8 +7612,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -7683,8 +7650,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8363,8 +8329,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8495,8 +8460,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8542,8 +8506,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8596,8 +8559,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8650,8 +8612,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8701,8 +8662,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8752,8 +8712,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8796,8 +8755,7 @@
                   "value": "00000000014SE"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         }
@@ -8861,8 +8819,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -8993,8 +8950,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -9032,8 +8988,7 @@
                   "id": "itemid"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -9320,8 +9275,7 @@
                       "value": "00000000014SE"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "response": []
             },
@@ -9583,8 +9537,7 @@
                       "value": "00000000014SE"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "response": []
             },
@@ -9719,8 +9672,7 @@
                       "value": "00000000014SE"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "response": []
             },
@@ -9778,8 +9730,7 @@
                       "value": "00000000014SE"
                     }
                   ]
-                },
-                "description": ""
+                }
               },
               "response": []
             },
@@ -10053,8 +10004,7 @@
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -10189,8 +10139,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -10240,8 +10189,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -10291,8 +10239,7 @@
                   "equals": true
                 }
               ]
-            },
-            "description": ""
+            }
           },
           "response": []
         },
@@ -10570,8 +10517,7 @@
               "value": "00000000014SE"
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -10629,8 +10575,7 @@
               "value": "00000000014SE"
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     }
