@@ -1561,7 +1561,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/countrycodes?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -1571,7 +1571,76 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "sv",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Get country and country codes"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-d13f8191-876e-9543-190d-1ff21377a8fb",
+          "name": "countrycodes copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "console.log(\"Got response \"+responseBody);",
+                  "if(responseCode.code==200){",
+                  "    tests[\"Check no of countries\"] = jsonData.countries >=1;",
+                  "    if(jsonData.countries.countrycodes){",
+                  "        tests[\"Check no of countries\"] = jsonData.countries.countrycodes.length >=1;",
+                  "    }",
+                  "} else if(responseCode.code==400) {",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "ETag",
+                "value": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/countrycodes?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "countrycodes"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
                   "equals": true
                 },
                 {
