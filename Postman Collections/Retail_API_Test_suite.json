@@ -350,6 +350,76 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-58014344-cdf3-ae96-7cf4-d0852709509c",
+          "name": "estimatedArrivals",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  " "
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/me?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "me"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-fd01ba79-2643-728d-de83-70e577b22c24",
           "name": "Delete testitem",
           "event": [
