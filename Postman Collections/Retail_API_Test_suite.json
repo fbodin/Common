@@ -10657,7 +10657,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00000000014SE\",\r\n             \"shelfNo\": \"A11\",\r\n             \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n          }\r\n      ]\r\n  }]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid",
@@ -10671,7 +10671,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "btvws6yp16gqin"
+                  "value": "1j71krh674ca"
                 }
               ]
             },
