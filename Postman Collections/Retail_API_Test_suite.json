@@ -7113,6 +7113,64 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-1c9b2369-af8b-46e6-8448-0c9d0caa1c5e",
+          "name": "Add testitem Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"24\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"Saman.Hadiani@postnord.com\"}\n    ]}\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-d95a19da-f02c-7bc4-0f2c-07363574ffa6",
           "name": "items Receiveitem",
           "event": [
