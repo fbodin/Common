@@ -521,7 +521,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n     {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"15395\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"notificationCode\",\"value\":\"9797\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -672,7 +672,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t\t{\r\n\t\t\t\"id\":\"1\",\t\r\n\t\t\t\"arrivals\":    [\r\n\t\t\t      {\r\n\t\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t\t         \"shelfNo\": \"A11\",\r\n\t\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t\t      }\r\n\t\t\t\t]\r\n\t\t}]\r\n\t}\r\n}"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"arrivals\":    [\r\n            {\r\n               \"itemId\": \"93062715282SE\",\r\n               \"shelfNo\": \"A11\",\r\n               \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -866,7 +866,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "0014"
+                  "value": "2653LBNIN1"
                 }
               ]
             },
