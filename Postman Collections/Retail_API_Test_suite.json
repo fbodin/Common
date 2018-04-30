@@ -2354,6 +2354,72 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-3d124c7e-49b2-3a26-4ad3-7837e2acf175",
+          "name": "estimatedArrivalTestData",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "46d70679-3f99-4ec4-9a6d-800a6b17e374",
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "8bac9e4a-e665-42bb-88af-7314cf112eff",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"estimatedArrival\":\r\n{\r\n\"losgaende\":\"1\",\r\n\"produkt\":\"Okänd\",\r\n\"tillSsid\":\"210478\",\r\n\"datum\":\"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"tidspartnyckel\":\"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"typ\":\"9\",\r\n\"kvittenslisteId\":\"PC22351211011\",\r\n\"franSsid\":\"156531\",\r\n\"skapad\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"kvlistaStatus\":\"9\",\r\n\"motKontaktperson\":\"LUND\",\r\n\"avsName\":\"PostNord Lund Tellusgatan\",\r\n\"avsAdress\":\"Tellusgatan 15\",\r\n\"avsPostNumber\":\"22457\",\r\n\"avsOrt\":\"LUND\",\r\n\"motName\":\"Coop Konsum Mårtenstorget\",\r\n\"motAdress\":\"Mårtenstorget 11\",\r\n\"motPostnumber\":\"22351\",\r\n\"motOrt\":\"LUND\",\r\n\"motTel\":null,\r\n\"antalStoraBrev\":\"0\",\r\n\"plombnr\":null,\r\n\"sortid\":\"0\",\r\n\"utskriftstyp\":\"0\"\r\n}\r\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/estimatedArrivals/:itemId",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "estimatedArrivals",
+                ":itemId"
+              ],
+              "variable": [
+                {
+                  "key": "itemId",
+                  "value": "00000000014SE"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-58014344-cdf3-ae96-7cf4-d0852709509c",
           "name": "estimatedArrivals",
           "event": [
