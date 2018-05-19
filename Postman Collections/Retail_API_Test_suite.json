@@ -7320,6 +7320,93 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-1ad1076d-6461-f60a-15a5-7b49d0ea28d0",
+          "name": "items Receiveitem copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=receive&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "items",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "context",
+                  "value": "receive",
+                  "equals": true
+                },
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-13718511-ed2c-3002-7e14-0133c3a1b8f8",
           "name": "events recieveitem",
           "event": [
