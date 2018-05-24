@@ -388,7 +388,7 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json;charset=UTF-8"
               },
               {
                 "key": "Device-ID",
