@@ -120,78 +120,6 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-568f9de6-b887-4adb-b4e4-a11eb0fe587a",
-          "name": "Health Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Health check\");"
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
-                  "if(responseCode.code != 200){",
-                  "    postman.setNextRequest(null);",
-                  "}"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "X-Request-ID",
-                "value": "JOPE_55"
-              },
-              {
-                "key": "X-External -Request-ID",
-                "value": "test_ext_1",
-                "disabled": true
-              },
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g",
-                "disabled": true
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://atapi2.postnord.com/retail/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com"
-              ],
-              "path": [
-                "retail",
-                "health"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en",
-                  "equals": true
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362",
-                  "equals": true
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
           "_postman_id": "1230022-b12912cd-6906-22b0-6149-a4ca7b2a9b2d",
           "name": "login-V2",
           "event": [
@@ -274,83 +202,6 @@
                 {
                   "key": "username",
                   "value": "pelle10"
-                }
-              ]
-            },
-            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "1230022-3c44088a-d224-5f1a-0bf2-8f3c1e5f8f53",
-          "name": "CapabilityLoggedInUser",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "570883f2-4362-4afd-a295-cb4008abc1c3",
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Login using ssid: \"+data.ssid);",
-                  "console.log(\"            user: \"+data.user);"
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "8748999e-f050-4e59-a1e8-a788f6de2543",
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              },
-              {
-                "key": "X-Request-ID",
-                "value": "JOPE_1"
-              },
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"credentialCapability\":{\n        \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}"
-            },
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "capability",
-                ""
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en",
-                  "equals": true
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362",
-                  "equals": true
                 }
               ]
             },
@@ -2468,6 +2319,83 @@
               "path": [
                 "items",
                 "forecast"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-3c44088a-d224-5f1a-0bf2-8f3c1e5f8f53",
+          "name": "CapabilityLoggedInUser",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "570883f2-4362-4afd-a295-cb4008abc1c3",
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "8748999e-f050-4e59-a1e8-a788f6de2543",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MTMwNzQ4NzksImlzcyI6Imh0dHBzOlwvXC9wYWJsby5wb3N0ZW4uc2UiLCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.5l3o0sGoyDFvwPl1-K01Y1IPC3UWRF8hKAdaYU0On0g"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"credentialCapability\":{\n        \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "capability",
+                ""
               ],
               "query": [
                 {
