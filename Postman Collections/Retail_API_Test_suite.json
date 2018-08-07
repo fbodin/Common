@@ -1362,96 +1362,6 @@
             }
           },
           "response": []
-        },
-        {
-          "_postman_id": "1230022-9bef5e14-8fdd-4a14-a0f6-02822b6a87ce",
-          "name": "login-V2 Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "console.log(\"Login using ssid: \"+data.ssid);",
-                  "console.log(\"            user: \"+data.user);"
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"Login failed\");",
-                  "    postman.setNextRequest(null);",
-                  "} else {",
-                  "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
-                  "}"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              },
-              {
-                "key": "X-Request-ID",
-                "value": "JOPE_1",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}\n"
-            },
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "login",
-                ":ssid",
-                ":username"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en",
-                  "equals": true
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362",
-                  "equals": true
-                }
-              ],
-              "variable": [
-                {
-                  "key": "ssid",
-                  "value": "210478"
-                },
-                {
-                  "key": "username",
-                  "value": "pelle10"
-                }
-              ]
-            },
-            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
-          },
-          "response": []
         }
       ]
     },
@@ -4395,7 +4305,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2018-05-15 00:00:00:000\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2018-08-08 00:00:00:000\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
