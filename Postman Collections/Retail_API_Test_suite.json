@@ -89,7 +89,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ",
                 "disabled": true
               }
             ],
@@ -247,7 +247,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -303,7 +303,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -328,7 +328,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "00000000014DK"
                 }
               ]
             }
@@ -363,7 +363,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -436,7 +436,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -510,7 +510,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -523,7 +523,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"arrivals\":    [\r\n            {\r\n               \"itemId\": \"69179915018SE\",\r\n               \"shelfNo\": \"A11\",\r\n               \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"arrivals\":    [\r\n            {\r\n               \"itemId\": \"69179915018SE\",\r\n               \"shelfNo\": \"A11\",\r\n               \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -593,7 +593,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -674,7 +674,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -765,7 +765,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -839,7 +839,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -852,7 +852,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"productCode\":\"19\",\r\n                \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n             }\r\n          ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"productCode\":\"19\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n             }\r\n          ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -913,7 +913,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -926,7 +926,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n                \"additionalRequestResponse\":             {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                },\r\n                \"productCode\":19\r\n             }\r\n          ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"9806180031\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\":             {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                },\r\n                \"productCode\":19\r\n             }\r\n          ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"9806180031\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -986,7 +986,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -999,7 +999,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"0028ABCDEF\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n        }\r\n        ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"0028ABCDEF\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n        }\r\n        ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1057,7 +1057,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -1129,7 +1129,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -1142,7 +1142,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"1221\",\r\n          \"recipientSurName\":\"12122\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"1221\",\r\n          \"recipientSurName\":\"12122\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1199,7 +1199,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -1212,7 +1212,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1333,7 +1333,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ",
                 "disabled": true
               }
             ],
@@ -1551,7 +1551,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -1620,7 +1620,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -1683,7 +1683,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -1744,7 +1744,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -1757,7 +1757,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1819,7 +1819,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -1888,7 +1888,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -1971,7 +1971,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2027,7 +2027,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2089,7 +2089,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2170,7 +2170,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2234,7 +2234,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -2247,7 +2247,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n   \"returns\":    [\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"returnReason\": \"senderdemand\",\r\n         \"missing\": false,\r\n         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n   ]\r\n}}"
+              "raw": "{\"eventList\": {\r\n   \"returns\":    [\r\n      {\r\n         \"itemId\": \"00000000014SE\",\r\n         \"returnReason\": \"senderdemand\",\r\n         \"missing\": false,\r\n         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n   ]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -2303,7 +2303,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -2316,7 +2316,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"estimatedArrival\":\r\n{\r\n\"losgaende\":\"1\",\r\n\"produkt\":\"Okänd\",\r\n\"tillSsid\":\"210478\",\r\n\"datum\":\"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"tidspartnyckel\":\"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"typ\":\"9\",\r\n\"kvittenslisteId\":\"PC22351211011\",\r\n\"franSsid\":\"156531\",\r\n\"skapad\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\"kvlistaStatus\":\"9\",\r\n\"motKontaktperson\":\"LUND\",\r\n\"avsName\":\"PostNord Lund Tellusgatan\",\r\n\"avsAdress\":\"Tellusgatan 15\",\r\n\"avsPostNumber\":\"22457\",\r\n\"avsOrt\":\"LUND\",\r\n\"motName\":\"Coop Konsum Mårtenstorget\",\r\n\"motAdress\":\"Mårtenstorget 11\",\r\n\"motPostnumber\":\"22351\",\r\n\"motOrt\":\"LUND\",\r\n\"motTel\":null,\r\n\"antalStoraBrev\":\"0\",\r\n\"plombnr\":null,\r\n\"sortid\":\"0\",\r\n\"utskriftstyp\":\"0\"\r\n}\r\n}"
+              "raw": "{\"estimatedArrival\":\r\n{\r\n\"losgaende\":\"1\",\r\n\"produkt\":\"Okänd\",\r\n\"tillSsid\":\"210478\",\r\n\"datum\":\"2018-06-29T10:37:15.717Z\",\r\n\"tidspartnyckel\":\"2018-06-29T10:37:15.717Z\",\r\n\"typ\":\"9\",\r\n\"kvittenslisteId\":\"PC22351211011\",\r\n\"franSsid\":\"156531\",\r\n\"skapad\": \"2018-06-29T10:37:15.717Z\",\r\n\"kvlistaStatus\":\"9\",\r\n\"motKontaktperson\":\"LUND\",\r\n\"avsName\":\"PostNord Lund Tellusgatan\",\r\n\"avsAdress\":\"Tellusgatan 15\",\r\n\"avsPostNumber\":\"22457\",\r\n\"avsOrt\":\"LUND\",\r\n\"motName\":\"Coop Konsum Mårtenstorget\",\r\n\"motAdress\":\"Mårtenstorget 11\",\r\n\"motPostnumber\":\"22351\",\r\n\"motOrt\":\"LUND\",\r\n\"motTel\":null,\r\n\"antalStoraBrev\":\"0\",\r\n\"plombnr\":null,\r\n\"sortid\":\"0\",\r\n\"utskriftstyp\":\"0\"\r\n}\r\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/estimatedArrivals/:itemId",
@@ -2376,7 +2376,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -2453,7 +2453,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -2673,7 +2673,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2751,7 +2751,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -2817,7 +2817,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -2830,7 +2830,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"changeAddressEvents\":   [\r\n\t    \t{\r\n\t        \t\"itemId\": \"00000000014SE\",\r\n\t        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t    \t}\r\n    \t]\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"changeAddressEvents\":   [\r\n\t    \t{\r\n\t        \t\"itemId\": \"00000000014SE\",\r\n\t        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t    \t}\r\n    \t]\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -3085,7 +3085,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -3159,7 +3159,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -3229,7 +3229,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -3297,7 +3297,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -3370,7 +3370,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -3383,7 +3383,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"arrivals\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"shelfNo\": \"A12\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"arrivals\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"shelfNo\": \"A12\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -3452,7 +3452,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -3527,7 +3527,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -3540,7 +3540,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"checkoutItemEvents\": [\r\n    \t{\r\n    \t\t\"itemId\": \"00000000014SE\",\r\n    \t\t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n    \t\t\"checkoutReason\": \"itemlost\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n\t}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"checkoutItemEvents\": [\r\n    \t{\r\n    \t\t\"itemId\": \"00000000014SE\",\r\n    \t\t\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n    \t\t\"checkoutReason\": \"itemlost\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n\t}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -3598,7 +3598,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -3611,7 +3611,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\"customersessions\":[{\"id\":\"1\",\"checkoutItemEvents\": [\r\n\t{\"itemId\": \"69117798254SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836672SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836655SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836641SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836584SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835442SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836690SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835544SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835558SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117832790SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836638SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837046SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837222SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837205SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837182SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838364SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838625SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837284SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837315SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838449SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842845SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842810SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842770SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842704SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842721SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842735SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842752SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842695SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835500SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835473SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835460SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842911SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842925SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842939SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835164SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835116SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838642SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838656SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838506SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838523SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838537SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838568SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835425SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117830122SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835266SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835371SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842868SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838727SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838735SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838758SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117839784SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842942SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117841757SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842987SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117839974SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842681SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838466SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838483SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829711SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829699SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798784SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798775SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798722SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798719SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798798SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798815SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817660SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817687SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817700SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817713SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817735SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817744SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817758SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817761SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818078SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818104SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823682SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823722SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823736SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823740SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823767SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823775SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823784SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817775SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817792SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817801SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817829SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817832SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817846SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817850SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823807SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823815SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823824SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823841SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823869SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823890SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823912SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823957SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798356SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798400SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823965SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823991SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824011SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824042SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824056SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824073SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824087SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817948SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817951SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817965SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817982SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817996SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818047SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829875SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829756SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798444SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798492SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798501SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798515SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798563SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798603SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798617SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829858SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826255SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826658SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826556SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826471SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826383SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824135SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798285SE\",\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\"checkoutReason\": \"checkoutToLocalStore\"}\r\n]}]}}"
+              "raw": "{\"eventList\": {\"customersessions\":[{\"id\":\"1\",\"checkoutItemEvents\": [\r\n\t{\"itemId\": \"69117798254SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836672SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836655SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836641SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836584SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835442SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836690SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835544SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835558SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117832790SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117836638SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837046SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837222SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837205SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837182SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838364SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838625SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837284SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117837315SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838449SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842845SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842810SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842770SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842704SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842721SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842735SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842752SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842695SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835500SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835473SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835460SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842911SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842925SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842939SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835164SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835116SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838642SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838656SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838506SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838523SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838537SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838568SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835425SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117830122SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835266SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117835371SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842868SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838727SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838735SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838758SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117839784SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842942SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117841757SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842987SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117839974SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117842681SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838466SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117838483SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829711SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829699SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798784SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798775SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798722SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798719SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798798SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798815SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817660SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817687SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817700SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817713SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817735SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817744SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817758SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817761SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818078SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818104SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823682SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823722SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823736SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823740SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823767SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823775SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823784SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817775SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817792SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817801SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817829SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817832SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817846SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817850SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823807SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823815SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823824SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823841SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823869SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823890SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823912SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823957SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798356SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798400SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823965SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117823991SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824011SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824042SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824056SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824073SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824087SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817948SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817951SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817965SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817982SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117817996SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117818047SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829875SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829756SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798444SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798492SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798501SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798515SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798563SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798603SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798617SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117829858SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826255SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826658SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826556SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826471SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117826383SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117824135SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"},\r\n{\"itemId\": \"69117798285SE\",\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\"checkoutReason\": \"checkoutToLocalStore\"}\r\n]}]}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -3875,7 +3875,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -3947,7 +3947,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4034,7 +4034,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4244,7 +4244,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4300,7 +4300,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -4358,7 +4358,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -4371,7 +4371,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -4440,7 +4440,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4504,7 +4504,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -4517,7 +4517,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handledDeliveryBookingEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }] \r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handledDeliveryBookingEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }] \r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -4563,7 +4563,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4619,7 +4619,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -4677,7 +4677,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -4690,7 +4690,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -4759,7 +4759,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4837,7 +4837,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -4912,7 +4912,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -4925,7 +4925,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handoverToDriverEvents\": [\r\n        {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n        }\r\n    ]\r\n  }] \r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handoverToDriverEvents\": [\r\n        {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n        }\r\n    ]\r\n  }] \r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5136,7 +5136,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -5175,7 +5175,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -5228,7 +5228,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -5302,7 +5302,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5315,7 +5315,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00000000014SE\",\r\n             \"shelfNo\": \"A12\",\r\n             \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n          }\r\n      \r\n      ]\r\n  }]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00000000014SE\",\r\n             \"shelfNo\": \"A12\",\r\n             \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n          }\r\n      \r\n      ]\r\n  }]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5384,7 +5384,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -5459,7 +5459,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5472,7 +5472,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\": [\r\n      ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5529,7 +5529,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5542,7 +5542,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"wronglySortedItemEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"wronglySortedItemEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5599,7 +5599,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5612,7 +5612,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"senderdemand\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"senderdemand\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5669,7 +5669,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5682,7 +5682,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"damaged\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"damaged\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5739,7 +5739,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -5752,7 +5752,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"receivermoved\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"receivermoved\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5821,7 +5821,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -6025,7 +6025,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6038,7 +6038,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6095,7 +6095,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6108,7 +6108,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n    \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n    \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ],\r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"Jörgen\",\r\n          \"recipientSurName\":\"Testsson\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6166,7 +6166,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6179,7 +6179,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n        \"checkoutReason\": \"itemlost\"\r\n      }\r\n  ]\r\n  }\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"itemlost\"\r\n      }\r\n  ]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6244,7 +6244,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6257,7 +6257,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"AP00000023XSE\",\r\n           \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n           \"emailAddresses\":          [\r\n             \"test\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"AP00000023XSE\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\":          [\r\n             \"test\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6314,7 +6314,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6327,7 +6327,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6384,7 +6384,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6397,7 +6397,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"receiverrefusestoaccept\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"receiverrefusestoaccept\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6454,7 +6454,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6467,7 +6467,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"unknownreceiver\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"unknownreceiver\",\r\n          \"missing\": false,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6525,7 +6525,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6538,7 +6538,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6596,7 +6596,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6609,7 +6609,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\":             {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n                  }\r\n        }\r\n          ],\r\n          \"identifications\":       [\r\n                {\r\n                \"idNumber\": \"7007046696\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             }\r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6820,7 +6820,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -6833,7 +6833,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":[\r\n\t         \t\"\"\r\n\t         ],\r\n\t         \"shelfNo\":\"SEPARLA1\"\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t         \"emailAddresses\":[\r\n\t         \t\"\"\r\n\t         ],\r\n\t         \"shelfNo\":\"SEPARLA1\"\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -6884,7 +6884,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7089,7 +7089,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7144,7 +7144,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7202,7 +7202,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7274,7 +7274,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7361,7 +7361,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7446,7 +7446,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -7459,7 +7459,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"19\",\r\n           \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n           \"emailAddresses\": [\r\n             \"\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"19\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\": [\r\n             \"\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -7526,7 +7526,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -7539,7 +7539,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"mappedReceivedItemEvents\":[\r\n\t\t     {\r\n\t\t     \t \"newItemId\": \"00000000014SE\", \r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"productCode\":\"19\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t\t         \"emailAddresses\":          [\r\n\t\t         \t\"jp@jnowledge.se\"\r\n\t\t         ]\r\n\t\t     }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
+              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"mappedReceivedItemEvents\":[\r\n\t\t     {\r\n\t\t     \t \"newItemId\": \"00000000014SE\", \r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"productCode\":\"19\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t\t         \"emailAddresses\":          [\r\n\t\t         \t\"jp@jnowledge.se\"\r\n\t\t         ]\r\n\t\t     }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -7610,7 +7610,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7698,7 +7698,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -7803,7 +7803,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8016,7 +8016,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8055,7 +8055,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -8123,7 +8123,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8207,7 +8207,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8284,7 +8284,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8360,7 +8360,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8432,7 +8432,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -8445,7 +8445,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8514,7 +8514,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8586,7 +8586,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -8599,7 +8599,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]  \r\n\t}]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]  \r\n\t}]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8655,7 +8655,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -8668,7 +8668,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8864,7 +8864,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8910,7 +8910,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -8960,7 +8960,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -9013,7 +9013,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -9055,7 +9055,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -9105,7 +9105,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -9155,7 +9155,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -9354,7 +9354,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -9393,7 +9393,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {
@@ -9461,7 +9461,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -9545,7 +9545,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -9611,7 +9611,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -9624,7 +9624,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"arrivals\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"shelfNo\": \"A12\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"arrivals\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"shelfNo\": \"A12\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9683,7 +9683,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -9696,7 +9696,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"wronglySortedItemEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"wronglySortedItemEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9759,7 +9759,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Device-ID",
@@ -9815,7 +9815,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -9828,7 +9828,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A13\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9884,7 +9884,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -9897,7 +9897,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid",
@@ -9950,7 +9950,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -9963,7 +9963,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n            \"additionalRequestResponse\": {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n            }\r\n        }\r\n        ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             },    \r\n            {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 4,\r\n                \"courier\": true\r\n             }  \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+                  "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n      \"deliveries\": [\r\n      \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n            \"additionalRequestResponse\": {\r\n                \"id\": 2,\r\n                    \"response\": \"true\"\r\n            }\r\n        }\r\n        ],\r\n          \"identifications\":       [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n             },    \r\n            {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 4,\r\n                \"courier\": true\r\n             }  \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -10018,7 +10018,7 @@
                   },
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Device-ID",
@@ -10077,7 +10077,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -10090,7 +10090,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -10156,7 +10156,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Device-ID",
@@ -10211,7 +10211,7 @@
                   },
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Device-ID",
@@ -10274,7 +10274,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -10287,7 +10287,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"jp@jknowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
+                  "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n   \t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"receivedItemEvents\":[\r\n\t     {\r\n\t         \"itemId\": \"00000000014SE\",\r\n\t         \"productCode\":\"19\",\r\n\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t         \"emailAddresses\":          [\r\n\t         \t\"jp@jknowledge.se\"\r\n\t         ]\r\n\t     }\r\n\t   ]  \r\n   \t}\r\n   \t]\r\n  }\r\n}\r\n\r\n"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -10343,7 +10343,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -10356,7 +10356,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid",
@@ -10407,7 +10407,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
                   },
                   {
                     "key": "Content-Type",
@@ -10420,7 +10420,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+                  "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
                 },
                 "url": {
                   "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -10612,7 +10612,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -10662,7 +10662,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -10712,7 +10712,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               }
             ],
             "body": {},
@@ -10779,7 +10779,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -10792,7 +10792,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"arrivals\":    [\r\n\t\t      {\r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"shelfNo\": \"A11\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n\t\t      }\r\n\t\t\t]\r\n\t}]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -10856,7 +10856,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Content-Type",
@@ -10869,7 +10869,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00000000014SE\",\r\n             \"shelfNo\": \"A11\",\r\n             \"timeStamp\": \"Tue Feb 07 2017 11:16:00 GMT+0100 (Västeuropa, normaltid)\"\r\n          }\r\n      ]\r\n  }]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n\"customersessions\":[\r\n  {\r\n    \"id\":\"1\",  \r\n    \"arrivals\":    [\r\n          {\r\n             \"itemId\": \"00000000014SE\",\r\n             \"shelfNo\": \"A11\",\r\n             \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n          }\r\n      ]\r\n  }]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events/:eventid",
@@ -10920,7 +10920,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -10996,7 +10996,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
               },
               {
                 "key": "Device-ID",
@@ -11068,7 +11068,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
           },
           {
             "key": "Device-ID",
@@ -11130,7 +11130,7 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMjc5MDM5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.8AFTZy2_SRSwI6ooxMsvBbRREvYNzGoQ6hkzssnlWOA"
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
           },
           {
             "key": "Device-ID",
