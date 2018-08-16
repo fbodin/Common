@@ -170,7 +170,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"credentialCapability\":{\n    \"credential\":{\n      \"password\":\"pelle10\"\n    },\n    \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}\n"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -328,7 +328,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00370720684969692387"
+                  "value": "00000000014SE"
                 }
               ]
             }
