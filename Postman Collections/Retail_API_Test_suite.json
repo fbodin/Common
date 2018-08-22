@@ -713,7 +713,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "0058OSB6GI"
                 }
               ]
             },
@@ -3309,20 +3309,16 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=checkout&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/checkout?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
               "path": [
                 "items",
-                ":itemid"
+                ":itemid",
+                "checkout"
               ],
               "query": [
-                {
-                  "key": "context",
-                  "value": "checkout",
-                  "equals": true
-                },
                 {
                   "key": "language",
                   "value": "en",
@@ -3478,21 +3474,24 @@
               "query": [
                 {
                   "key": "context",
-                  "value": "checkout"
+                  "value": "checkout",
+                  "equals": true
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -3546,7 +3545,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried_without_signature\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
