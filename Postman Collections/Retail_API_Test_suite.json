@@ -372,7 +372,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"CY\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -712,7 +712,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "0014"
                 }
               ]
             },
@@ -851,7 +851,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00000000014SE\",\r\n                \"productCode\":\"19\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n             }\r\n          ],\r\n          \"identifications\":  [\r\n          {\r\n                \"idNumber\": \"\",\r\n                \"identificationTypeId\": 15,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n                      {\r\n                \"itemId\": \"00257059832157193441\",\r\n                \"productCode\":\"18\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n             }\r\n          ],\r\n          \"identifications\":  [\r\n          {\r\n                \"idNumber\": \"\",\r\n                \"identificationTypeId\": 15,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -3544,7 +3544,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried_without_signature\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
