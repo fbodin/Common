@@ -126,17 +126,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "8918e71a-67be-4331-976e-d601d40f77e7",
                 "exec": [
                   "console.log(\"Login using ssid: \"+data.ssid);",
                   "console.log(\"            user: \"+data.user);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "ae84f901-ec58-4cad-a166-c663ba2790a3",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "if(responseCode.code != 200){",
@@ -147,7 +148,8 @@
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
                   "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
                   "}"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -156,16 +158,23 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "disabled": false
               },
               {
                 "key": "Device-ID",
-                "value": "{{deviceid}}"
+                "value": "{{deviceid}}",
+                "disabled": false
               },
               {
                 "key": "X-Request-ID",
                 "value": "JOPE_1",
-                "disabled": true
+                "disabled": false
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "JOPE_2",
+                "disabled": false
               }
             ],
             "body": {
@@ -4282,7 +4291,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "69c697c3-3c45-45f7-90d0-0b5ba411fe90",
                 "exec": [
                   "//2017-06-15 00:00:00:000\r",
                   "var date = new Date();\r",
@@ -4291,7 +4300,8 @@
                   "\r",
                   "\r",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -4300,7 +4310,7 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json; charset=UTF-8"
               },
               {
                 "key": "Authorization",
