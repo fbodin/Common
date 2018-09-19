@@ -647,19 +647,20 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "dfcee6d3-f751-4857-8972-67214519c158",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "8d679743-2eb2-4ab3-b806-57fec1dc4885",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -678,7 +679,8 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -725,7 +727,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "5695"
                 }
               ]
             },
