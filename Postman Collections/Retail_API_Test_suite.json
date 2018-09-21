@@ -383,7 +383,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -727,7 +727,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "0014E87MSQ"
+                  "value": "0014536U6M"
                 }
               ]
             },
@@ -1944,39 +1944,25 @@
               "listen": "prerequest",
               "script": {
                 "id": "19a5f27b-c569-4939-9980-689d0f98f651",
-                "type": "text/javascript",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "419ad6ac-ca1e-4acd-9df4-41d14d536dfc",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
-                  "if(responseCode.code==200){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Delivery approved\");",
-                  "    if(jsonData.itemList.items[0].delivery.signonglass){",
-                  "        console.log(\"signonglass true\");",
-                  "        postman.setNextRequest(\"events delivery Sign On Glass\");",
-                  "    }",
-                  "}else if(responseCode.code==400){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Got response \"+responseBody);",
-                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
-                  "}",
-                  "",
-                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -4326,7 +4312,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2018-09-18 00:00:00:000\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2018-09-24 00:00:00:000\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
