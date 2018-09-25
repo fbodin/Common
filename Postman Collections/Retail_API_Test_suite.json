@@ -370,7 +370,9 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json;charset=UTF-8"
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Authorization",
@@ -498,23 +500,23 @@
               "listen": "prerequest",
               "script": {
                 "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
-                "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
                   "//2017-11-02T06:28:15+0100",
                   "//2018-03-01T11:31:44.491Z",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
