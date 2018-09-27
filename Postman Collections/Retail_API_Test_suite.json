@@ -179,7 +179,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\t\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -11051,6 +11051,391 @@
                 {
                   "key": "eventid",
                   "value": "1j71lwtlvgs9"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1230022-db717f70-7b80-4861-b83c-b0c11f12b450",
+      "name": "Reminder notification",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1230022-a8129b41-29e3-4b6c-a891-012ef7f89320",
+          "name": "Health",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "console.log(\"Health check\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
+                  "if(responseCode.code != 200){",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_55"
+              },
+              {
+                "key": "X-External -Request-ID",
+                "value": "test_ext_1",
+                "disabled": true
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ",
+                "disabled": true
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "manage",
+                "health"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-752e4185-ba33-4f66-9c9f-791a5e3a6e48",
+          "name": "login-V2",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8918e71a-67be-4331-976e-d601d40f77e7",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "ae84f901-ec58-4cad-a166-c663ba2790a3",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": false
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": false
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1",
+                "disabled": false
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "JOPE_2",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "ssid",
+                  "value": "210478"
+                },
+                {
+                  "key": "username",
+                  "value": "pelle10"
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-a672f3a1-cdd7-4049-aa94-a5480a700d70",
+          "name": "Delete testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0d90daab-63e6-421b-a48f-4be21b2e565c",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-aca30095-0024-44a5-894f-9d44f0d179e2",
+          "name": "Add testitem",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "81abcbad-6092-42ec-b921-9ba1c19d4645",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "ce0b87ad-4083-4fea-836d-14a5ceb63479",
+                "exec": [
+                  "//2017-06-15 00:00:00:000\r",
+                  "var date = new Date();\r",
+                  "var str = date.getFullYear()+'-0'+(date.getMonth()+1)+'-'+date.getDate()+' 00:00:00:000';\r",
+                  "postman.setEnvironmentVariable(\"reminderDate\", str);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"}\n    ]}\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-87991d5b-1a0c-42db-9d8d-653bd13410d5",
+          "name": "events reminder",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTMwMzQyMDc5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.6zvxcKdis3OZJJmVJwRP8xwYng53QprOwSGpO_t8iAQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"reminderEvents\": [\r\n            {\r\n               \"itemId\": \"00000000014SE\",\r\n               \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "equals": true,
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
                 }
               ]
             },
