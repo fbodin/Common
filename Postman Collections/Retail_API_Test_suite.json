@@ -11526,6 +11526,124 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "1230022-1111de52-faa9-4386-b6aa-bccee73c810a",
+          "name": "AT",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "1230022-e2002845-7100-4176-ae7c-949fb83acf8b",
+              "name": "login admin",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7fc2f5aa-d27d-405c-ad29-be4bde159856",
+                    "exec": [
+                      "console.log(\"Login using ssid: \"+data.ssid);",
+                      "console.log(\"            user: \"+data.user);"
+                    ],
+                    "type": "text/javascript"
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "e57755f7-df8e-4a08-b485-8d00e567d7f1",
+                    "exec": [
+                      "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"Login failed\");",
+                      "    postman.setNextRequest(null);",
+                      "} else {",
+                      "    var responseObj = JSON.parse(responseBody);",
+                      "    console.log(\"Login got authorization key \"+responseObj.jwttoken.token);",
+                      "    postman.setEnvironmentVariable(\"authorization\", responseObj.jwttoken.token);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Origin",
+                    "value": "https://pablo.posten.se:7014",
+                    "disabled": true
+                  },
+                  {
+                    "key": "X-RequeOrginst-ID",
+                    "value": "JOPE_1",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\":\"{{AD_PWD}}\"\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "https://pablo.posten.se:7014/retail/rest/authenticate/v1/auth/login/admin/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "protocol": "https",
+                  "host": [
+                    "pablo",
+                    "posten",
+                    "se"
+                  ],
+                  "port": "7014",
+                  "path": [
+                    "retail",
+                    "rest",
+                    "authenticate",
+                    "v1",
+                    "auth",
+                    "login",
+                    "admin",
+                    ":ssid",
+                    ":username"
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": "en",
+                      "equals": true
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362",
+                      "equals": true
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "ssid",
+                      "value": "165070"
+                    },
+                    {
+                      "key": "username",
+                      "value": "jope304"
+                    }
+                  ]
+                },
+                "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+              },
+              "response": []
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "1230022-c7eb6275-2b92-4692-8fc6-bbf1bbcf62cd",
           "name": "PR",
           "description": "",
@@ -11622,6 +11740,116 @@
                     {
                       "key": "username",
                       "value": "pelle10"
+                    }
+                  ]
+                },
+                "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "1230022-30dee83b-4c6a-4ed1-8040-a21a6ac8e6f6",
+              "name": "login admin",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7fc2f5aa-d27d-405c-ad29-be4bde159856",
+                    "exec": [
+                      "console.log(\"Login using ssid: \"+data.ssid);",
+                      "console.log(\"            user: \"+data.user);"
+                    ],
+                    "type": "text/javascript"
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "e57755f7-df8e-4a08-b485-8d00e567d7f1",
+                    "exec": [
+                      "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"Login failed\");",
+                      "    postman.setNextRequest(null);",
+                      "} else {",
+                      "    var responseObj = JSON.parse(responseBody);",
+                      "    console.log(\"Login got authorization key \"+responseObj.jwttoken.token);",
+                      "    postman.setEnvironmentVariable(\"authorization\", responseObj.jwttoken.token);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}",
+                    "disabled": false
+                  },
+                  {
+                    "key": "Origin",
+                    "value": "https://pablo.posten.se:7014",
+                    "disabled": true
+                  },
+                  {
+                    "key": "X-RequeOrginst-ID",
+                    "value": "JOPE_1",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\":\"{{AD_PWD}}\"\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "https://pablo.posten.se:7014/retail/rest/authenticate/v1/auth/login/admin/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "protocol": "https",
+                  "host": [
+                    "pablo",
+                    "posten",
+                    "se"
+                  ],
+                  "port": "7014",
+                  "path": [
+                    "retail",
+                    "rest",
+                    "authenticate",
+                    "v1",
+                    "auth",
+                    "login",
+                    "admin",
+                    ":ssid",
+                    ":username"
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": "en",
+                      "equals": true
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362",
+                      "equals": true
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "ssid",
+                      "value": "165070"
+                    },
+                    {
+                      "key": "username",
+                      "value": "jope304"
                     }
                   ]
                 },
