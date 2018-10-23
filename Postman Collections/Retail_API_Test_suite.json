@@ -385,7 +385,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen PetterssonJörgen PetterssonJörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson3\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1Storgatan 1Storgatan 1Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"StockholmStockholmStockholmStockholmStockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -1158,7 +1158,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"productCode\":\"UD\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"1221\",\r\n          \"recipientSurName\":\"12122\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n       \"deliveries\": [\r\n          {\r\n              \"itemId\": \"00000000014SE\",\r\n              \"productCode\":\"00\",\r\n              \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n              \"additionalRequestResponse\": {\r\n                 \"id\": 1,\r\n                 \"response\": \"true\"\r\n              }\r\n          }\r\n      ],\r\n      \"identifications\":       [\r\n                        ],\r\n     \r\n      \"signonglass\":{\r\n          \"signature\":\"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\",\r\n          \"recipientFirstName\":\"1221\",\r\n          \"recipientSurName\":\"12122\",\r\n          \"visible\":true\r\n        }\r\n   }\r\n}]\r\n}\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -2128,87 +2128,6 @@
           "response": []
         },
         {
-          "_postman_id": "1230022-7fe9ad91-18e4-3502-10d0-b51eaa7371d1",
-          "name": "items pastlastduedate copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
-                  "console.log(\"ItemId: \"+data.itemId);",
-                  "console.log(\"Product: \"+data.productCode);",
-                  "console.log(\"Context: \"+data.context);"
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "if(responseCode.code==200){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Delivery approved\");",
-                  "    if(jsonData.itemList.items.delivery.signonglass){",
-                  "        console.log(\"signonglass true\");",
-                  "        postman.setNextRequest(\"events delivery Sign On Glass\");",
-                  "    }",
-                  "}else if(responseCode.code==400){",
-                  "    var jsonData = JSON.parse(responseBody);",
-                  "    console.log(\"Got response \"+responseBody);",
-                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
-                  "}",
-                  "",
-                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/00120210?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "items",
-                "00120210"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en",
-                  "equals": true
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "1230022-eb1c722e-285b-7d05-2890-811117d43b81",
           "name": "events return",
           "event": [
@@ -2463,6 +2382,83 @@
             "body": {
               "mode": "raw",
               "raw": "{\n  \"credentialCapability\":{\n        \"clientCapability\":{\n      \"clientAppVersion\":\"2.3-TEST-v4\",\n      \"clientAppPlatform\":\"android\",\n      \"clientDeviceId\":\"234243234234324234\",\n      \"paymentSupport\":false,\n      \"printer\":true\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "capability",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-9dd58b61-9ae9-40ca-b6be-005205af126f",
+          "name": "CapabilityLoggedInUser Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "570883f2-4362-4afd-a295-cb4008abc1c3",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "8748999e-f050-4e59-a1e8-a788f6de2543",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"credentialCapability\":{\n  }\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
