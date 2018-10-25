@@ -2340,22 +2340,22 @@
               "listen": "prerequest",
               "script": {
                 "id": "570883f2-4362-4afd-a295-cb4008abc1c3",
-                "type": "text/javascript",
                 "exec": [
                   "console.log(\"Login using ssid: \"+data.ssid);",
                   "console.log(\"            user: \"+data.user);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "8748999e-f050-4e59-a1e8-a788f6de2543",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -2368,11 +2368,13 @@
               },
               {
                 "key": "Device-ID",
-                "value": "{{deviceid}}"
+                "value": "{{deviceid}}",
+                "disabled": true
               },
               {
                 "key": "X-Request-ID",
-                "value": "JOPE_1"
+                "value": "JOPE_1",
+                "disabled": true
               },
               {
                 "key": "Authorization",
