@@ -8031,10 +8031,11 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "30c44443-d77f-4c6c-a8fc-344785e9d0ad",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8062,8 +8063,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             }
@@ -8109,25 +8110,64 @@
           "response": []
         },
         {
+          "_postman_id": "1230022-b9ccda73-8c18-4851-9883-599ada8ffbe7",
+          "name": "Add testitem pastlastduedate",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\t\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2018-11-10 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n     {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n     {\"key\":\"location.210478.ankomsttid\",\"value\":\"2018-11-10 00:00:00:000\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2018-11-10 00:00:00:000\"}\n    ]}\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "_postman_id": "1230022-e84b6a86-e501-df3a-ab3e-2e84c6bc42c6",
           "name": "items return",
           "event": [
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "0f3490a8-cd17-4f2c-83c3-8467487c85af",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "a3118cec-3642-4894-9e1a-b25791a49359",
                 "exec": [
                   "tests[\"Check status code is 400\"] = responseCode.code === 400;",
                   "",
@@ -8141,7 +8181,8 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8157,7 +8198,10 @@
                 "value": "{{deviceid}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=returnitem&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
@@ -8170,21 +8214,24 @@
               "query": [
                 {
                   "key": "context",
-                  "value": "returnitem"
+                  "value": "returnitem",
+                  "equals": true
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -8199,19 +8246,20 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "5f10b193-4bff-41ad-85a9-24a89b45814b",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "41e98e3a-6302-411f-be22-252a0669939d",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -8225,7 +8273,8 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8241,27 +8290,29 @@
                 "value": "{{deviceid}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items?filter=pastlastduedate&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/pastlastduedate?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
               "path": [
-                "items"
+                "items",
+                "pastlastduedate"
               ],
               "query": [
                 {
-                  "key": "filter",
-                  "value": "pastlastduedate"
-                },
-                {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ]
             },
@@ -8436,21 +8487,24 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "7f769a30-d6fc-432e-a246-fa35499da768",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                ]
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "1453567d-8e55-410a-81c3-ae2ee7c455e6",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8472,7 +8526,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"arrivals\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"shelfNo\": \"A12\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"arrivals\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"shelfNo\": \"A12\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8506,19 +8560,20 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "894aa917-299a-4793-ab09-ef00233cbf7d",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "6a9f9577-ad88-4dd8-b7cd-3e73ad6ea11c",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -8532,7 +8587,8 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8548,7 +8604,10 @@
                 "value": "{{deviceid}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=returnitem&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
@@ -8561,21 +8620,24 @@
               "query": [
                 {
                   "key": "context",
-                  "value": "returnitem"
+                  "value": "returnitem",
+                  "equals": true
                 },
                 {
                   "key": "language",
-                  "value": "en"
+                  "value": "en",
+                  "equals": true
                 },
                 {
                   "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
                 }
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             },
@@ -8660,20 +8722,23 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "ae034df1-c6e9-4fcc-bf2c-16cbc66e1d20",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                ]
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "807a0a36-8e4f-4f90-8ca3-179b472afcb6",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8695,7 +8760,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"returns\":    [\r\n        {\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"returnReason\": \"damaged\",\r\n        \t\"missing\": false,\r\n        \t\"productCode\":\"19\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": false,\r\n          \"productCode\":\"00\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8879,10 +8944,11 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "fd359c4b-7b20-45b0-a898-f56e71621cf7",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8910,8 +8976,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             }
@@ -8925,10 +8991,11 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "0b33d36c-a3f2-4c4e-94a8-fc60fc2e5271",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -8956,8 +9023,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000028SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             }
@@ -11365,7 +11432,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\t\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2018-10-02 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2018-10-10 00:00:00:000\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\t\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2018-11-10 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"0\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2018-11-10 00:00:00:000\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
