@@ -7946,17 +7946,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "681e83fa-204e-4ba7-9485-eb3a0d7a020e",
                 "exec": [
                   "console.log(\"Login using ssid: \"+data.ssid);",
                   "console.log(\"            user: \"+data.user);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "84c6b105-2003-4859-8e7d-3f0baf46d318",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "if(responseCode.code != 200){",
@@ -7967,7 +7968,8 @@
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
                   "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
                   "}"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -7985,7 +7987,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"credentialCapability\":{\r\n\t\t\"credential\":{\r\n\t\t\t\"password\":\"pelle10\"\r\n\t\t},\r\n\t\t\"clientCapability\":{\r\n\t\t\t\"clientAppVersion\":\"1.1.1.1\",\r\n\t\t\t\"clientDeviceId\":\"234243234234324234\",\r\n\t\t\t\"paymentSupport\":false,\r\n\t\t\t\"printer\":true\r\n\t\t}\r\n\t}\r\n}"
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8609,20 +8611,16 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=returnitem&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/returnitem?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
               "path": [
                 "items",
-                ":itemid"
+                ":itemid",
+                "returnitem"
               ],
               "query": [
-                {
-                  "key": "context",
-                  "value": "returnitem",
-                  "equals": true
-                },
                 {
                   "key": "language",
                   "value": "en",
