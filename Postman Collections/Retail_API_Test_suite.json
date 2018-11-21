@@ -9037,10 +9037,11 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "4b2295ff-6c0a-47ee-aa2e-98079853792a",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -9062,7 +9063,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n\t{\"key\":\"produktkod\",\"value\":\"19\"},\n\t{\"key\":\"mottagaradress.namn\",\"value\":\"Karl\"},\n\t{\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n\t{\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n\t{\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n\t]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Karl\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
@@ -9075,8 +9076,8 @@
               ],
               "variable": [
                 {
-                  "value": "00000000014SE",
-                  "id": "itemid"
+                  "key": "itemid",
+                  "value": "00000000014SE"
                 }
               ]
             }
@@ -9151,9 +9152,12 @@
                 "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=item&query=recipientname:jörgen&language=en&Content-Type=application/json;charset=UTF-8",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=item&query=recipientname:jorgen&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -9168,7 +9172,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "recipientname:jörgen",
+                  "value": "recipientname:jorgen",
                   "equals": true
                 },
                 {
@@ -9179,6 +9183,12 @@
                 {
                   "key": "Content-Type",
                   "value": "application/json;charset=UTF-8",
+                  "equals": true,
+                  "disabled": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
                   "equals": true
                 }
               ]
