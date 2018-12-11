@@ -147,7 +147,8 @@
                   "    var responseObj = JSON.parse(responseBody);",
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
                   "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
-                  "}"
+                  "}",
+                  ""
                 ],
                 "type": "text/javascript"
               }
