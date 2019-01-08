@@ -4627,19 +4627,20 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "48c57dc3-1201-4eb2-8807-4448d6d08164",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "9ff2fa8f-5b8f-4a64-8f32-99431795c9a4",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -4653,7 +4654,8 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -4669,7 +4671,10 @@
                 "value": "{{deviceid}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/deliveryBooking?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
