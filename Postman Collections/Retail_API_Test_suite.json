@@ -966,7 +966,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n          \t{\r\n            \t\"itemId\": \"00000000014SE\",\t\r\n                \"productCode\":\"AN\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n            }\r\n          ],\r\n          \"identifications\":  [\r\n          {\r\n                \"idNumber\": \"\",\r\n                \"identificationTypeId\": 15,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"deliveries\":    {\r\n          \"deliveries\": [\r\n          \t{\r\n            \t\"itemId\": \"00000000014SE\",\t\r\n                \"productCode\":\"AN\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n            }\r\n          ],\r\n          \"identifications\":  [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n  }\r\n  ]\r\n}\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -7701,7 +7701,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"24\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\": [\r\n             \"jp@jknowledge.se\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"RR\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\": [\r\n             \"jp@jknowledge.se\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
