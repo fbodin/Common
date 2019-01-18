@@ -3702,23 +3702,23 @@
               "listen": "prerequest",
               "script": {
                 "id": "8cd7ceb2-a36e-428a-bdae-5c056d270d96",
-                "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "525e9682-a02f-4cd6-93d8-e466175dac13",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "//postman.setNextRequest(\"Health end\");",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -3740,7 +3740,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"checkoutToLocalStore\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -7705,7 +7705,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"04\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\": [\r\n             \"\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n     {\r\n    \"id\":\"1\",\r\n    \"receivedItemEvents\":[\r\n       {\r\n           \"itemId\": \"00000000014SE\",\r\n           \"productCode\":\"19\",\r\n           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n           \"emailAddresses\": [\r\n             \"\"\r\n           ]\r\n       }\r\n     ]  \r\n     }\r\n     ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
