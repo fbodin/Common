@@ -11399,20 +11399,22 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "ef12dbee-e1aa-4252-aa1e-d463377b0152",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "244a5ef8-948f-43bc-96dc-fc0f8b7c352c",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
