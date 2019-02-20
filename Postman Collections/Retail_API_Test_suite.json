@@ -2743,21 +2743,23 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "985b0691-ec28-491f-a292-36ed7af63f75",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "4aa625a3-de7c-48a5-92c5-d7eec79a3095",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -2779,7 +2781,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\t\r\n\t\t\"wronglySortedItemEvents\":    [\r\n    \t{\r\n        \t\"itemId\": \"00000000014SE\",\r\n        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n    \t}\r\n\t\t]\r\n\t}]\r\n}}"
+              "raw": "{\"eventList\":{\"customersessions\":[{\"handovertopostnordEvents\":[{\"itemId\":\"92709326740SE\",\"reason\":\"RETURN_ADDRESS_MISSING\",\"timeStamp\":\"2019-02-19T11:27:48+0100\"}],\"id\":\"1\"}]}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -4665,7 +4667,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-02-19 00:00:00:000\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-02-20 00:00:00:000\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"10:00-10:05\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
