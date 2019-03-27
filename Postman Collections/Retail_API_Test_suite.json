@@ -543,6 +543,11 @@
               {
                 "key": "Device-ID",
                 "value": "{{deviceid}}"
+              },
+              {
+                "key": "Origin",
+                "value": "localhost:4200",
+                "type": "text"
               }
             ],
             "body": {
@@ -2149,6 +2154,11 @@
               {
                 "key": "Device-ID",
                 "value": "{{deviceid}}"
+              },
+              {
+                "key": "Origin",
+                "value": "d1z1n5hcr2mfu0.cloudfront.net",
+                "type": "text"
               }
             ],
             "body": {
