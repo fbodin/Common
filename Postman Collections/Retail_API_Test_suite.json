@@ -2145,7 +2145,7 @@
             }
           ],
           "request": {
-            "method": "GET",
+            "method": "OPTIONS",
             "header": [
               {
                 "key": "Authorization",
