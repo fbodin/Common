@@ -1552,6 +1552,20 @@
             }
           },
           "response": []
+        },
+        {
+          "_postman_id": "1230022-a70f56a1-4bb9-4a67-a97d-800278aac44a",
+          "name": "badge",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": ""
+          },
+          "response": []
         }
       ]
     },
@@ -2145,7 +2159,7 @@
             }
           ],
           "request": {
-            "method": "OPTIONS",
+            "method": "GET",
             "header": [
               {
                 "key": "Authorization",
