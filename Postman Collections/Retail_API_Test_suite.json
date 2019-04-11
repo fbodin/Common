@@ -904,7 +904,8 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "00000000014SE",
+                  "type": "string"
                 }
               ]
             },
