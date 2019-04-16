@@ -324,7 +324,8 @@
               },
               {
                 "key": "Device-ID",
-                "value": "{{deviceid}}"
+                "value": "{{deviceid}}",
+                "disabled": true
               },
               {
                 "key": "Content-Type",
@@ -352,7 +353,8 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE"
+                  "value": "00000000014SE",
+                  "type": "string"
                 }
               ]
             }
@@ -394,12 +396,13 @@
               },
               {
                 "key": "Device-ID",
-                "value": "{{deviceid}}"
+                "value": "{{deviceid}}",
+                "disabled": true
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"},\n    {\"key\":\"tillaggstjanster.07:ForkortadLiggetid.andratCentralt\",\"value\":\"N\"},\n    {\"key\":\"tillaggstjanster.07:ForkortadLiggetid.sistaLiggedag\",\"value\":\"2019-01-24 00:00:00:000\"},\n    {\"key\":\"tillaggstjanster.01:Postforskott.andratCentralt\",\"value\":\"N\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Görgen Petersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"},\n    {\"key\":\"tillaggstjanster.07:ForkortadLiggetid.andratCentralt\",\"value\":\"N\"},\n    {\"key\":\"tillaggstjanster.07:ForkortadLiggetid.sistaLiggedag\",\"value\":\"2019-01-24 00:00:00:000\"},\n    {\"key\":\"tillaggstjanster.01:Postforskott.andratCentralt\",\"value\":\"N\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1045,6 +1048,80 @@
             "body": {
               "mode": "raw",
               "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"00000000014SE\",\t\n                \"productCode\":\"19\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en",
+                  "equals": true
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1230022-8cf11013-f4a8-4f0d-9a10-62ad78a5fc6f",
+          "name": "events delivery AWS",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6f46155c-3c24-4255-9b9a-871ea3a63e84",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b0cb4dba-b504-4cee-bf7f-5f62ba5339d1",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "postman.setNextRequest(\"Health end\");",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"eventList\": {\n        \"customersessions\": [\n            {\n                \"id\": \"1\",\n                \"deliveries\": {\n                    \"deliveries\": [\n                        {\n                            \"itemId\": \"UE000000005SZ\",\n                            \"timeStamp\": \"2019-02-27T02:52:07.697Z\",\n                            \"additionalRequestResponse\": {\n                                \"id\": 1,\n                                \"response\": \"true\"\n                            }\n                        }\n                    ],\n                    \"identifications\": [\n                        {\n                            \"idNumber\": \"1212121212\",\n                            \"identificationTypeId\": 1,\n                            \"courier\": false\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
