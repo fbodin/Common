@@ -889,7 +889,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE",
+                  "value": "052289147796192",
                   "type": "string"
                 }
               ]
@@ -2738,7 +2738,7 @@
           "response": []
         },
         {
-          "name": "CapabilityLoggedInUser",
+          "name": "GET capability",
           "event": [
             {
               "listen": "prerequest",
@@ -10556,20 +10556,23 @@
                 {
                   "listen": "prerequest",
                   "script": {
-                    "type": "text/javascript",
+                    "id": "18013ea0-7ac6-49f3-ad87-28fc86f28842",
                     "exec": [
                       "//2016-12-13T16:25:39.611+02:00",
-                      "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());"
-                    ]
+                      "postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                      "postman.setEnvironmentVariable(\"itemId\", \"fake\");"
+                    ],
+                    "type": "text/javascript"
                   }
                 },
                 {
                   "listen": "test",
                   "script": {
-                    "type": "text/javascript",
+                    "id": "070eee75-3027-4b43-91df-9d218654c85f",
                     "exec": [
                       "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ]
+                    ],
+                    "type": "text/javascript"
                   }
                 }
               ],
@@ -10579,7 +10582,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTU2NzI1MzU0LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.AjEzSoQKg4L1n1dRp2dFnqMu4lGiODfieFSGOIQv5Dg"
                   },
                   {
                     "key": "Content-Type",
