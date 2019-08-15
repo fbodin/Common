@@ -420,14 +420,14 @@
               "script": {
                 "id": "63acab9f-1b28-4e90-8aaf-da84c4dc7ef3",
                 "exec": [
-                  "console.log('before: '+pm.variables.get(\"itemId\"));\r",
+                  "//console.log('before: '+pm.variables.get(\"itemId\"));\r",
                   "console.log('before: '+pm.environment.get(\"itemId\"));\r",
-                  "console.log('before: '+pm.globals.get(\"itemId\"));\r",
-                  "let encoded = encodeURIComponent(postman.getEnvironmentVariable('itemId'));\r",
+                  "//console.log('before: '+pm.globals.get(\"itemId\"));\r",
+                  "let encoded = encodeURIComponent(pm.environment.get(\"itemId\"));\r",
                   "console.log('after: '+encoded);\r",
                   "\r",
-                  "postman.setEnvironmentVariable(\"itemId\", encoded);\r",
-                  "//pm.environment.set(itemId, encoded);\r",
+                  "//postman.setEnvironmentVariable(\"itemId\", encoded);\r",
+                  "//pm.environment.set(\"itemId\", encoded);\r",
                   "\r",
                   ""
                 ],
