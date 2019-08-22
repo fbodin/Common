@@ -441,7 +441,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Bearer  eyJ0eXAiOiJKV1QiLCJraWQiOiIyanAtRU1oYWF1WndkZExsTWtoXzNHYVJLemxTTmNxY2RpT1RZY1NiWDlNIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJwbnJldGFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwidXNlcl9pZCI6InBucmV0YWlsIiwic2NvcGUiOiJodHRwczovL2FwaS5wb3N0bm9yZC5jb20vcmVzdC9zaGlwbWVudC92MS9jb2QvZ2V0IGh0dHBzOi8vYXBpLnBvc3Rub3JkLmNvbS9yZXN0L3NoaXBtZW50L3YxL2NvZC9wdXQgaHR0cHM6Ly9hcGkucG9zdG5vcmQuY29tL3Njb3Blcy9yZXRhaWwvdXNlcnMvZ2V0ICBodHRwczovL2FwaS5wb3N0bm9yZC5jb20vc2NvcGVzL3JldGFpbC91c2Vycy9wb3N0IGh0dHBzOi8vYXBpLnBvc3Rub3JkLmNvbS9zY29wZXMvcmV0YWlsL3VzZXJzL3B1dCBodHRwczovL2FwaS5wb3N0bm9yZC5jb20vc2NvcGVzL3NoaXBtZW50L2NvbGxlY3Rjb2RlL2JsYWNrbGlzdC9nZXQgaHR0cHM6Ly9hcGkucG9zdG5vcmQuY29tL3Njb3Blcy9zaGlwbWVudC9jb2xsZWN0Y29kZS9ibGFja2xpc3QvcG9zdCBodHRwczovL2FwaS5wb3N0bm9yZC5jb20vc2NvcGVzL3NoaXBtZW50L2NvbGxlY3Rjb2RlL3BhcnRuZXIvZ2V0IGh0dHBzOi8vYXBpLnBvc3Rub3JkLmNvbS9zY29wZXMvc2hpcG1lbnQvY29sbGVjdGNvZGUvcmVjaXBpZW50L2dldCBodHRwczovL2FwaS5wb3N0bm9yZC5jb20vc2NvcGVzL3NoaXBtZW50L2V2ZW50cy8zcmRwYXJ0eS9wb3N0IGh0dHBzOi8vYXBpLnBvc3Rub3JkLmNvbS9zY29wZXMvc2hpcG1lbnQvZXZlbnRzL2N1c3RvbWVyL3Bvc3QgaHR0cHM6Ly9hcGkucG9zdG5vcmQuY29tL3Njb3Blcy9zaGlwbWVudC9pdGVtL3NlYXJjaCBodHRwczovL2FwaS5wb3N0bm9yZC5jb20vc2NvcGVzL3NoaXBtZW50L2l0ZW1jaGFuZ2UvZ2V0IGh0dHBzOi8vYXBpLnBvc3Rub3JkLmNvbS9zY29wZXMvc2hpcG1lbnQvaXRlbWNoYW5nZS9wdXQiLCJ0b2tlbl90eXBlIjoiYmVhcmVyIiwiYWNjZXNzX3Rva2VuIjoiR3M3a0tqdVUzRFQiLCJpYW1fdXVpZCI6IjgwNGY5MzkyLWRjZGUtMTFlOC1hOGFmLTAwNTA1NmFkNTM0MSIsImlzcyI6Imh0dHBzOi8vZ2F0ZS5lc3MucG9zdG5vcmQuY29tIiwiZXhwIjoxNTY2MzEwODczLCJpYXQiOjE1NjYzMDcyNzN9.pfkfT5rzAotK9UF5xYMTATQGxgoYnZT76Q0UW2kv6CgvTOAUwpYX8EBhi50pIHz3S6gNIiOO2XcUly780Y_FTYklAAdlJf1hontn_6w7QSs3_Iu-zrldk6uJbu51WTv8G_CzNCz6wZGi6cmdhjGKyugemzneWdClWyafWvfS6kKGqEQ_wu8Df3jaZjkDdAezpRgqliA7AZbOJeLCZWBW21zi5qtB-h9LJDYkCQR1kPqUcEoupb-V6_w8DZjU2yP_NG-VteFLbDZ28s8LUFW9MlL-MidvV1FyqWUvMZ0e5UpUcDxNenXm_SQEmFUBTvQuwToUrMX_7NeCDJn913JqRg"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
               },
               {
                 "key": "Device-ID",
@@ -13974,13 +13974,11 @@
               ],
               "variable": [
                 {
-                  "id": "023ce2f9-ad4c-4ebb-9b0d-1322edd7cf17",
                   "key": "ssid",
                   "value": "210478",
                   "type": "string"
                 },
                 {
-                  "id": "168b98d1-95b0-4714-8414-ee86aa4880be",
                   "key": "username",
                   "value": "pelle10",
                   "type": "string"
@@ -14599,7 +14597,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen lars Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"},\n    {\"key\":\"deliveryCodes.1\",\"value\":\"1357\"},\n    {\"key\":\"lbbBokningsTid\",\"value\":\"{{lbbBookingDate}}\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"{{todayDate}}\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.ankomsttid\",\"value\":\"{{todayDate}}\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"{{todayDate}}\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen lars Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"},\n    {\"key\":\"deliveryCodes.1\",\"value\":\"1357\"},\n    {\"key\":\"deliveryBooking\",\"value\":\"{{todayDate}}\"},\n    {\"key\":\"deliveryBookingSsid\",\"value\":\"165070\"},\n    {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n    {\"key\":\"leveranstid\",\"value\":\"\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"{{todayDate}}\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.ankomsttid\",\"value\":\"{{todayDate}}\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"{{todayDate}}\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -14618,7 +14616,6 @@
               ],
               "variable": [
                 {
-                  "id": "e3ad613e-274e-434f-b325-d99ddfa65aec",
                   "key": "itemid",
                   "value": "00000000014SE",
                   "type": "string"
