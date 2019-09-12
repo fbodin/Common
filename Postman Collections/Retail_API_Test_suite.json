@@ -87,7 +87,7 @@
               },
               {
                 "key": "X-External-Request-ID",
-                "value": "jope_ext_1"
+                "value": "jope_test"
               },
               {
                 "key": "Authorization",
@@ -9600,6 +9600,84 @@
             "body": {
               "mode": "raw",
               "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": true,\r\n          \"productCode\":\"00\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "name": "events return Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "ae034df1-c6e9-4fcc-bf2c-16cbc66e1d20",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", new Date());",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "807a0a36-8e4f-4f90-8ca3-179b472afcb6",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-131c2ef6-3473-4e50-8c6c-b125dee1c51e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "jopetest1",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"13301001798078D\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"productCode\":\"17\",\r\n          \"missing\":false,\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
