@@ -1174,6 +1174,9 @@
             }
           ],
           "_postman_id": "1230022-df5c8a2b-9d8f-40ec-8a3c-5917d8e0128e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -1213,7 +1216,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "5899",
+                  "value": "0014",
                   "type": "string"
                 }
               ]
@@ -1333,6 +1336,9 @@
             }
           ],
           "_postman_id": "1230022-99cb0795-73f7-6aed-b5f7-58a69e32d44d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -1342,7 +1348,9 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Device-ID",
@@ -2617,6 +2625,30 @@
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
+                  "var template = `",
+                  "    <table>",
+                  "        <tr>",
+                  "            <th>Item</th>",
+                  "            <th>Product</th>",
+                  "            <th>arrivalDate</th>",
+                  "        </tr>",
+                  "",
+                  "        {{#each response.itemList.items}}",
+                  "            <tr>",
+                  "                <td>00000000014SE</td>",
+                  "                <td>{{product.name}}</td>",
+                  "                <td>{{arrivalDate}}</td>",
+                  "                ",
+                  "            </tr>",
+                  "        {{/each}}",
+                  "    </table>",
+                  "`;",
+                  "",
+                  "pm.visualizer.set(template, {",
+                  "    // Pass the response body parsed as JSON as `data`",
+                  "    response: pm.response.json()",
+                  "});",
+                  "",
                   ""
                 ],
                 "type": "text/javascript"
@@ -2624,6 +2656,9 @@
             }
           ],
           "_postman_id": "1230022-00c97fd7-495f-b5cf-105c-63a81671e21f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -8200,6 +8235,9 @@
             }
           ],
           "_postman_id": "1230022-24573d6f-02a0-4793-06ca-d0afe54bb820",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -8457,6 +8495,9 @@
             }
           ],
           "_postman_id": "1230022-13718511-ed2c-3002-7e14-0133c3a1b8f8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -8477,7 +8518,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"testøåäö@test.com\"]\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8623,6 +8664,9 @@
             }
           ],
           "_postman_id": "1230022-088561ff-3887-0ee0-aa43-5fc7dbf00495",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -9667,6 +9711,9 @@
             }
           ],
           "_postman_id": "1230022-d29be740-d36e-a0d5-fe57-d544d89d5044",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -9676,7 +9723,9 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Device-ID",
@@ -9685,7 +9734,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": true,\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2019-09-12T12:14:02.026Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"LX635819154NL\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": true,\t\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
