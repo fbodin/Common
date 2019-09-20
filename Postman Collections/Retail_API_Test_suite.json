@@ -153,13 +153,17 @@
             }
           ],
           "_postman_id": "1230022-b12912cd-6906-22b0-6149-a4ca7b2a9b2d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json;charset=UTF-8",
-                "disabled": false
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Device-ID",
@@ -8544,24 +8548,23 @@
           "response": []
         },
         {
-          "name": "events recieveitem copy",
+          "name": "events recieveitem Copy",
           "event": [
             {
               "listen": "prerequest",
               "script": {
                 "id": "a448dca0-f318-486d-874b-c6d75552237d",
-                "type": "text/javascript",
                 "exec": [
                   "//2016-12-13T16:25:39.611+02:00",
                   "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "f7c5dbb3-8054-4541-9105-fc96d913d84f",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -8570,14 +8573,18 @@
                   "    postman.setNextRequest(null);",
                   "}else{",
                   "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions.printid);",
-                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions.printid);",
+                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions[0].printid);",
+                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions[0].printid);",
                   "}"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
-          "_postman_id": "1230022-c9081612-dbee-3c0b-cddd-7d77c39285c1",
+          "_postman_id": "1230022-a7979289-41a9-43bf-bb25-999e19153c1b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -8587,7 +8594,9 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Device-ID",
@@ -8596,7 +8605,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"mappedReceivedItemEvents\":[\r\n\t\t     {\r\n\t\t     \t \"newItemId\": \"00000000014SE\", \r\n\t\t         \"itemId\": \"00000000014SE\",\r\n\t\t         \"productCode\":\"19\",\r\n\t\t         \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t\t         \"emailAddresses\":          [\r\n\t\t         \t\"jp@jnowledge.se\"\r\n\t\t         ]\r\n\t\t     }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
+              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"receivedItemEvents\":[\r\n\t\t     {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       },\r\n\t\t     {\r\n\t           \"itemId\": \"00000000028SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       },\r\n\t\t     {\r\n\t           \"itemId\": \"00000000045SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9011,6 +9020,9 @@
             }
           ],
           "_postman_id": "1230022-bf3b71fe-461b-b025-541a-8c685bcb30d3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -9124,12 +9136,17 @@
         {
           "name": "Add testitem",
           "_postman_id": "1230022-af50e076-3f97-555f-c3cb-15b5cff8efd7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               },
               {
                 "key": "Authorization",
@@ -9138,7 +9155,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"tillaggstjanster.23:EnkelTillaggstjanst.kod\",\"value\":\"23\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"00\"},\n  {\"key\":\"tillaggstjanster.23:EnkelTillaggstjanst.kod\",\"value\":\"23\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9734,7 +9751,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"LX635819154NL\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": true,\t\r\n          \"productCode\":\"19\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"returns\":    [\r\n        {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"returnReason\": \"pastlastduedate\",\r\n          \"missing\": false,\t\r\n          \"productCode\":\"04\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
