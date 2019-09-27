@@ -933,6 +933,9 @@
             }
           ],
           "_postman_id": "1230022-415f92fe-71ce-9231-b240-0fc7fe9654c8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
