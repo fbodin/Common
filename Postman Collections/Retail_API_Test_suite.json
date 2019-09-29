@@ -856,6 +856,9 @@
             }
           ],
           "_postman_id": "1230022-64163483-23aa-8b43-7499-bf722cd2696b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
