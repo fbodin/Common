@@ -4562,6 +4562,9 @@
             }
           ],
           "_postman_id": "1230022-2e7fc6c9-6f1a-792e-016b-d936e6160895",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -4580,7 +4583,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00370726205468215828\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"checkoutItemEvents\": [\r\n      {\r\n        \"itemId\": \"00000000014SE\",\r\n        \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n        \"checkoutReason\": \"deliveried\"\r\n      }\r\n    ]\r\n  }]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
