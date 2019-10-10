@@ -5653,6 +5653,9 @@
             }
           ],
           "_postman_id": "1230022-cb25a07d-ddea-da8e-7e62-b57461f838a8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -5669,7 +5672,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-08-17 00:00:00:000\"},\n  {\"key\":\"deliveryBookingSsid\",\"value\":\"165070\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-10-10 00:00:00:000\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"1900-2000\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2019-10-20 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2019-11-10 00:00:00:000\"},\n    {\"key\":\"location.210478.ankomsttid\",\"value\":\"2019-10-10 00:00:00:000\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -5869,6 +5872,9 @@
             }
           ],
           "_postman_id": "1230022-e763e395-0d20-731c-314f-30f116fe6103",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -5887,7 +5893,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handledDeliveryBookingEvents\":    [\r\n      {\r\n          \"itemId\": \"00000000014SE\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }] \r\n}}"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n  {\r\n    \"id\":\"1\",\r\n    \"handledDeliveryBookingEvents\":    [\r\n      {\r\n          \"itemId\": \"%002454509446503096174328752\",\r\n          \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n      }\r\n    ]\r\n  }] \r\n}}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8828,7 +8834,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
