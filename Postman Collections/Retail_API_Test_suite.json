@@ -12131,6 +12131,61 @@
         {
           "name": "Search event by itemid",
           "_postman_id": "1230022-8fb4dc90-de34-11b5-ffd8-8ef9e7dded9a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?apikey=810f45985a2e91c7b3b95701fa8c7362&type=event&query=itemid:00000000014SE&language=en&Content-Type=application/json;charset=UTF-8",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "type",
+                  "value": "event"
+                },
+                {
+                  "key": "query",
+                  "value": "itemid:00000000014SE"
+                },
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search item by itemid",
+          "_postman_id": "1230022-6aae9cb5-1a34-48d8-9e13-7ef0bcb9002a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -12305,6 +12360,9 @@
             }
           ],
           "_postman_id": "1230022-f2a1804e-3d2d-6c4c-bbab-7bfa5990daf9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
