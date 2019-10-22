@@ -339,25 +339,30 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "14ffd43b-9545-4de5-9c10-80d73e7e3016",
                 "exec": [
                   "console.log(\"Login using ssid: \"+data.ssid);",
                   "console.log(\"            user: \"+data.user);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "231077ef-712b-42fc-8ca7-2e9316d4f490",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   " "
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-f15643ae-fef2-6d20-1189-bff4510b36da",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -374,10 +379,6 @@
                 "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
-            },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/me?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
