@@ -8578,7 +8578,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -8864,89 +8864,6 @@
           "response": []
         },
         {
-          "name": "events recieveitem Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "a448dca0-f318-486d-874b-c6d75552237d",
-                "exec": [
-                  "//2016-12-13T16:25:39.611+02:00",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "f7c5dbb3-8054-4541-9105-fc96d913d84f",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"failed\");",
-                  "    postman.setNextRequest(null);",
-                  "}else{",
-                  "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions[0].printid);",
-                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions[0].printid);",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-a7979289-41a9-43bf-bb25-999e19153c1b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
-              },
-              {
-                "key": "Content-Type",
-                "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"eventList\": {\r\n\t\t\"customersessions\":[\r\n\t   \t{\r\n\t\t\t\"id\":\"1\",\r\n\t\t\t\"receivedItemEvents\":[\r\n\t\t     {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       },\r\n\t\t     {\r\n\t           \"itemId\": \"00000000028SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       },\r\n\t\t     {\r\n\t           \"itemId\": \"00000000045SE\",\r\n\t           \"productCode\":\"24\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": []\r\n\t       }\r\n\t\t   ]  \r\n\t   \t}\r\n\t   \t]\r\n  }\r\n}"
-            },
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "events"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en"
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ]
-            },
-            "description": "Events on items"
-          },
-          "response": []
-        },
-        {
           "name": "print zpl",
           "event": [
             {
@@ -9152,28 +9069,6 @@
           "response": []
         },
         {
-          "name": "ZPL viewer Copy",
-          "_postman_id": "1230022-587b9189-3c68-4a8c-8e81-e16cdb6adfc5",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "^XA\\n^CWW,E:ARI000.TTF^\\n^CWW,E:ARIAL.TTF^\\n^CWX,E:TT0003M_^\\n^XZ\\n^XA\\n^LL1520\\n^FX utf-8   ^CI28\\n^PON\\n^FWN\\n^FX ===== LABEL: FROM ZONE\\n^CF0,28,28\\n^FO40,20\\n^GFA,726,726,22,hI0EhH0FEX0FFgG01FE:::3F9FFI03FFI07FF8IFCFE7F8007FF00FF3E07F9FE7FBFF801IFC03IFCIFDFEFFC01IFC0FF7E1JFE7JFC03IFE07IFCIFDJFE03IFE0IFE3JFE7JFE07JF0JF8IF9KF07JF0IFE7JFE7KF0KF8JF8IF9KF0KF8IFE7JFE7KF0KFCFF9F8IF1KF1KFCIFEKFE7FFBFF9FFDFFDFFI0IF1KF9FFDFFCIFEKFE7FC0FF9FF07FDFFC00FF01FF0FF9FF07FCFFC1FF03FE7FC07F9FE03FEIFE0FF01FE07FBFE03FCFF81FF01FE7F807FBFE03FEJF8FF01FE07FBFC03FEFF01FE01FE7F807FBFC01FE7IFCFF01FE07FBFC03FEFF01FE01FE7F807FBFE03FE3IFCFF01FE07FBFC03FEFF01FE01FE7F807FBFE03FE0IFEFF01FE07FBFE03FCFF01FF01FE7FC0FF9FF07FC007FEFF01FE07FBFE07FCFF01FF03FE7FF3FF9FF8FFC401FEFF01FE07F9FF9FFCFF00FFCFFE7KF1KFCFC3FEFF01FE07F9KF8FF00KFE7KF0KF8JFEFF01FE07F8KF8FF00KFE7JFE07JF0JFCFF01FE07F8KF0FF007JFE7JFC03IFE0JF8FF01FE07F87IFE0FF003JFE7JF801IFC1JF0FF01FE07F81IFC0FF001JFE7F9FEI07FF00IFC0FF01FE07F007FF00FFI0FF9FE7F8,::::3F8,^FS\\n^FO540,20\\n^FDEDI-KUND^FS\\n^FO541,20\\n^FDEDI-KUND^FS\\n^FO540,21\\n^FDEDI-KUND^FS\\n^FO690,20\\n^FD^GFA,540,540,12,gHFC,NFE07KFE0JFC,::NFC07KFE0JFC,NFC03KFE0JFC,::NFC03QFC,NF801QFC,:F81KF801F07F060FC07C,F00KF801F07F060F803C,E007JFI0F07F060F001C,E003JFI0F83E060EI0C,C003JF060F83E0E0EI0C,C001JF060F83E0E0EI0C,C081IFE060783E0E0E0E04,81C1IFE060781E0E0C1F04,83E0IFE0607C1E1E0C0F1C,83E0IFE0F07C1C1E0C07FC,83E0E03E0F07C1C1E0C01FC,83E0C01C0F03C1C1E0E007C,8I0C01C0F03C0C1E0E003C,8I0C01CI03E083E0E001C,8I0C01CI03E083E0FI0C,8I0C01CI01E083E0F8004,8I0C018I01E003E0FC004,83FFC018I01F007E0FF004,83FFE018I01F007E0FFC04,83EJF8J0F007E0F9F04,83E1IF03FC0F007E0C1F04,81C0IF03FC0F00FE0C1F04,C1C0IF03FC0F80FE0C0F04,C001IF07FC0F80FE0CI04,C001IF07FE0780FE0EI04,E001FFE07FE0780FE0EI0C,E003FFE07FE07C1FE0FI0C,F007FFE0FFE07C1FE0F801C,F80IFE0IF07C1FE0FC03C,FF7WFBFC,gHFC,:::^FS^FS\\n^FO40,55\\n^FDSkicka Lätt^FS\\n^FO41,55\\n^FDSkicka Lätt^FS\\n^FO40,56\\n^FDSkicka Lätt^FS\\n^CF0,20,20\\n^FO130,80\\n^FDINTERNETBETALD^FS\\n^FO350,100\\n^FDGiltig tom: ^FS\\n^FO450,100\\n^FD2019-12-06^FS\\n^CF0,20,20\\n^FO40,80\\n^FDBetalsätt: ^FS\\n^FO40,100\\n^FDFrån^FS\\n^FO130,100\\n^FDKöpt: ^FS\\n^FO180,100\\n^FD2019-10-07^FS\\n^CF0,28,28\\n^FO40,120\\n^FDUtrustad AB^FS\\n^FO34,148\\n^FDJärnvägsgatan 18^FS\\n^FO40,176\\n^FD^FS\\n^FO40,204\\n^FDSE - 923 31 STORUMAN^FS\\n^CF0,20,20\\n^FO500,160\\n^FDKontakt :^FS\\n^FO500,180\\n^FDTel: ^FS\\n^FO610,160\\n^FDKalle Åkerblom^FS\\n^FO610,180\\n^FD^FS\\n^FX ===== LABEL: TO ZONE\\n^FO30,235\\n^GB47,0,7^FS\\n^FO30,235\\n^GB0,47,7^FS\\n^FO740,235\\n^GB47,0,7^FS\\n^FO780,235\\n^GB0,47,7^FS\\n^FO30,388\\n^GB47,0,7^FS\\n^FO30,348\\n^GB0,47,7^FS\\n^FO740,388\\n^GB47,0,7^FS\\n^FO780,348\\n^GB0,47,7^FS\\n^CF0,20,20\\n^FO40,245\\n^FDTill^FS\\n^CF0,28,28\\n^FO40,268\\n^FDIda Ylipää^FS\\n^FO40,296\\n^FDDoktorsronden 11D^FS\\n^FO40,324\\n^FD^FS\\n^FO40,352\\n^FDSE - 984 31 PAJALA^FS\\n^FO41,352\\n^FDSE - 984 31 PAJALA^FS\\n^FO40,353\\n^FDSE - 984 31 PAJALA^FS\\n^CF0,20,20\\n^FO500,340\\n^FDPortkod:^FS\\n^FO610,340\\n^FD^FS\\n^FO500,360\\n^FDTel: ^FS\\n^FO610,360\\n^FD0768391928^FS\\n^FX ===== LABEL: SERVICE, itemIdx=0\\n^CF0,20,20\\n^FO40,399\\n^FDVikt(kg):^FS\\n^FO125,405\\n^GB660,0,4^FS\\n^FO40,419\\n^FD1,00 kg^FS\\n^FO125,425\\n^GB660,0,4^FS\\n^FX ===== LABEL: BARCODE ZONE\\n^FO149,445,0\\n^BY3,0.7,160\\n^BCN,160,N,N,N,N\\n^FDAP173278314SE^FS\\n^CF0,150,150\\n^FO20,470\\n^FDA^FS\\n^CF0,22,22\\n^FO20,630\\n^FDFörsändelse-ID^FS\\n^CF0,45,45\\n^FO40,620\\n^FB758,1,0,C,0\\n^FDAP173278314SE^FS\\n^FO41,620\\n^FB758,1,0,C,0\\n^FDAP173278314SE^FS\\n^FO40,621\\n^FB758,1,0,C,0\\n^FDAP173278314SE^FS\\n^XZ"
-            },
-            "url": "http://api.labelary.com/v1/printers/8dpmm/labels/4x8/0/"
-          },
-          "response": []
-        },
-        {
           "name": "items Deliveritem",
           "event": [
             {
@@ -9258,6 +9153,89 @@
               ]
             },
             "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "Event print label",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "db72c2d5-7963-48ca-be67-1f9a4ddd957e",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "8ef6929a-8f37-4ebd-abaf-56b576e3befb",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions[0].printid);",
+                  "    postman.setEnvironmentVariable(\"printid\", responseObj.eventresponse.customersessions[0].printid);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-1f271906-ca28-489e-ac85-08ad62c9bbbc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"labelPrintEvents\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n          }\r\n        ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
           },
           "response": []
         }
