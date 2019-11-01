@@ -967,7 +967,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t            {\t\t\t\r\n\t               \"itemId\": \"00000000014SE\",\r\n\t               \"shelfNo\": \"A10\",\r\n\t               \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t               \"arrivalWarning\":{\"userConfirmed\":false}\r\n\t            }\r\n\t        ]\r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      ],\r\n\t      \"deliveries\":    {\r\n          \"deliveries\": [\r\n          \t{\r\n            \t\"itemId\": \"00000000014SE\",\t\r\n                \"productCode\":\"42175241314\\u001d9012020582799119\",\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"additionalRequestResponse\": {\r\n                   \"id\": 1,\r\n                   \"response\": \"true\"\r\n                }\r\n            }\r\n          ],\r\n          \"identifications\":  [\r\n          {\r\n                \"idNumber\": \"1212121212\",\r\n                \"identificationTypeId\": 1,\r\n                \"courier\": false\r\n            }\r\n            \r\n          ]\r\n       }\r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
