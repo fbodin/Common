@@ -223,6 +223,112 @@
           "response": []
         },
         {
+          "name": "login-V2 Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8918e71a-67be-4331-976e-d601d40f77e7",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "ae84f901-ec58-4cad-a166-c663ba2790a3",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-a5c376c1-69b9-4fc8-b41a-97ccfd5bde1f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "device-id",
+                "value": "{{deviceid}}",
+                "disabled": false
+              },
+              {
+                "key": "x-request-id",
+                "value": "JOPE_1",
+                "disabled": false
+              },
+              {
+                "key": "x-external-request-id",
+                "value": "JOPE_3",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\t\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true,\r\n      \"notificationRegistration\":{\r\n      \t\"registerToken\":\"XXX\",\r\n      \t\"notificationTypes\":[\"newMessage\"]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "5a3a6ee5-ffb6-42cd-9fb5-38caf51429c6",
+                  "key": "ssid",
+                  "value": "210478",
+                  "type": "string"
+                },
+                {
+                  "id": "bff1beb9-7bed-4573-a80a-601d77b9da1a",
+                  "key": "username",
+                  "value": "pelle10",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
           "name": "login-V2 AT",
           "event": [
             {
@@ -632,7 +738,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Kalle Karlsson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Kalle Karlsson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
