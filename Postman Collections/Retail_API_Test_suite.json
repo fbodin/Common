@@ -1310,7 +1310,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"00000000014SEX\",\t\n                \"productCode\":\"42175241314\\u001d9012020582799119\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
+              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"00000000014SE\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": \"false\"\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
