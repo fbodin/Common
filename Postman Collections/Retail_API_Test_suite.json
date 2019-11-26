@@ -1387,7 +1387,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"00357128520029375908\",\n\t            \"productCode\":\"19\",\t\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
+              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"15976876691771R\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -13035,7 +13035,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"reminderEvents\": [\r\n            {\r\n               \"itemId\": \"00000000014SE\",\r\n               \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n               \"recipientName\":\"Jörgen Pettersson\",\r\n               \"recipientStreet1\":\"Sofieberg Lövsta 30\",\r\n               \"recipientStreet2\":\"\",\r\n               \"recipientPostCode\":\"15395\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n    {\r\n      \"id\":\"1\",  \r\n      \"reminderEvents\": [\r\n            {\r\n               \"itemId\": \"00000000014SE\",\r\n               \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n               \"recipientName\":\"Dag Lundgren\",\r\n               \"recipientStreet1\":\"Bällstavägen 298\",\r\n               \"recipientStreet2\":\"\",\r\n               \"recipientPostCode\":\"16853\"\r\n            }\r\n        ]\r\n    }]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
