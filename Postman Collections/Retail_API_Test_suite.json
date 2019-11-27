@@ -1004,6 +1004,86 @@
           "response": []
         },
         {
+          "name": "events arrival Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-4ba99514-aaf0-4e7a-a31a-9b1fe1a82cd7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-Exc",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00757135950006925709\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
           "name": "items filter:arrived",
           "event": [
             {
@@ -1387,7 +1467,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"15976876691771R\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
+              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"96671567160SE\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1915,6 +1995,166 @@
               }
             ],
             "url": "https://8wov838wl2.execute-api.eu-north-1.amazonaws.com/test/gamification/badges"
+          },
+          "response": []
+        },
+        {
+          "name": "events arrival Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-f575f7db-2106-45bc-ba1c-e4b67b6a5ba3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-Exc",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00000000014SE\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "name": "events arrival Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-2ee5e64c-bf05-4d5b-8f07-a5e313c365c9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "X-Exc",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00000000014SE\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
           },
           "response": []
         }
