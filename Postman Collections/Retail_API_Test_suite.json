@@ -643,7 +643,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Kalle Karlsson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"83\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Kalle Karlsson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -978,7 +978,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00000000014SE\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00000000014SE\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"SEPARLA01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9775,6 +9775,20 @@
                   "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
                   "}",
                   "",
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var template = `",
+                  "    {{#each response.itemList.items}}",
+                  "    Itemid: 00000000014SE <br>",
+                  "    {{/each}}",
+                  "`;",
+                  "",
+                  "pm.visualizer.set(template, {",
+                  "    // Pass the response body parsed as JSON as `data`",
+                  "    response: pm.response.json()",
+                  "});",
+                  "",
+                  "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
                 ],
@@ -9783,6 +9797,9 @@
             }
           ],
           "_postman_id": "1230022-fdde6578-88f2-74e7-f327-d92f848acc19",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
