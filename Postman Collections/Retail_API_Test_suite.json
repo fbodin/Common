@@ -1247,7 +1247,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE",
+                  "value": "9999",
                   "type": "string"
                 }
               ]
@@ -3325,6 +3325,9 @@
             }
           ],
           "_postman_id": "1230022-3c44088a-d224-5f1a-0bf2-8f3c1e5f8f53",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
