@@ -118,8 +118,7 @@
                 },
                 {
                   "key": "X-External-Request-ID",
-                  "value": "jopetest",
-                  "type": "text"
+                  "value": "jopetest"
                 }
               ]
             }
@@ -1058,7 +1057,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"00757135950006925709\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"CJ205553298US\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1457,8 +1456,8 @@
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               },
               {
                 "key": "Device-ID",
@@ -1467,7 +1466,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"86529899608SE\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
+              "raw": "{\"eventList\": {\n  \"customersessions\":[\n  {\n    \"id\":\"1\",\n    \"deliveries\":    {\n          \"deliveries\": [\n          \t{\n            \t\"itemId\": \"CJ205553298US\",\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\n                \"additionalRequestResponse\": {\n                   \"id\": 1,\n                   \"response\": \"true\"\n                }\n            }\n          ],\n          \"identifications\":  [\n          {\n                \"idNumber\": \"1212121212\",\n                \"identificationTypeId\": 1,\n                \"courier\": false\n            }\n            \n          ]\n       }\n  }\n  ]\n}\n}\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -15710,6 +15709,90 @@
         }
       ],
       "_postman_id": "1230022-df3db692-0c11-4140-9f38-9050adcad274"
+    },
+    {
+      "name": "arrivedWithoutID",
+      "item": [
+        {
+          "name": "items handovertopostnord",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "abd64330-0065-49ca-8671-6291cfcb2a0d",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "c471e483-ac26-4da0-91b4-d2c73f18f07f",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-4bfd7bb3-47c6-495e-9e80-e2dd86ca73ca",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/arrivedwithoutid?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "items",
+                "arrivedwithoutid"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-7e383bac-df5a-4523-899d-7dc590581faf"
     },
     {
       "name": "Delete testitem copy",
