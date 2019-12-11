@@ -96,10 +96,15 @@
                 "key": "Authorization",
                 "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
                 "disabled": true
+              },
+              {
+                "key": "VIA",
+                "value": "1.0 TEST",
+                "type": "text"
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&X-External-Request-ID=jopetest",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -118,7 +123,8 @@
                 },
                 {
                   "key": "X-External-Request-ID",
-                  "value": "jopetest"
+                  "value": "jopetest",
+                  "disabled": true
                 }
               ]
             }
@@ -186,6 +192,11 @@
                 "key": "x-external-request-id",
                 "value": "JOPE_3",
                 "disabled": false
+              },
+              {
+                "key": "VIA",
+                "value": "1.0 JOPETEST",
+                "type": "text"
               }
             ],
             "body": {
@@ -5860,7 +5871,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-10-24 00:00:00:000\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"1900-2000\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2019-10-20 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2019-11-10 00:00:00:000\"},\n    {\"key\":\"location.210478.ankomsttid\",\"value\":\"2019-10-10 00:00:00:000\"}\n  ]}\n}"
+              "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"Test Testsson\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"Calle Kula\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"deliveryBooking\",\"value\":\"2019-10-24 00:00:00:000\"},\n  {\"key\":\"handledDeliveryBooking\",\"value\":\"N\"},\n  {\"key\":\"leveranstid\",\"value\":\"1900-2000\"},\n  {\"key\":\"location.210478.paminndatum\",\"value\":\"2019-10-20 00:00:00:000\"},\n  {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n  {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n  {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2019-11-10 00:00:00:000\"},\n  {\"key\":\"location.210478.ankomsttid\",\"value\":\"2019-10-10 00:00:00:000\"}\n  ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9707,7 +9718,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\t\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2019-08-10 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n     {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n     {\"key\":\"location.210478.ankomsttid\",\"value\":\"2019-08-01 00:00:00:000\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2019-08-11 00:00:00:000\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"00\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\t\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"\"},\n    {\"key\":\"paminnas\",\"value\":\"Y\"},\n    {\"key\":\"location.210478.paminndatum\",\"value\":\"2019-08-10 00:00:00:000\"},\n    {\"key\":\"location.210478.pamind\",\"value\":\"N\"},\n    {\"key\":\"location.210478.tillstand\",\"value\":\"3\"},\n    {\"key\":\"location.210478.ankomsttid\",\"value\":\"2019-11-01 00:00:00:000\"},\n    {\"key\":\"location.210478.sistaLiggedatum\",\"value\":\"2019-12-09 00:00:00:000\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
