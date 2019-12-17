@@ -104,7 +104,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&JOPETEST",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -125,6 +125,10 @@
                   "key": "X-External-Request-ID",
                   "value": "jopetest",
                   "disabled": true
+                },
+                {
+                  "key": "JOPETEST",
+                  "value": null
                 }
               ]
             }
@@ -157,7 +161,7 @@
                   "} else {",
                   "    var responseObj = JSON.parse(responseBody);",
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "    pm.environment.set(\"authorization\", responseObj.response.jwttoken.token);",
                   "}",
                   ""
                 ],
@@ -8773,7 +8777,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"3333\"}\n    ]}\n}"
+              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"222222\"}\n    ]}\n}"
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -9275,7 +9279,7 @@
               "variable": [
                 {
                   "key": "labelNo",
-                  "value": "0",
+                  "value": "1",
                   "type": "string"
                 }
               ]
