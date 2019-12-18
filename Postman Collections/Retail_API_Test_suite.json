@@ -8593,17 +8593,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "b15b45fe-b50e-4bbe-b342-9e789cc7c4db",
                 "exec": [
                   "console.log(\"Login using ssid: \"+data.ssid);",
                   "console.log(\"            user: \"+data.user);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "392d6fbe-5860-4876-8eca-2931f73a0d8a",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "if(responseCode.code != 200){",
@@ -8612,13 +8613,18 @@
                   "}else{",
                   "    var responseObj = JSON.parse(responseBody);",
                   "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "    pm.environment.set(\"authorization\", responseObj.response.jwttoken.token);",
+                  "    ",
                   "}"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-2c95d24c-4744-7f3f-d18d-939b368accae",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -9279,7 +9285,7 @@
               "variable": [
                 {
                   "key": "labelNo",
-                  "value": "1",
+                  "value": "0",
                   "type": "string"
                 }
               ]
