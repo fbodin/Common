@@ -8523,6 +8523,1237 @@
       "name": "Receive item",
       "item": [
         {
+          "name": "add bunch of items",
+          "item": [
+            {
+              "name": "Delete testitem1",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-3bda219e-0e4e-4d9f-a8c5-e9b10b3160ab",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000012XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem2",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-922b5114-e333-4371-963e-ea8f37db669f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000013XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem3",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-ae46b60d-e260-4ce4-bb8a-8b606d5486af",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000014XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem4",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-971228b6-2fab-463f-b82e-24fdaff341c6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000015XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem5",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-021d2594-11ec-45b2-b3d9-540acdc87b72",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000016XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem6",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-4542019f-b585-47ea-929e-bbf0e774a984",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000017XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem7",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-5e36f10b-a107-42cd-b30d-a161f6f9cf8c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000018XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem8",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-d87a88df-e1dc-48da-b429-3af41b294b29",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000019XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem8",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "63aaff96-1cb6-4757-a113-ffddc62c06d8",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-eacd67de-1dd7-4753-a567-f75a32990dae",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000020XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem1",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-6dfe21af-ad7f-4433-bdf5-dc1f21608001",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000012XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem2",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-2b4260c3-21a6-488f-814c-08c4f210fea8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000013XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem3",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-02b99a83-b075-4a72-8b6a-d5a6d6f61eb0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000014XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem4",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-f4c3b09d-a484-43c9-8b0d-666659d6f3de",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000015XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem5",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-95a9afaf-fb65-4e82-8fc3-f8a280b451a0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000016XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem6",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-642ab970-4254-440a-b11c-fd484bd49ebe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000017XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem7",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-c147f535-0af3-4353-82f3-f7229a068214",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000018XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem8",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-07c010ef-e3d8-457f-9c67-293bff4876d1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000019XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Add testitem9",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "27896eae-ac8d-47ee-9783-d3d2b938a948",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                      "",
+                      "if(responseCode.code != 200){",
+                      "    console.log(\"failed\");",
+                      "    postman.setNextRequest(null);",
+                      "}"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-8a8dda2f-f8f4-4aaf-8e18-8800d8cc8028",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json;charset=UTF-8"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+                  },
+                  {
+                    "key": "Device-ID",
+                    "value": "{{deviceid}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"RR\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Jörgen Pettersson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"mottagaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"jp@jknowledge.se\"},\n    {\"key\":\"vikt.vikt\",\"value\":\"123\"},\n    {\"key\":\"vikt.viktenhet\",\"value\":\"2\"},\n    {\"key\":\"orderlaggarnr\",\"value\":\"999999999\"}\n    ]}\n}"
+                },
+                "url": {
+                  "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+                  "host": [
+                    "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+                  ],
+                  "path": [
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "RR00000020XSE",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "1230022-1bcead19-60a6-41c5-8d0c-018fe7227598",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Health",
           "event": [
             {
@@ -9522,7 +10753,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"00000000014SE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"00000000028SE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
+              "raw": "{\"eventList\": {\r\n  \"customersessions\":[\r\n\t{\r\n\t    \"id\":\"1\",\r\n\t    \"receivedItemEvents\":[\r\n\t       {\r\n\t           \"itemId\": \"RR00000012XSE\",\r\n\t           \"productCode\":\"RR\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000013XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000014XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000015XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000016XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000017XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000018XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000019XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       },\r\n\t       {\r\n\t           \"itemId\": \"RR00000020XSE\",\r\n\t           \"productCode\":\"19\",\r\n\t           \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t           \"emailAddresses\": [\"jp@jknowledge.se\"]\r\n\t       }\r\n\t    ]  \r\n    }\r\n   ]\r\n  }\r\n}\r\n\r\n"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
