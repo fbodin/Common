@@ -17298,7 +17298,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"handledFlexBookingEvents\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n          }\r\n        ]  \r\n\t    }\r\n    ]\r\n  }\r\n}"
+              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \u0001\r\n\t      \"handledFlexBookingEvents\": [\r\n          {\r\n            \"itemId\": \"00000000014SE\",\r\n            \"timeStamp\": \"2018-06-29T10:37:15.717Z\"\r\n          }\u0001\r\n        ]  \r\n\t    }\r\n    ]\r\n  }\r\n}"
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
