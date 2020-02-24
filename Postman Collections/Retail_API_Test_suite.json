@@ -205,7 +205,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\t\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true,\r\n      \"notificationRegistration\":{\r\n      \t\"registerToken\":\"XXX\",\r\n      \t\"notificationTypes\":[\"newMessage\"]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
