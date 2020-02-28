@@ -657,7 +657,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"testitem\":\n  {\"attributes\":[ \n    {\"key\":\"produktkod\",\"value\":\"19\"},\n    {\"key\":\"mottagaradress.namn\",\"value\":\"Kalle Karlsson\"},\n    {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"Storgatan 1\"},\n    {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"mottagaradress.postort\",\"value\":\"Stockholm\"},\n    {\"key\":\"avsandaradress.namn\",\"value\":\"Retail Test\"},\n    {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n    {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n    {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n    {\"key\":\"avsandaradress.landskod\",\"value\":\"SE\"},\n    {\"key\":\"avsandaradress.contact.email\",\"value\":\"retail28@postnord.se\"},\n    {\"key\":\"notificationCode\",\"value\":\"00035\"},\n    {\"key\":\"itemRefIds.INFO_ID\",\"value\":\"AN01010\"},\n    {\"key\":\"itemRefIds.INFO_ID_SHORT\",\"value\":\"0010\"}\n    ]}\n}"
+              "raw": ""
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1235,7 +1235,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/delivery?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&handleProductCode=Y",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/delivery?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&handleProductCode=N",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -1255,7 +1255,7 @@
                 },
                 {
                   "key": "handleProductCode",
-                  "value": "Y"
+                  "value": "N"
                 }
               ],
               "variable": [
@@ -16890,7 +16890,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\t\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true,\r\n      \"notificationRegistration\":{\r\n      \t\"registerToken\":\"XXX\",\r\n      \t\"notificationTypes\":[\"newMessage\"]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
