@@ -2254,6 +2254,11 @@
       "description": "Basic flow Arrival->Delivery of mypack product 19,24\nIncluding both swe and dk "
     },
     {
+      "name": "Error codes",
+      "item": [],
+      "_postman_id": "1230022-bd9faaf8-2a12-434a-41c3-de3b92e027fa"
+    },
+    {
       "name": "Basic singel tests",
       "item": [
         {
@@ -3697,6 +3702,105 @@
               ]
             },
             "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "name": "items expected",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "19a5f27b-c569-4939-9980-689d0f98f651",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "419ad6ac-ca1e-4acd-9df4-41d14d536dfc",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var template = `",
+                  "    <table>",
+                  "        <tr>",
+                  "            <th>Item</th>",
+                  "            <th>Product</th>",
+                  "            <th>arrivalDate</th>",
+                  "        </tr>",
+                  "",
+                  "        {{#each response.itemList.items}}",
+                  "            <tr>",
+                  "                <td>00000000014SE</td>",
+                  "                <td>{{product.name}}</td>",
+                  "                <td>{{arrivalDate}}</td>",
+                  "                ",
+                  "            </tr>",
+                  "        {{/each}}",
+                  "    </table>",
+                  "`;",
+                  "",
+                  "pm.visualizer.set(template, {",
+                  "    // Pass the response body parsed as JSON as `data`",
+                  "    response: pm.response.json()",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-2eb532db-816d-418f-9d8b-40fb83e0a773",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              },
+              {
+                "key": "Origin",
+                "type": "text",
+                "value": "d1z1n5hcr2mfu0.cloudfront.net",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/expected?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "items",
+                "expected"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
           },
           "response": []
         }
@@ -6699,11 +6803,6 @@
         }
       ],
       "_postman_id": "1230022-9d8b3e69-0a65-2df6-d6b8-9f41131d8645"
-    },
-    {
-      "name": "Error codes",
-      "item": [],
-      "_postman_id": "1230022-bd9faaf8-2a12-434a-41c3-de3b92e027fa"
     },
     {
       "name": "GTT Production Request",
