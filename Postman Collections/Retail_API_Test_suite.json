@@ -1018,7 +1018,7 @@
           "response": []
         },
         {
-          "name": "events arrival Copy",
+          "name": "events arrival NO",
           "event": [
             {
               "listen": "prerequest",
@@ -1065,14 +1065,14 @@
               },
               {
                 "key": "X-Exc",
-                "value": "",
                 "type": "text",
+                "value": "",
                 "disabled": true
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"eventList\": {\r\n    \"customersessions\":[\r\n\t    {\r\n\t      \"id\":\"1\",  \r\n\t      \"arrivals\": [\r\n\t      \t{\r\n\t      \t\t\"itemId\": \"CE440628402FI\",\t\r\n                \"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n                \"shelfNo\": \"A01\"\r\n\t      \t}\r\n\t      ]\r\n       \r\n\t    }\r\n    ]\r\n  }\r\n}\r\n"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
@@ -1235,7 +1235,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/delivery?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&handleProductCode=N",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/delivery?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&handleProductCode=Y",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -1255,13 +1255,13 @@
                 },
                 {
                   "key": "handleProductCode",
-                  "value": "N"
+                  "value": "Y"
                 }
               ],
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "0000",
+                  "value": "00000000014SE",
                   "type": "string"
                 }
               ]
