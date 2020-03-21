@@ -1277,20 +1277,19 @@
               "listen": "prerequest",
               "script": {
                 "id": "f84aacfd-ed54-4293-89c2-1c9f6ee1d688",
-                "type": "text/javascript",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
                 "id": "ec46c5b2-d96a-436d-b939-a6836918b6b5",
-                "type": "text/javascript",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -1304,11 +1303,15 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-0ee0a64a-4cdb-3c1c-5d57-9570444a230d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -1327,7 +1330,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"deliveryIdentificationRequest\":{\n  \"identification\":[\n    {\n      \"courier\":false,\n      \"idNumber\":\"c\",\n      \"identificationTypeId\":1\n      \n    }\n    ],\"itemId\":[\"00000000014SE\"]\n  }\n}"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/validateidentification?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
