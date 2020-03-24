@@ -179,28 +179,28 @@
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               },
               {
+                "disabled": false,
                 "key": "device-id",
-                "value": "{{deviceid}}",
-                "disabled": false
+                "value": "{{deviceid}}"
               },
               {
+                "disabled": false,
                 "key": "x-request-id",
-                "value": "JOPE_1",
-                "disabled": false
+                "value": "JOPE_1"
               },
               {
+                "disabled": false,
                 "key": "x-external-request-id",
-                "value": "JOPE_3",
-                "disabled": false
+                "value": "JOPE_3"
               },
               {
                 "key": "VIA",
-                "value": "1.0 JOPETEST",
-                "type": "text"
+                "type": "text",
+                "value": "1.0 JOPETEST"
               }
             ],
             "body": {
