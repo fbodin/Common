@@ -4516,6 +4516,9 @@
             }
           ],
           "_postman_id": "1230022-6f2db20e-ce5a-771b-9b7f-d8404cc323be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
@@ -4525,7 +4528,7 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json;charset=UTF-8"
               },
               {
                 "key": "Device-ID",
@@ -4534,7 +4537,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"eventList\": {\r\n\t\"customersessions\":[\r\n\t{\r\n\t\t\"id\":\"1\",\r\n\t\t\"changeAddressEvents\":   [\r\n\t    \t{\r\n\t        \t\"itemId\": \"00000000014SE\",\r\n\t        \t\"timeStamp\": \"2018-06-29T10:37:15.717Z\",\r\n\t        \t\"itemMissing\":false\r\n\t    \t}\r\n    \t]\r\n\t}\r\n\t]\r\n}\r\n}\r\n"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
