@@ -3040,7 +3040,8 @@
               {
                 "key": "Origin",
                 "value": "d1z1n5hcr2mfu0.cloudfront.net",
-                "type": "text"
+                "type": "text",
+                "disabled": true
               }
             ],
             "url": {
