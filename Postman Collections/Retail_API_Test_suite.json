@@ -2627,6 +2627,58 @@
           "response": []
         },
         {
+          "name": "Retail Blom cache",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "7bc7a7b2-457d-4870-8b8a-118334f43e50",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "console.log(\"Got response \"+responseBody);",
+                  "if(responseCode.code==200){",
+                  "    tests[\"Check no of countries\"] = jsonData.countries >=1;",
+                  "    if(jsonData.countries.countrycodes){",
+                  "        tests[\"Check no of countries\"] = jsonData.countries.countrycodes.length >=1;",
+                  "    }",
+                  "} else if(responseCode.code==400) {",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-64412bc0-22f9-4543-a979-f71db212dd46",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "ETag",
+                "value": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "url": "https://fd5zq03gda.execute-api.eu-west-1.amazonaws.com/test/businesslocations/me",
+            "description": "Get country and country codes"
+          },
+          "response": []
+        },
+        {
           "name": "countrycodes copy",
           "event": [
             {
