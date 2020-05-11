@@ -2401,11 +2401,6 @@
       "description": "Basic flow Arrival->Delivery of mypack product 19,24\nIncluding both swe and dk "
     },
     {
-      "name": "Error codes",
-      "item": [],
-      "_postman_id": "1230022-bd9faaf8-2a12-434a-41c3-de3b92e027fa"
-    },
-    {
       "name": "Basic singel tests",
       "item": [
         {
