@@ -1805,7 +1805,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE",
+                  "value": "81292715985SE",
                   "type": "string"
                 }
               ]
@@ -5066,6 +5066,69 @@
             "body": {
               "mode": "raw",
               "raw": "{\"testitem\":\n{\"attributes\":[ \n  {\"key\":\"produktkod\",\"value\":\"19\"},\n  {\"key\":\"avsandaradress.namn\",\"value\":\"NR FL Test\"},\n  {\"key\":\"avsandaradress.utdelningsadressrad1\",\"value\":\"Terminalvägen\"},\n  {\"key\":\"avsandaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"avsandaradress.postort\",\"value\":\"SOLNA\"} ,\n  {\"key\":\"mottagaradress.namn\",\"value\":\"test\"},\n  {\"key\":\"mottagaradress.utdelningsadressrad1\",\"value\":\"testgatan\"},\n  {\"key\":\"mottagaradress.postnr\",\"value\":\"10500\"},\n  {\"key\":\"mottagaradress.postort\",\"value\":\"STOCKHOLM\"},\n  {\"key\":\"afNewDelivery\",\"value\":\"{{afNewDelivery_1}}\"},\n  {\"key\":\"tillaggstjanster.45:EnkelTillaggstjanst.kod\",\"value\":\"45\"}\n  ]}\n}"
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add testitem ChangeDelivery  forcedReturn",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "77a8b020-f3d0-416d-87d5-ca607e74715b",
+                "exec": [
+                  "const moment = require('moment');\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());\r",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", moment().format(\"YYYY-MM-DD h:m:ss:000\"));\r",
+                  "postman.setEnvironmentVariable(\"afNewDelivery\", moment().format(\"YYYY-MM-DD 00:00:00:000\"));\r",
+                  "postman.setEnvironmentVariable(\"afNewDelivery_1\", moment().add(1,'days').format(\"YYYY-MM-DD 00:00:00:000\"));\r",
+                  "//postman.setEnvironmentVariable(\"todayDate\", \"2019-10-09 08:26:25.000\");\r",
+                  "//postman.setEnvironmentVariable(\"todayDate\", str);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-fc1a10cb-ad6f-4192-bf15-806b16d8d698",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
             },
             "url": {
               "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
