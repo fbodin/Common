@@ -4171,7 +4171,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoibmlja2xhcyIsInNzaWQiOiIxOTUxNjkiLCJzb3VyY2VpZCI6IlNFMTk1MTY5IiwiaWF0IjoxNjAxOTk3OTQ0LCJleHAiOjE2MDIwNjk5NDQsImlzcyI6Imh0dHBzOi8vcmV0YWlsLnBvc3Rlbi5zZSJ9.JedUoBZDE8EC18jmXHOvc5IpmqSgPAXAewrqt9nvbDKIES1EXhG31LqCEAQWcFSIxupFgmoDB1GwrYqWNjD_DVxSXvcRo-VYn5M0Q3gntCAzYLWPmnnI9rEW8aKgiOXmLyfhpFs9WgDweWoYG92Tk4d8M882SNFIi09avi6k0-Z4QrPQAaV-DPafd07fGxUnNc_xT7cRbPjWpRp4PPQO2BISKhzq-BvTu1ZVCJ1ryUGvKptGNO-KSH853NYwK2CTCvgeY0GNgbHjoM-bT7ndedZi_KNunRXbjoxoA55XQo2CJ67efBoQ8eNvUlnnUOGBTMhuOmXsdWblLPZ-ZleFPg"
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
               }
             ],
             "body": {
@@ -4752,7 +4752,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"1.1.1\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true\r\n    }\r\n  }\r\n}"
+              "raw": ""
             },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
