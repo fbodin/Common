@@ -15,16 +15,17 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "84632fb0-5ced-43ba-88ec-384c7a321ade",
                 "exec": [
                   "console.log(\"Health check\");"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "d016fc6f-6100-4ce5-a27f-25d3fb5d3748",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -32,19 +33,34 @@
                   "if(responseCode.code != 200){",
                   "    postman.setNextRequest(null);",
                   "}"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-cea8c30e-8168-c509-773d-b008ec788689",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
-            "url": "https://atapi2.postnord.com/ping-retail"
+            "url": {
+              "raw": "https://atapi2.postnord.com/ping-retail?X-External-Request-ID=jopetest",
+              "host": [
+                "https://atapi2.postnord.com"
+              ],
+              "path": [
+                "ping-retail"
+              ],
+              "query": [
+                {
+                  "key": "X-External-Request-ID",
+                  "value": "jopetest",
+                  "type": "text"
+                }
+              ]
+            }
           },
           "response": []
         },
@@ -104,7 +120,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&JOPETEST",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/manage/health?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&X-External-Request-ID=jopetest&JOPETEST",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -123,8 +139,7 @@
                 },
                 {
                   "key": "X-External-Request-ID",
-                  "value": "jopetest",
-                  "disabled": true
+                  "value": "jopetest"
                 },
                 {
                   "key": "JOPETEST",
