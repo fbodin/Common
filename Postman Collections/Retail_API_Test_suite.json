@@ -4194,7 +4194,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362&ssid=",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/capability/?language=fi&apikey=810f45985a2e91c7b3b95701fa8c7362&ssid=",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -4205,7 +4205,7 @@
               "query": [
                 {
                   "key": "language",
-                  "value": "sv"
+                  "value": "fi"
                 },
                 {
                   "key": "apikey",
