@@ -11522,6 +11522,99 @@
               "raw": ""
             },
             "url": {
+              "raw": "https://st3.pablo.posten.se:7014/retailapi/wsservices/rest/retail/v2/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
+              "host": [
+                "st3",
+                "pablo",
+                "posten",
+                "se"
+              ],
+              "port": "7014",
+              "path": [
+                "retailapi",
+                "wsservices",
+                "rest",
+                "retail",
+                "v2",
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        },
+        {
+          "name": "events recieveitem on-prem",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "b86e304e-b385-400e-b792-547e226471c0",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "1f000d29-19ba-44f5-b9cd-6edd5ff79158",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}else{",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions[0].printid);",
+                  "    pm.environment.set(\"printid\", responseObj.eventresponse.customersessions[0].printid);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-bcb93c81-91b9-4e52-ad5c-1ddf4c5a6c7c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
