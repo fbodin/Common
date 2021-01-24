@@ -11462,7 +11462,7 @@
           "response": []
         },
         {
-          "name": "events recieveitem",
+          "name": "events recieveitem on prem",
           "event": [
             {
               "listen": "prerequest",
@@ -11555,7 +11555,7 @@
           "response": []
         },
         {
-          "name": "events recieveitem on-prem",
+          "name": "events recieveitem",
           "event": [
             {
               "listen": "prerequest",
@@ -11602,8 +11602,8 @@
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               },
               {
                 "key": "Device-ID",
