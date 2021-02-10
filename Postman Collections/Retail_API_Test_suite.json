@@ -11361,24 +11361,25 @@
           "response": []
         },
         {
-          "name": "items Receiveitem copy",
+          "name": "items Receiveitem on prem",
           "event": [
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "1899c03d-e633-40c2-8941-165db431f386",
                 "exec": [
                   "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
                   "console.log(\"ItemId: \"+data.itemId);",
                   "console.log(\"Product: \"+data.productCode);",
                   "console.log(\"Context: \"+data.context);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "db336311-9a31-45cd-a73f-3539ad808b4d",
                 "exec": [
                   "tests[\"Check status code is 200\"] = responseCode.code === 200;",
                   "",
@@ -11392,11 +11393,15 @@
                   "",
                   "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-1ad1076d-6461-f60a-15a5-7b49d0ea28d0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -11409,16 +11414,22 @@
                 "value": "{{deviceid}}"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid?context=receive&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://st3.pablo.posten.se:7014/retailapi/wsservices/rest/retail/v2/items/:itemid?context=receive&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
               "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+                "st3",
+                "pablo",
+                "posten",
+                "se"
               ],
+              "port": "7014",
               "path": [
+                "retailapi",
+                "wsservices",
+                "rest",
+                "retail",
+                "v2",
                 "items",
                 ":itemid"
               ],
