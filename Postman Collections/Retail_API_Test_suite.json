@@ -801,7 +801,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "98068844337SE",
+                  "value": "00000000045SE",
                   "type": "string"
                 }
               ]
@@ -1954,25 +1954,39 @@
               }
             ],
             "url": {
-              "raw": "https://tkw80kl1zc.execute-api.eu-west-1.amazonaws.com/test/items/00000000028SE/returnitem?language=sv",
-              "protocol": "https",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemId/delivery?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362&handleProductCode=Y",
               "host": [
-                "tkw80kl1zc",
-                "execute-api",
-                "eu-west-1",
-                "amazonaws",
-                "com"
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
               "path": [
-                "test",
                 "items",
-                "00000000028SE",
-                "returnitem"
+                ":itemId",
+                "delivery"
               ],
               "query": [
                 {
                   "key": "language",
                   "value": "sv"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": null,
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "key": "handleProductCode",
+                  "value": "Y"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemId",
+                  "value": "93068377720SE",
+                  "type": "string"
                 }
               ]
             },
