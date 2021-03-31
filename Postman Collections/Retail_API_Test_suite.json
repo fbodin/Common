@@ -738,6 +738,105 @@
           "response": []
         },
         {
+          "name": "import from prod testitem IAM",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2d792b39-28c8-4bc9-909c-59933d1524b1",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "c0d23d16-ee0f-4767-9f94-c0806a3e15a9",
+                "exec": [
+                  "//console.log('before: '+pm.variables.get(\"itemId\"));\r",
+                  "console.log('before: '+pm.environment.get(\"itemId\"));\r",
+                  "//console.log('before: '+pm.globals.get(\"itemId\"));\r",
+                  "let encoded = encodeURIComponent(pm.environment.get(\"itemId\"));\r",
+                  "console.log('after: '+encoded);\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"itemId\", encoded);\r",
+                  "//pm.environment.set(\"itemId\", encoded);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-c8f2e801-cb95-4940-b5e6-3d2d45bc70a0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3c3Rlc3Rwb3N0bm9yZCIsImlhdCI6MTUxMjEyMzU5OCwiZXhwIjoxNTEyMTI1Mzk4LCJ1c2VySWQiOiI0MTA0MyIsInJvbGUiOiIiLCJwcm9kdWN0cyI6WzE1NTldLCJjdXN0b21lclN5c3RlbXMiOlsxNjY1XSwiZmxvd1Nob3BzIjpbXSwid2ViU2VydmljZXMiOlsibm8uZGkud3MuYWRkcmVzc2NoZWNrLnN1Ym1pdC5TdWJtaXRBZGRyZXNzQ2hlY2tFbmRwb2ludFYxIiwibm8uZGkud3MuYWRkcmVzc2NoZWNrLmZldGNoLkZldGNoQWRkcmVzc0NoZWNrRW5kcG9pbnRWMSJdLCJjb21wYW5pZXMiOltdfQ.HbQHla4rhLrqylo_11QkCmwCVEa_rOtCR2XrXxkH_IBin1owqQDN-MhJHKS1lxNpVhySzuJyEaJ9Uatmg1BENw"
+              },
+              {
+                "key": "Device-IDcon",
+                "value": "{{deviceid}}",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid/readfromprod?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid",
+                "readfromprod"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "97989272255SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "Add testitem",
           "event": [
             {
@@ -856,7 +955,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid ?apikey=810f45985a2e91c7b3b95701fa8c7362&jopetest",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -871,17 +970,21 @@
                 "SE",
                 "test",
                 "item",
-                ":itemid"
+                ":itemid "
               ],
               "query": [
                 {
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "jopetest",
+                  "value": null
                 }
               ],
               "variable": [
                 {
-                  "key": "itemid",
+                  "key": "itemid ",
                   "value": "00000000014SE",
                   "type": "string"
                 }
@@ -5095,6 +5198,69 @@
             }
           ],
           "_postman_id": "1230022-d7dff660-f3e2-43c3-927b-c1d23c27e46c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid",
+              "host": [
+                "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
+              ],
+              "path": [
+                "item",
+                ":itemid"
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add testitem ChangeDelivery newDelivery yeasterday",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6a154453-9b1c-42cf-8f9a-20d696eae038",
+                "exec": [
+                  "const moment = require('moment');\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());\r",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", moment().format(\"YYYY-MM-DD h:m:ss:000\"));\r",
+                  "postman.setEnvironmentVariable(\"afNewDelivery\", moment().format(\"YYYY-MM-DD 00:00:00:000\"));\r",
+                  "postman.setEnvironmentVariable(\"afNewDelivery_1\", moment().add(-11,'days').format(\"YYYY-MM-DD 00:00:00:000\"));\r",
+                  "//postman.setEnvironmentVariable(\"todayDate\", \"2019-10-09 08:26:25.000\");\r",
+                  "//postman.setEnvironmentVariable(\"todayDate\", str);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-925c7471-f0c6-4270-a109-13be8b80ea47",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
