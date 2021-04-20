@@ -7,6 +7,121 @@
   },
   "item": [
     {
+      "name": "=¡ New! DELETE /item/:itemid",
+      "item": [
+        {
+          "name": "1. Get bearer token",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "0e77f931-c78a-4ce4-ab38-d8efb5ec52ce"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
+                ],
+                "type": "text/javascript",
+                "id": "562630bf-7007-46da-a3b6-e9e1e9897905"
+              }
+            }
+          ],
+          "_postman_id": "1230022-096a7b05-8b0c-4bdb-b1c8-73f6c5848f04",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "pnretail",
+                "password": "0yVhM4s2qPje4UGuRnxt"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://pp-gate.ess.postnord.com/mga/sps/oauth/oauth20/token"
+          },
+          "response": []
+        },
+        {
+          "name": "2. Delete testitem",
+          "_postman_id": "1230022-d40c44af-bc9a-4552-a5c9-4d9f54e53414",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "delayMs",
+                  "value": "5000"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "4a4118c3-9cb2-4dc6-9057-ad0337b5c639",
+                  "key": "itemid",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-4193540f-c56e-499e-9b96-0f573da23993"
+    },
+    {
       "name": "Basic flow Arrival-delivery",
       "item": [
         {
@@ -20080,182 +20195,6 @@
         }
       ],
       "_postman_id": "1230022-64a796de-3c3f-4e95-b8de-c92964e4535b"
-    },
-    {
-      "name": "=¡ New! DELETE /item/:itemid",
-      "item": [
-        {
-          "name": "Get bearer token",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "0e77f931-c78a-4ce4-ab38-d8efb5ec52ce"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
-                ],
-                "type": "text/javascript",
-                "id": "562630bf-7007-46da-a3b6-e9e1e9897905"
-              }
-            }
-          ],
-          "_postman_id": "1230022-096a7b05-8b0c-4bdb-b1c8-73f6c5848f04",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "basic",
-              "basic": {
-                "username": "pnretail",
-                "password": "0yVhM4s2qPje4UGuRnxt"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "name": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": "https://pp-gate.ess.postnord.com/mga/sps/oauth/oauth20/token"
-          },
-          "response": []
-        },
-        {
-          "name": "Delete testitem",
-          "_postman_id": "1230022-d40c44af-bc9a-4552-a5c9-4d9f54e53414",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "DELETE",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{bearer_token}}",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "protocol": "https",
-              "host": [
-                "atapi2",
-                "postnord",
-                "com"
-              ],
-              "path": [
-                "rest",
-                "retail",
-                "v2i",
-                "agent",
-                "SE",
-                "test",
-                "item",
-                ":itemid"
-              ],
-              "query": [
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ],
-              "variable": [
-                {
-                  "id": "4a4118c3-9cb2-4dc6-9057-ad0337b5c639",
-                  "key": "itemid",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "1230022-4193540f-c56e-499e-9b96-0f573da23993"
-    },
-    {
-      "name": "Delete testitem copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "9e5d3452-6d50-4bc8-a0ad-8fa286a5c7fe",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "if(responseCode.code != 200){",
-              "    console.log(\"failed\");",
-              "    postman.setNextRequest(null);",
-              "}"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "_postman_id": "1230022-3fa617d3-2bd6-fe86-d79b-3941e71aa175",
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
-          },
-          {
-            "key": "Device-ID",
-            "value": "{{deviceid}}"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": ""
-        },
-        "url": {
-          "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
-          "host": [
-            "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
-          ],
-          "path": [
-            "item",
-            ":itemid"
-          ],
-          "query": [
-            {
-              "key": "apikey",
-              "value": "810f45985a2e91c7b3b95701fa8c7362"
-            }
-          ],
-          "variable": [
-            {
-              "key": "itemid",
-              "value": "00000000014SE",
-              "type": "string"
-            }
-          ]
-        }
-      },
-      "response": []
     },
     {
       "name": "Add testitem copy",
