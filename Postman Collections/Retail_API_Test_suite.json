@@ -15,21 +15,21 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "0e77f931-c78a-4ce4-ab38-d8efb5ec52ce",
                 "exec": [
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "0e77f931-c78a-4ce4-ab38-d8efb5ec52ce"
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "562630bf-7007-46da-a3b6-e9e1e9897905",
                 "exec": [
                   "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
                 ],
-                "type": "text/javascript",
-                "id": "562630bf-7007-46da-a3b6-e9e1e9897905"
+                "type": "text/javascript"
               }
             }
           ],
@@ -78,7 +78,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/00000000014SE?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -93,7 +93,7 @@
                 "SE",
                 "test",
                 "item",
-                ":itemid"
+                "00000000014SE"
               ],
               "query": [
                 {
@@ -103,14 +103,6 @@
                 {
                   "key": "delayMs",
                   "value": "5000"
-                }
-              ],
-              "variable": [
-                {
-                  "id": "4a4118c3-9cb2-4dc6-9057-ad0337b5c639",
-                  "key": "itemid",
-                  "value": "",
-                  "type": "string"
                 }
               ]
             },
