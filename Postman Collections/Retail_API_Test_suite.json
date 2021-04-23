@@ -10,6 +10,399 @@
       "name": "=¡ New! DELETE /item/:itemid",
       "item": [
         {
+          "name": "DELETE/item/:itemid - multipleItems",
+          "item": [
+            {
+              "name": "1. Get bearer token",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "efab7999-6743-4f77-a8d5-384dee880273",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "08b0cba9-2138-44c6-9b88-61956e1c81b2",
+                    "exec": [
+                      "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "1230022-dff88d5f-4de2-4bcb-80cd-ae696d59f95b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "basic",
+                  "basic": {
+                    "username": "pnretail",
+                    "password": "0yVhM4s2qPje4UGuRnxt"
+                  }
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": "https://pp-gate.ess.postnord.com/mga/sps/oauth/oauth20/token"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 1",
+              "_postman_id": "1230022-2d4d3718-62b6-46f6-8acd-167f5161ec33",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "44123416831SE",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 2",
+              "_postman_id": "1230022-eece0384-8ab7-4496-871e-52e1cf4a95cd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 3",
+              "_postman_id": "1230022-25e67fcc-54ed-4d3c-853a-45b27daae52d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "id": "646bfaa0-b5c0-42a9-bca9-a8a4cf6d2e35",
+                      "key": "itemid",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 4",
+              "_postman_id": "1230022-137742d3-cdd9-4d97-9219-227c1a01fcea",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "id": "411b2e1e-f657-4140-ab6e-16c8ee1b2e45",
+                      "key": "itemid",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 5",
+              "_postman_id": "1230022-41b4c158-d234-4b67-92d5-d74d4f73337a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "id": "300ff012-ca84-4f7e-9175-608773a5aac5",
+                      "key": "itemid",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            },
+            {
+              "name": "Delete testitem 6",
+              "_postman_id": "1230022-2fbce055-0108-4962-83a9-1331a8576c0d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{bearer_token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "protocol": "https",
+                  "host": [
+                    "atapi2",
+                    "postnord",
+                    "com"
+                  ],
+                  "path": [
+                    "rest",
+                    "retail",
+                    "v2i",
+                    "agent",
+                    "SE",
+                    "test",
+                    "item",
+                    ":itemid"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "810f45985a2e91c7b3b95701fa8c7362"
+                    },
+                    {
+                      "key": "delayMs",
+                      "value": "5000"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemid",
+                      "value": "",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "1230022-f08a58b1-412c-4e9f-afdb-4b299b549575",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "1. Get bearer token",
           "event": [
             {
@@ -63,7 +456,7 @@
           "response": []
         },
         {
-          "name": "2. Delete testitem",
+          "name": "2. Delete single testitem",
           "_postman_id": "1230022-d40c44af-bc9a-4552-a5c9-4d9f54e53414",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -78,7 +471,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/00000000014SE?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -93,7 +486,7 @@
                 "SE",
                 "test",
                 "item",
-                "00000000014SE"
+                ":itemid"
               ],
               "query": [
                 {
@@ -103,6 +496,13 @@
                 {
                   "key": "delayMs",
                   "value": "5000"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "",
+                  "type": "string"
                 }
               ]
             },
@@ -461,12 +861,12 @@
               "variable": [
                 {
                   "key": "ssid",
-                  "value": "SE195169",
+                  "value": "NO3934775",
                   "type": "string"
                 },
                 {
                   "key": "username",
-                  "value": "postnord",
+                  "value": "gresvig24",
                   "type": "string"
                 }
               ]
@@ -1016,7 +1416,7 @@
           "response": []
         },
         {
-          "name": "Add testitem IAM",
+          "name": "Add testitem AT-IAM",
           "event": [
             {
               "listen": "test",
@@ -1073,6 +1473,91 @@
                 "rest",
                 "retail",
                 "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid "
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "jopetest",
+                  "value": null
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemid ",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add testitem PROD-IAM",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "23d2accb-0a89-45bc-a5d7-17bb439538eb",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-07372f98-e384-40d6-8ab5-811a9ec0d320",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json;charset=UTF-8"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3c3Rlc3Rwb3N0bm9yZCIsImlhdCI6MTUxMjEyMzU5OCwiZXhwIjoxNTEyMTI1Mzk4LCJ1c2VySWQiOiI0MTA0MyIsInJvbGUiOiIiLCJwcm9kdWN0cyI6WzE1NTldLCJjdXN0b21lclN5c3RlbXMiOlsxNjY1XSwiZmxvd1Nob3BzIjpbXSwid2ViU2VydmljZXMiOlsibm8uZGkud3MuYWRkcmVzc2NoZWNrLnN1Ym1pdC5TdWJtaXRBZGRyZXNzQ2hlY2tFbmRwb2ludFYxIiwibm8uZGkud3MuYWRkcmVzc2NoZWNrLmZldGNoLkZldGNoQWRkcmVzc0NoZWNrRW5kcG9pbnRWMSJdLCJjb21wYW5pZXMiOltdfQ.HbQHla4rhLrqylo_11QkCmwCVEa_rOtCR2XrXxkH_IBin1owqQDN-MhJHKS1lxNpVhySzuJyEaJ9Uatmg1BENw"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://api2.postnord.com/rest/retail/v2/agent/SE/test/item/:itemid ?apikey=810f45985a2e91c7b3b95701fa8c7362&jopetest",
+              "protocol": "https",
+              "host": [
+                "api2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2",
                 "agent",
                 "SE",
                 "test",
@@ -20187,6 +20672,54 @@
         }
       ],
       "_postman_id": "1230022-64a796de-3c3f-4e95-b8de-c92964e4535b"
+    },
+    {
+      "name": "Missions",
+      "item": [
+        {
+          "name": "Create Mission",
+          "_postman_id": "1230022-2894dd77-1a26-4a90-ba3b-63ee29d70318",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Mission",
+          "_postman_id": "1230022-59984d9b-f38c-4234-8930-590cf8dfe538",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-98c3945a-c962-49fa-bf64-d67797ab5e48"
     },
     {
       "name": "Add testitem copy",
