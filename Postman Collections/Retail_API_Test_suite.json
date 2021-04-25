@@ -20717,6 +20717,29 @@
             "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
           },
           "response": []
+        },
+        {
+          "name": "Update Mission",
+          "_postman_id": "1230022-d363563b-124a-4b6f-96d6-a03dff7164e4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
+          },
+          "response": []
         }
       ],
       "_postman_id": "1230022-98c3945a-c962-49fa-bf64-d67797ab5e48"
