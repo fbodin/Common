@@ -81,7 +81,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -105,7 +105,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -136,7 +136,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -160,7 +160,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -191,7 +191,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -215,7 +215,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -247,7 +247,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -271,7 +271,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -303,7 +303,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -327,7 +327,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -359,7 +359,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -383,7 +383,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "5000"
+                      "value": "7000"
                     }
                   ],
                   "variable": [
@@ -471,7 +471,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -495,7 +495,7 @@
                 },
                 {
                   "key": "delayMs",
-                  "value": "5000"
+                  "value": "7000"
                 }
               ],
               "variable": [
@@ -1125,6 +1125,105 @@
                 "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
               "path": [
+                "item",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete testitem IAM AT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9718f735-1002-4264-8864-0b956ac5608e",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "a052beb4-ba6f-40f9-b184-ecf8e3da6df2",
+                "exec": [
+                  "//console.log('before: '+pm.variables.get(\"itemId\"));\r",
+                  "console.log('before: '+pm.environment.get(\"itemId\"));\r",
+                  "//console.log('before: '+pm.globals.get(\"itemId\"));\r",
+                  "let encoded = encodeURIComponent(pm.environment.get(\"itemId\"));\r",
+                  "console.log('after: '+encoded);\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"itemId\", encoded);\r",
+                  "//pm.environment.set(\"itemId\", encoded);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-83a4ee78-7354-4d85-857e-f9974f6ec26a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3c3Rlc3Rwb3N0bm9yZCIsImlhdCI6MTUxMjEyMzU5OCwiZXhwIjoxNTEyMTI1Mzk4LCJ1c2VySWQiOiI0MTA0MyIsInJvbGUiOiIiLCJwcm9kdWN0cyI6WzE1NTldLCJjdXN0b21lclN5c3RlbXMiOlsxNjY1XSwiZmxvd1Nob3BzIjpbXSwid2ViU2VydmljZXMiOlsibm8uZGkud3MuYWRkcmVzc2NoZWNrLnN1Ym1pdC5TdWJtaXRBZGRyZXNzQ2hlY2tFbmRwb2ludFYxIiwibm8uZGkud3MuYWRkcmVzc2NoZWNrLmZldGNoLkZldGNoQWRkcmVzc0NoZWNrRW5kcG9pbnRWMSJdLCJjb21wYW5pZXMiOltdfQ.HbQHla4rhLrqylo_11QkCmwCVEa_rOtCR2XrXxkH_IBin1owqQDN-MhJHKS1lxNpVhySzuJyEaJ9Uatmg1BENw"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
                 "item",
                 ":itemid"
               ],
@@ -3808,6 +3907,62 @@
                 }
               ]
             }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete testitem 1",
+          "_postman_id": "1230022-dd6c3756-0a6d-49fa-8730-463a8e3ec783",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=5000",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "delayMs",
+                  "value": "5000"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "87a55aa7-6fc4-4d4d-a17a-050b068e4831",
+                  "key": "itemid",
+                  "value": "44123416831SE",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Deletes the item data stored in Retail AWS backend and Retail on-prem.\n\nAdd \"delayMs\" query parameter if delete fails (This adds milliseconds delay between AWS and On-prem system operations)\n\n\nNote: Old delete testitem will fail because it will only delete the data in Retail on-prem side and not the data in Retail AWS backend side"
           },
           "response": []
         }
@@ -13200,6 +13355,206 @@
               ],
               "variable": [
                 {
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete testitem IAM AT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "84ff5202-335e-4271-abea-df2f7f031193",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "ff66dc27-7d55-49b9-90a6-172a4e4390c6",
+                "exec": [
+                  "//console.log('before: '+pm.variables.get(\"itemId\"));\r",
+                  "console.log('before: '+pm.environment.get(\"itemId\"));\r",
+                  "//console.log('before: '+pm.globals.get(\"itemId\"));\r",
+                  "let encoded = encodeURIComponent(pm.environment.get(\"itemId\"));\r",
+                  "console.log('after: '+encoded);\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"itemId\", encoded);\r",
+                  "//pm.environment.set(\"itemId\", encoded);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-9c2efb2a-2548-48cf-8e74-923bd3f1b856",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3c3Rlc3Rwb3N0bm9yZCIsImlhdCI6MTUxMjEyMzU5OCwiZXhwIjoxNTEyMTI1Mzk4LCJ1c2VySWQiOiI0MTA0MyIsInJvbGUiOiIiLCJwcm9kdWN0cyI6WzE1NTldLCJjdXN0b21lclN5c3RlbXMiOlsxNjY1XSwiZmxvd1Nob3BzIjpbXSwid2ViU2VydmljZXMiOlsibm8uZGkud3MuYWRkcmVzc2NoZWNrLnN1Ym1pdC5TdWJtaXRBZGRyZXNzQ2hlY2tFbmRwb2ludFYxIiwibm8uZGkud3MuYWRkcmVzc2NoZWNrLmZldGNoLkZldGNoQWRkcmVzc0NoZWNrRW5kcG9pbnRWMSJdLCJjb21wYW5pZXMiOltdfQ.HbQHla4rhLrqylo_11QkCmwCVEa_rOtCR2XrXxkH_IBin1owqQDN-MhJHKS1lxNpVhySzuJyEaJ9Uatmg1BENw"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "73abc196-91b7-4abf-ba1f-89f0cdb5d1c8",
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete testitem IAM AT Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "303351b9-4829-48cb-b27e-58914647edb2",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"failed\");",
+                  "    postman.setNextRequest(null);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "febdad47-a7d1-4145-b467-c47a0ff6e777",
+                "exec": [
+                  "//console.log('before: '+pm.variables.get(\"itemId\"));\r",
+                  "console.log('before: '+pm.environment.get(\"itemId\"));\r",
+                  "//console.log('before: '+pm.globals.get(\"itemId\"));\r",
+                  "let encoded = encodeURIComponent(pm.environment.get(\"itemId\"));\r",
+                  "console.log('after: '+encoded);\r",
+                  "\r",
+                  "//postman.setEnvironmentVariable(\"itemId\", encoded);\r",
+                  "//pm.environment.set(\"itemId\", encoded);\r",
+                  "\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-eb0ad122-d449-4ee8-986d-44347aba0200",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3c3Rlc3Rwb3N0bm9yZCIsImlhdCI6MTUxMjEyMzU5OCwiZXhwIjoxNTEyMTI1Mzk4LCJ1c2VySWQiOiI0MTA0MyIsInJvbGUiOiIiLCJwcm9kdWN0cyI6WzE1NTldLCJjdXN0b21lclN5c3RlbXMiOlsxNjY1XSwiZmxvd1Nob3BzIjpbXSwid2ViU2VydmljZXMiOlsibm8uZGkud3MuYWRkcmVzc2NoZWNrLnN1Ym1pdC5TdWJtaXRBZGRyZXNzQ2hlY2tFbmRwb2ludFYxIiwibm8uZGkud3MuYWRkcmVzc2NoZWNrLmZldGNoLkZldGNoQWRkcmVzc0NoZWNrRW5kcG9pbnRWMSJdLCJjb21wYW5pZXMiOltdfQ.HbQHla4rhLrqylo_11QkCmwCVEa_rOtCR2XrXxkH_IBin1owqQDN-MhJHKS1lxNpVhySzuJyEaJ9Uatmg1BENw"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "protocol": "https",
+              "host": [
+                "atapi2",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "rest",
+                "retail",
+                "v2i",
+                "agent",
+                "SE",
+                "test",
+                "item",
+                ":itemid"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "d1607c78-b1ec-4f72-8566-5f0080040689",
                   "key": "itemid",
                   "value": "00000000014SE",
                   "type": "string"
