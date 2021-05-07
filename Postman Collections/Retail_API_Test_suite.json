@@ -501,7 +501,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "",
+                  "value": "00000000014SE",
                   "type": "string"
                 }
               ]
@@ -21550,9 +21550,8 @@
               ],
               "variable": [
                 {
-                  "id": "e7ada3a9-ffea-4c92-b5ec-cac69cebe629",
                   "key": "printid",
-                  "value": "20201206:21047899:1",
+                  "value": "AWS-58da2035b1a09bb6",
                   "type": "string"
                 }
               ]
