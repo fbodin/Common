@@ -2534,12 +2534,12 @@
               "variable": [
                 {
                   "key": "ssid",
-                  "value": "210478",
+                  "value": "020001",
                   "type": "string"
                 },
                 {
                   "key": "username",
-                  "value": "pelle10",
+                  "value": "TestMad",
                   "type": "string"
                 }
               ]
@@ -21094,6 +21094,29 @@
               "raw": ""
             },
             "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Mission to App",
+          "_postman_id": "1230022-ba27f6c9-fd3d-4853-96eb-3a8d0ff97a92",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
           },
           "response": []
         }
