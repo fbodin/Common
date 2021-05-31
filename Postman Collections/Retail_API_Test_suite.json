@@ -81,7 +81,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -105,7 +105,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -136,7 +136,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -160,7 +160,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -191,7 +191,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -215,7 +215,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -247,7 +247,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -271,7 +271,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -303,7 +303,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -327,7 +327,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -359,7 +359,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -383,7 +383,7 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "7000"
+                      "value": "15000"
                     }
                   ],
                   "variable": [
@@ -471,7 +471,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=7000",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -495,7 +495,7 @@
                 },
                 {
                   "key": "delayMs",
-                  "value": "7000"
+                  "value": "15000"
                 }
               ],
               "variable": [
