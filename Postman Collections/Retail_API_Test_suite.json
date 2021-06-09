@@ -6238,7 +6238,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE",
+                  "value": "73103250511SE",
                   "type": "string"
                 }
               ]
@@ -21056,6 +21056,29 @@
           "response": []
         },
         {
+          "name": "Create Mission through API2",
+          "_postman_id": "1230022-935c4583-be55-4fd6-bb9c-4342a1c2bfdc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions"
+          },
+          "response": []
+        },
+        {
           "name": "Get Mission",
           "_postman_id": "1230022-59984d9b-f38c-4234-8930-590cf8dfe538",
           "protocolProfileBehavior": {
@@ -21117,6 +21140,54 @@
               "raw": ""
             },
             "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "_postman_id": "1230022-e5fd9897-22cd-4c23-a90f-ee16c586e89a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "eTDA59p9OgBEFFhuBWDcFJDTHZqC1OC8XhHl7Obl",
+                "username": "salesforce-miss6FhCc5OJhn7iBmh"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://stage.account.postnord.com/oauth2/token"
+          },
+          "response": []
+        },
+        {
+          "name": "Introspect (access_token -> jws_access_token)",
+          "_postman_id": "1230022-18030cf9-cc50-4ba7-b4a2-a797682b5f89",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "eTDA59p9OgBEFFhuBWDcFJDTHZqC1OC8XhHl7Obl",
+                "username": "salesforce-miss6FhCc5OJhn7iBmh"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://stage.account.postnord.com/oauth2/introspect"
           },
           "response": []
         }
