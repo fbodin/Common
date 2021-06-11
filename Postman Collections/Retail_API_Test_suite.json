@@ -21320,6 +21320,103 @@
       "_postman_id": "1230022-98c3945a-c962-49fa-bf64-d67797ab5e48"
     },
     {
+      "name": "Missions SalesForce",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c0f1e4c3-1568-4098-ae8b-b8146e7a76b4",
+                "exec": [
+                  "pm.environment.set(\"salesforce_access_token\", JSON.parse(responseBody).access_token);",
+                  "pm.environment.set(\"salesforce_instance_url\", JSON.parse(responseBody).instance_url);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-8aa29f4d-f0b7-4f0b-a158-3b8c2d52bfda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "grant_type",
+                "value": "password",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "client_id",
+                "value": "3MVG9Lu3LaaTCEgKOSKEWJ7hdyLI9W2ZXLGMdq0XUMcSxF7KaZmcu4NmuWH1AvoaLw7taMITRKwQ9UZ5Fc2LL",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "client_secret",
+                "value": "04EFF118742A3C2DB43E088D43736B2DCADC77B3D5592F6988980A85ED7634D9",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "redirect_uri",
+                "value": "https://www.test.salesforce.com",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "username",
+                "value": "retail.mission.api@postnord.com.pnuat",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "password",
+                "value": "PostNord@123$",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://test.salesforce.com/services/oauth2/token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mission (Case) in SalesForce",
+          "_postman_id": "1230022-8babf75d-f453-430f-9e0e-45922564bbe3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{salesforce_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{salesforce_instance_url}}/services/data/v51.0/sobjects/Case/CaseNumber/16156497"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-6ea1f1f4-ad75-405b-83ff-f5254ad632b2"
+    },
+    {
       "name": "Cleveron",
       "item": [
         {
@@ -21826,48 +21923,6 @@
         }
       ],
       "_postman_id": "1230022-1f65102f-d9c2-49ef-8e75-ee0875dc67a4"
-    },
-    {
-      "name": "Missions SalesForce",
-      "item": [
-        {
-          "name": "Login",
-          "_postman_id": "1230022-8aa29f4d-f0b7-4f0b-a158-3b8c2d52bfda",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": "https://test.salesforce.com/services/oauth2/token"
-          },
-          "response": []
-        },
-        {
-          "name": "Update Mission (Case) in SalesForce",
-          "_postman_id": "1230022-8babf75d-f453-430f-9e0e-45922564bbe3",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{salesforce_access_token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://test.salesforce.com/services/data/v51.0/sobjects/Case/CaseNumber/{CaseNumber}"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "1230022-6ea1f1f4-ad75-405b-83ff-f5254ad632b2"
     },
     {
       "name": "Add testitem copy",
