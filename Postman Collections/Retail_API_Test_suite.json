@@ -21109,7 +21109,216 @@
       "_postman_id": "1230022-64a796de-3c3f-4e95-b8de-c92964e4535b"
     },
     {
-      "name": "Missions",
+      "name": "Missions AWS",
+      "item": [
+        {
+          "name": "Login (get access_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "179675f8-3139-4dd6-9009-36fadb975f11",
+                "exec": [
+                  "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-2b408f41-6ff5-485f-8d5d-9e9610b6eb3c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "eTDA59p9OgBEFFhuBWDcFJDTHZqC1OC8XhHl7Obl",
+                "username": "salesforce-miss6FhCc5OJhn7iBmh"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "https://stage.account.postnord.com/oauth2/token?",
+              "protocol": "https",
+              "host": [
+                "stage",
+                "account",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "oauth2",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Introspect (access_token -> jws_access_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "02c5fe7a-1863-475e-98e8-32bac8759594",
+                "exec": [
+                  "pm.environment.set(\"jws_access_token\", JSON.parse(responseBody).jws_access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-18030cf9-cc50-4ba7-b4a2-a797682b5f89",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "iEfEbgcNmIlDy5PhD5qTSHu3WWQ55Maqcb94YucZ",
+                "username": "pnretail27YNU4vLXfBi7GJc722rNI"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://stage.account.postnord.com/oauth2/introspect"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Mission AWS (IAM token)",
+          "_postman_id": "1230022-2894dd77-1a26-4a90-ba3b-63ee29d70318",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jws_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions"
+          },
+          "response": []
+        },
+        {
+          "name": "Print Mission AWS (Retail token)",
+          "_postman_id": "1230022-6dd94330-b5e9-4388-9911-cc7e77ed5e2e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://bghvrm64sl.execute-api.eu-west-1.amazonaws.com/test/missions/print/zpl"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Mission to App (Retail token)",
+          "_postman_id": "1230022-ba27f6c9-fd3d-4853-96eb-3a8d0ff97a92",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Mission (Retail token)",
+          "_postman_id": "1230022-59984d9b-f38c-4234-8930-590cf8dfe538",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mission AWS (Retail token)",
+          "_postman_id": "1230022-d363563b-124a-4b6f-96d6-a03dff7164e4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-1509a312-a99d-4344-a315-2413bb45d47c"
+    },
+    {
+      "name": "Missions API2",
       "item": [
         {
           "name": "Login",
@@ -21168,7 +21377,7 @@
           "response": []
         },
         {
-          "name": "Create Mission through API2",
+          "name": "Create Mission through API2 (IAM token)",
           "_postman_id": "1230022-935c4583-be55-4fd6-bb9c-4342a1c2bfdc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -21205,50 +21414,8 @@
           "response": []
         },
         {
-          "name": "Create Mission",
-          "_postman_id": "1230022-2894dd77-1a26-4a90-ba3b-63ee29d70318",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{bearer_token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions"
-          },
-          "response": []
-        },
-        {
-          "name": "Get Mission",
-          "_postman_id": "1230022-59984d9b-f38c-4234-8930-590cf8dfe538",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
-                "type": "text"
-              }
-            ],
-            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/22"
-          },
-          "response": []
-        },
-        {
-          "name": "Update Mission",
-          "_postman_id": "1230022-d363563b-124a-4b6f-96d6-a03dff7164e4",
+          "name": "Update Mission through API2 (Retail token)",
+          "_postman_id": "1230022-00715520-54d1-41da-a830-165199599c1c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -21270,8 +21437,8 @@
           "response": []
         },
         {
-          "name": "Send Mission to App",
-          "_postman_id": "1230022-ba27f6c9-fd3d-4853-96eb-3a8d0ff97a92",
+          "name": "Print Mission through API2 (Retail token)",
+          "_postman_id": "1230022-c8010e1a-9272-4fef-ab4e-666788aecfb8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -21280,7 +21447,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "value": "Bearer {{bearer_token}}",
                 "type": "text"
               }
             ],
@@ -21288,31 +21455,23 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
-          },
-          "response": []
-        },
-        {
-          "name": "Introspect (access_token -> jws_access_token)",
-          "_postman_id": "1230022-18030cf9-cc50-4ba7-b4a2-a797682b5f89",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "basic",
-              "basic": {
-                "password": "eTDA59p9OgBEFFhuBWDcFJDTHZqC1OC8XhHl7Obl",
-                "username": "salesforce-miss6FhCc5OJhn7iBmh"
-              }
-            },
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": "https://stage.account.postnord.com/oauth2/introspect"
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/missions/print/zpl?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "missions",
+                "print",
+                "zpl"
+              ],
+              "query": [
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            }
           },
           "response": []
         }
