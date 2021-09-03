@@ -81,7 +81,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&delayMs=15000",
+                  "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
                   "protocol": "https",
                   "host": [
                     "atapi2",
@@ -105,13 +105,14 @@
                     },
                     {
                       "key": "delayMs",
-                      "value": "15000"
+                      "value": "15000",
+                      "disabled": true
                     }
                   ],
                   "variable": [
                     {
                       "key": "itemid",
-                      "value": "44123416831SE",
+                      "value": "00000000014SE",
                       "type": "string"
                     }
                   ]
@@ -2919,7 +2920,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "00000000014SE",
+                  "value": "RR000000014SE",
                   "type": "string"
                 }
               ]
@@ -4234,7 +4235,7 @@
               "variable": [
                 {
                   "key": "itemid",
-                  "value": "93455061991SE",
+                  "value": "00000000014SE",
                   "type": "string"
                 }
               ]
