@@ -21543,7 +21543,8 @@
           ],
           "_postman_id": "1230022-8aa29f4d-f0b7-4f0b-a158-3b8c2d52bfda",
           "protocolProfileBehavior": {
-            "disableBodyPruning": true
+            "disableBodyPruning": true,
+            "disabledSystemHeaders": {}
           },
           "request": {
             "method": "POST",
@@ -21551,38 +21552,32 @@
               {
                 "key": "grant_type",
                 "value": "password",
-                "type": "text",
-                "disabled": true
+                "type": "text"
               },
               {
                 "key": "client_id",
-                "value": "3MVG9Lu3LaaTCEgKOSKEWJ7hdyLI9W2ZXLGMdq0XUMcSxF7KaZmcu4NmuWH1AvoaLw7taMITRKwQ9UZ5Fc2LL",
-                "type": "text",
-                "disabled": true
+                "value": "3MVG9qQjGkWUbcrG2DmDIMLQMHOuTfJyoLcYtGqUKhx84cyPY1rqXiiDoRHodfpBFzqv58sE2g_jT_HmP_hSW",
+                "type": "text"
               },
               {
                 "key": "client_secret",
-                "value": "04EFF118742A3C2DB43E088D43736B2DCADC77B3D5592F6988980A85ED7634D9",
-                "type": "text",
-                "disabled": true
+                "value": "F5EBCAD1FEA40716299E31C5CF152A16AF79CB32B0A33D60E23B70C7D2472F84",
+                "type": "text"
               },
               {
                 "key": "redirect_uri",
                 "value": "https://www.test.salesforce.com",
-                "type": "text",
-                "disabled": true
+                "type": "text"
               },
               {
                 "key": "username",
-                "value": "retail.mission.api@postnord.com.pnuat",
-                "type": "text",
-                "disabled": true
+                "value": "retail.mission.api@postnord.com.pnuat ",
+                "type": "text"
               },
               {
                 "key": "password",
                 "value": "PostNord@123$",
-                "type": "text",
-                "disabled": true
+                "type": "text"
               }
             ],
             "body": {
@@ -21600,7 +21595,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "PATCH",
+            "method": "POST",
             "header": [
               {
                 "key": "Authorization",
@@ -21612,7 +21607,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{salesforce_instance_url}}/services/data/v51.0/sobjects/Case/CaseNumber/16156497"
+            "url": "{{salesforce_instance_url}}/services/apexrest/Case/CaseComment"
           },
           "response": []
         }
