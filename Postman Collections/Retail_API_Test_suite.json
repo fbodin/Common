@@ -21112,7 +21112,7 @@
       "_postman_id": "1230022-64a796de-3c3f-4e95-b8de-c92964e4535b"
     },
     {
-      "name": "Missions AWS",
+      "name": "Missions AWS test",
       "item": [
         {
           "name": "Login (get access_token)",
@@ -21341,6 +21341,236 @@
         }
       ],
       "_postman_id": "1230022-1509a312-a99d-4344-a315-2413bb45d47c"
+    },
+    {
+      "name": "Missions AWS PROD!",
+      "item": [
+        {
+          "name": "Login (get access_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0e0bb605-0833-4430-884b-17bf3085b10a",
+                "exec": [
+                  "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-15b0fd87-5a26-4cb6-97bb-43d7879c2140",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "BPI7dT50mHDdL1GojGSUfnLHVn9YFg2HTOGw3rJo",
+                "username": "salesforce-missCoiWnIQej0z5slH"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "https://account.postnord.com/oauth2/token?",
+              "protocol": "https",
+              "host": [
+                "account",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "oauth2",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Introspect (access_token -> jws_access_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d03c9d8e-7e4c-4414-a642-22e9bc451c41",
+                "exec": [
+                  "pm.environment.set(\"jws_access_token\", JSON.parse(responseBody).jws_access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-08d1b800-2ec9-48c2-b2b9-1e24039901c7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "2H047vDWFe77eaeExHGcKMSje0mch5o0q8EdZOcx",
+                "username": "pnretailRIyAj76J1aNMAmdbo6X7hl"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://account.postnord.com/oauth2/introspect"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Mission AWS (IAM token)",
+          "_postman_id": "1230022-5a8c4cbe-f906-4fd5-a26a-171b0a19fb75",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jws_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://z9o9fesfa5.execute-api.eu-west-1.amazonaws.com/prod/missions"
+          },
+          "response": []
+        },
+        {
+          "name": "Print Mission AWS (Retail token)",
+          "_postman_id": "1230022-470e6b5d-e0ac-4a72-b4c6-8a07fefa0d5d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://bghvrm64sl.execute-api.eu-west-1.amazonaws.com/test/missions/print/zpl?language=sv",
+              "protocol": "https",
+              "host": [
+                "bghvrm64sl",
+                "execute-api",
+                "eu-west-1",
+                "amazonaws",
+                "com"
+              ],
+              "path": [
+                "test",
+                "missions",
+                "print",
+                "zpl"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "sv"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Mission to App (Retail token)",
+          "_postman_id": "1230022-7a9a25d2-7a97-4e9b-a35d-25951c403cd4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Mission (Retail token)",
+          "_postman_id": "1230022-232b12ac-65e4-4ba0-b3a0-8beab269f9c6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/1087aad1-537f-492f-9462-10fd08221040"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mission AWS (Retail token)",
+          "_postman_id": "1230022-9f519846-9d6b-482b-8e3d-4f6ad87d438a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/67054a2f-0fd6-42a5-8204-e500512046df"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-b062798f-8490-4b16-8812-e5027225ec29"
     },
     {
       "name": "Missions API2",
