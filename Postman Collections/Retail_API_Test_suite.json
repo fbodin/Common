@@ -21528,7 +21528,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://ykzhi502sj.execute-api.eu-west-1.amazonaws.com/test/missions/send"
+            "url": "https://z9o9fesfa5.execute-api.eu-west-1.amazonaws.com/prod/missions/send"
           },
           "response": []
         },
@@ -21547,7 +21547,7 @@
                 "type": "text"
               }
             ],
-            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/1087aad1-537f-492f-9462-10fd08221040"
+            "url": "https://z9o9fesfa5.execute-api.eu-west-1.amazonaws.com/prod/missions/7e3571d6-eefc-42c4-8e06-1cd54c915cd8"
           },
           "response": []
         },
@@ -21570,7 +21570,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/67054a2f-0fd6-42a5-8204-e500512046df"
+            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/7e3571d6-eefc-42c4-8e06-1cd54c915cd8"
           },
           "response": []
         }
@@ -21853,6 +21853,111 @@
           "response": []
         },
         {
+          "name": "Login - Retail token",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6cca73c4-9f87-44b1-984f-048b47bfc1b9",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "f5f82f3e-1d3a-40dd-982a-29044331a4bd",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-d4ebf5b3-5795-4496-a230-a576181307b2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8",
+                "disabled": false
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": false
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1",
+                "disabled": false
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "JOPE_2",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "7c2a19c2-689e-4a94-af4b-785dc9ddd5db",
+                  "key": "ssid",
+                  "value": "210478",
+                  "type": "string"
+                },
+                {
+                  "id": "6d6c10ac-3ab8-4512-8047-9a3d906f1395",
+                  "key": "username",
+                  "value": "pelle10",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
           "name": "Update Mission through API2 (Retail token)",
           "_postman_id": "1230022-d3ffd3b0-1771-4952-a83e-773d740d692f",
           "protocolProfileBehavior": {
@@ -21887,6 +21992,25 @@
                 }
               ]
             }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Mission (Retail token)",
+          "_postman_id": "1230022-13a5f431-3bd3-4c64-aabb-34e8c45f5ea2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "url": "https://773pdrs7q1.execute-api.eu-west-1.amazonaws.com/test/missions/1087aad1-537f-492f-9462-10fd08221040"
           },
           "response": []
         },
