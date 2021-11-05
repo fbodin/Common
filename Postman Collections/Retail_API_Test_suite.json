@@ -16742,7 +16742,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday%3A20210714&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&includedetails=true",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday%3A20211104&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&includedetails=true",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -16756,7 +16756,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "accountday%3A20210714"
+                  "value": "accountday%3A20211104"
                 },
                 {
                   "key": "language",
@@ -17053,7 +17053,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "1j9302a201xc",
+                  "value": "bujg6hyemud0ba",
                   "type": "string"
                 }
               ]
@@ -22151,6 +22151,98 @@
         }
       ],
       "_postman_id": "1230022-6ea1f1f4-ad75-405b-83ff-f5254ad632b2"
+    },
+    {
+      "name": "=¨=¨  Missions SalesForce Copy PROD!!",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "07943ebe-f009-438c-9a18-00ed72d82bae",
+                "exec": [
+                  "pm.environment.set(\"salesforce_access_token\", JSON.parse(responseBody).access_token);",
+                  "pm.environment.set(\"salesforce_instance_url\", JSON.parse(responseBody).instance_url);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-c9617cf6-5b41-4919-ad40-e3a75a5ca196",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true,
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "grant_type",
+                "value": "password",
+                "type": "text"
+              },
+              {
+                "key": "client_id",
+                "value": "3MVG9qQjGkWUbcrG2DmDIMLQMHOuTfJyoLcYtGqUKhx84cyPY1rqXiiDoRHodfpBFzqv58sE2g_jT_HmP_hSW",
+                "type": "text"
+              },
+              {
+                "key": "client_secret",
+                "value": "F5EBCAD1FEA40716299E31C5CF152A16AF79CB32B0A33D60E23B70C7D2472F84",
+                "type": "text"
+              },
+              {
+                "key": "redirect_uri",
+                "value": "https://www.test.salesforce.com",
+                "type": "text"
+              },
+              {
+                "key": "username",
+                "value": "retail.mission.api@postnord.com.pnuat ",
+                "type": "text"
+              },
+              {
+                "key": "password",
+                "value": "PostNord@123$",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://test.salesforce.com/services/oauth2/token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mission (Case) in SalesForce",
+          "_postman_id": "1230022-be5fdc8e-5a8b-44be-a700-3ab6573b9850",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{salesforce_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{salesforce_instance_url}}/services/apexrest/Case/CaseComment"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-44eb9826-493f-4c90-bc90-a64cf6591c08"
     },
     {
       "name": "Cleveron",
