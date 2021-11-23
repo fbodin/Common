@@ -2904,7 +2904,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "raw": "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1/item/:itemid?apikey=810f45985a2e91c7b3b95701fa8c7362&deleteEvent=true",
               "host": [
                 "http://st2.pablo.posten.se:7013/testweb/wsservices/rest/v1"
               ],
@@ -2916,6 +2916,10 @@
                 {
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "deleteEvent",
+                  "value": "true"
                 }
               ],
               "variable": [
@@ -16742,7 +16746,7 @@
               }
             ],
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday%3A20211104&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&includedetails=true",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/search?type=event&query=accountday%3A20211121&language=en&apikey=810f45985a2e91c7b3b95701fa8c7362&includedetails=true",
               "host": [
                 "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
               ],
@@ -16756,7 +16760,7 @@
                 },
                 {
                   "key": "query",
-                  "value": "accountday%3A20211104"
+                  "value": "accountday%3A20211121"
                 },
                 {
                   "key": "language",
@@ -17053,7 +17057,7 @@
               "variable": [
                 {
                   "key": "eventid",
-                  "value": "bujg6hyemud0ba",
+                  "value": "98918375701SE_2021-11-21T20:29:27.264Z_f2d1612aaed628f4",
                   "type": "string"
                 }
               ]
