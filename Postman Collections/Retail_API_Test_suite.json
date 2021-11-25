@@ -21180,6 +21180,62 @@
           "response": []
         },
         {
+          "name": "CINS Login (get access_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "830c36b3-7cba-4c9b-81a6-d7f41fb60221",
+                "exec": [
+                  "pm.environment.set(\"bearer_token\", JSON.parse(responseBody).access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-8668cdcb-8f22-40ef-a692-eda6dfe688a6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "eTDA59p9OgBEFFhuBWDcFJDTHZqC1OC8XhHl7Obl",
+                "username": "salesforce-miss6FhCc5OJhn7iBmh"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "https://stage.account.postnord.com/oauth2/token?",
+              "protocol": "https",
+              "host": [
+                "stage",
+                "account",
+                "postnord",
+                "com"
+              ],
+              "path": [
+                "oauth2",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "Introspect (access_token -> jws_access_token)",
           "event": [
             {
