@@ -3022,8 +3022,7 @@
                 },
                 {
                   "key": "deleteEvent",
-                  "value": "true",
-                  "type": "text"
+                  "value": "true"
                 }
               ],
               "variable": [
@@ -3354,7 +3353,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid ?apikey=810f45985a2e91c7b3b95701fa8c7362&jopetest",
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/test/item/:itemid ?apikey=810f45985a2e91c7b3b95701fa8c7362",
               "protocol": "https",
               "host": [
                 "atapi2",
@@ -3375,10 +3374,6 @@
                 {
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
-                },
-                {
-                  "key": "jopetest",
-                  "value": null
                 }
               ],
               "variable": [
