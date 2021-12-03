@@ -523,39 +523,45 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "6595df4f-f0aa-428b-866d-0cec3b096ef7",
                 "exec": [
                   "console.log(\"Health check\");",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "65fb89d4-14fc-4662-9a90-a320358301e7",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;",
                   "",
                   "console.log(\"Pabloversion:\"+postman.getResponseHeader(\"Pabloversion\"));",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
           "_postman_id": "1230022-c4529d2b-9477-ed56-9b72-7127e2ba9f82",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Device-ID",
                 "value": "{{deviceid}}"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/health?language=sv&apikey=810f45985a2e91c7b3b95701fa8c7362",
               "host": [
@@ -572,6 +578,15 @@
                 {
                   "key": "apikey",
                   "value": "810f45985a2e91c7b3b95701fa8c7362"
+                },
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text"
+                },
+                {
+                  "key": null,
+                  "value": null
                 }
               ]
             }
