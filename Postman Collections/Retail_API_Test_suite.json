@@ -18539,274 +18539,6 @@
       "_postman_id": "1230022-af357565-fbd5-44d4-bd02-c78cd6cc9a2c"
     },
     {
-      "name": "Forward mail",
-      "item": [
-        {
-          "name": "login-V2",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "8918e71a-67be-4331-976e-d601d40f77e7",
-                "exec": [
-                  "console.log(\"Login using ssid: \"+data.ssid);",
-                  "console.log(\"            user: \"+data.user);"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "ae84f901-ec58-4cad-a166-c663ba2790a3",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "if(responseCode.code != 200){",
-                  "    console.log(\"Login failed\");",
-                  "    postman.setNextRequest(null);",
-                  "} else {",
-                  "    var responseObj = JSON.parse(responseBody);",
-                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
-                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-29c4ed97-65c0-4291-9ac1-eea138faf154",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json;charset=UTF-8",
-                "disabled": false
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}",
-                "disabled": false
-              },
-              {
-                "key": "X-Request-ID",
-                "value": "JOPE_1",
-                "disabled": false
-              },
-              {
-                "key": "X-External-Request-ID",
-                "value": "JOPE_2",
-                "disabled": false
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"credentialCapability\":{\r\n    \"credential\":{\r\n      \"password\":\"pelle10\"\r\n    },\t\r\n    \"clientCapability\":{\r\n      \"clientAppVersion\":\"2.2\",\r\n      \"clientAppPlatform\":\"android\",\r\n      \"clientDeviceId\":\"234243234234324234\",\r\n      \"paymentSupport\":false,\r\n      \"printer\":true,\r\n      \"notificationRegistration\":{\r\n      \t\"registerToken\":\"XXX\",\r\n      \t\"notificationTypes\":[\"newMessage\"]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
-            },
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "login",
-                ":ssid",
-                ":username"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en"
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ],
-              "variable": [
-                {
-                  "key": "ssid",
-                  "value": "210478",
-                  "type": "string"
-                },
-                {
-                  "key": "username",
-                  "value": "pelle10",
-                  "type": "string"
-                }
-              ]
-            },
-            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
-          },
-          "response": []
-        },
-        {
-          "name": "items forwardmail",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "abd64330-0065-49ca-8671-6291cfcb2a0d",
-                "exec": [
-                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
-                  "console.log(\"ItemId: \"+data.itemId);",
-                  "console.log(\"Product: \"+data.productCode);",
-                  "console.log(\"Context: \"+data.context);"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "c471e483-ac26-4da0-91b4-d2c73f18f07f",
-                "exec": [
-                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "var jsonData = JSON.parse(responseBody);",
-                  "if(responseCode.code==200){",
-                  "    console.log(\"Arrival approved\");",
-                  "}else if(responseCode.code==400){",
-                  "    console.log(\"Got response \"+responseBody);",
-                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
-                  "}",
-                  "",
-                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-a6adfef4-390b-4738-bf45-d8f959cea3d5",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              }
-            ],
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/forwardmail?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "items",
-                ":itemid",
-                "forwardmail"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en"
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ],
-              "variable": [
-                {
-                  "key": "itemid",
-                  "value": "00000000014SE",
-                  "type": "string"
-                }
-              ]
-            },
-            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
-          },
-          "response": []
-        },
-        {
-          "name": "events forwardmail",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "09ae441c-d3d7-4b97-ab7e-c33df03998a4",
-                "exec": [
-                  "//2016-12-13T16:25:39.611+02:00",
-                  "//2017-11-02T06:28:15+0100",
-                  "//2018-03-01T11:31:44.491Z",
-                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "e6e4163d-0ce5-4f97-bab9-1ee6cca54311",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-d02d0a4f-d2dc-4470-9574-9dde68d9fd2e",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Device-ID",
-                "value": "{{deviceid}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
-              "host": [
-                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
-              ],
-              "path": [
-                "events"
-              ],
-              "query": [
-                {
-                  "key": "language",
-                  "value": "en"
-                },
-                {
-                  "key": "apikey",
-                  "value": "810f45985a2e91c7b3b95701fa8c7362"
-                }
-              ]
-            },
-            "description": "Events on items"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "1230022-c05b00d1-e358-4259-9fc6-0e624d91be0a"
-    },
-    {
       "name": "arrival without ID",
       "item": [
         {
@@ -21823,6 +21555,92 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Salesforce Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c0f1e4c3-1568-4098-ae8b-b8146e7a76b4",
+                "exec": [
+                  "pm.environment.set(\"salesforce_access_token\", JSON.parse(responseBody).access_token);",
+                  "pm.environment.set(\"salesforce_instance_url\", JSON.parse(responseBody).instance_url);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-8aa29f4d-f0b7-4f0b-a158-3b8c2d52bfda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true,
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "grant_type",
+                "value": "password",
+                "type": "text"
+              },
+              {
+                "key": "client_id",
+                "value": "3MVG9qQjGkWUbcrG2DmDIMLQMHOuTfJyoLcYtGqUKhx84cyPY1rqXiiDoRHodfpBFzqv58sE2g_jT_HmP_hSW",
+                "type": "text"
+              },
+              {
+                "key": "client_secret",
+                "value": "F5EBCAD1FEA40716299E31C5CF152A16AF79CB32B0A33D60E23B70C7D2472F84",
+                "type": "text"
+              },
+              {
+                "key": "redirect_uri",
+                "value": "https://www.test.salesforce.com",
+                "type": "text"
+              },
+              {
+                "key": "username",
+                "value": "retail.mission.api@postnord.com.pnuat ",
+                "type": "text"
+              },
+              {
+                "key": "password",
+                "value": "PostNord@123$",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": "https://test.salesforce.com/services/oauth2/token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mission (Case) in Salesforce",
+          "_postman_id": "1230022-8babf75d-f453-430f-9e0e-45922564bbe3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{salesforce_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{salesforce_instance_url}}/services/apexrest/Case/CaseComment"
+          },
+          "response": []
         }
       ],
       "_postman_id": "1230022-98c3945a-c962-49fa-bf64-d67797ab5e48"
@@ -22024,190 +21842,6 @@
         }
       ],
       "_postman_id": "1230022-8c66bb44-373e-4b73-86de-f3222beb41f3"
-    },
-    {
-      "name": "Missions SalesForce",
-      "item": [
-        {
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "c0f1e4c3-1568-4098-ae8b-b8146e7a76b4",
-                "exec": [
-                  "pm.environment.set(\"salesforce_access_token\", JSON.parse(responseBody).access_token);",
-                  "pm.environment.set(\"salesforce_instance_url\", JSON.parse(responseBody).instance_url);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-8aa29f4d-f0b7-4f0b-a158-3b8c2d52bfda",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true,
-            "disabledSystemHeaders": {}
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "grant_type",
-                "value": "password",
-                "type": "text"
-              },
-              {
-                "key": "client_id",
-                "value": "3MVG9qQjGkWUbcrG2DmDIMLQMHOuTfJyoLcYtGqUKhx84cyPY1rqXiiDoRHodfpBFzqv58sE2g_jT_HmP_hSW",
-                "type": "text"
-              },
-              {
-                "key": "client_secret",
-                "value": "F5EBCAD1FEA40716299E31C5CF152A16AF79CB32B0A33D60E23B70C7D2472F84",
-                "type": "text"
-              },
-              {
-                "key": "redirect_uri",
-                "value": "https://www.test.salesforce.com",
-                "type": "text"
-              },
-              {
-                "key": "username",
-                "value": "retail.mission.api@postnord.com.pnuat ",
-                "type": "text"
-              },
-              {
-                "key": "password",
-                "value": "PostNord@123$",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": "https://test.salesforce.com/services/oauth2/token"
-          },
-          "response": []
-        },
-        {
-          "name": "Update Mission (Case) in SalesForce",
-          "_postman_id": "1230022-8babf75d-f453-430f-9e0e-45922564bbe3",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{salesforce_access_token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{salesforce_instance_url}}/services/apexrest/Case/CaseComment"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "1230022-6ea1f1f4-ad75-405b-83ff-f5254ad632b2"
-    },
-    {
-      "name": "=¨=¨  Missions SalesForce Copy PROD!!",
-      "item": [
-        {
-          "name": "Login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "07943ebe-f009-438c-9a18-00ed72d82bae",
-                "exec": [
-                  "pm.environment.set(\"salesforce_access_token\", JSON.parse(responseBody).access_token);",
-                  "pm.environment.set(\"salesforce_instance_url\", JSON.parse(responseBody).instance_url);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "1230022-c9617cf6-5b41-4919-ad40-e3a75a5ca196",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true,
-            "disabledSystemHeaders": {}
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "grant_type",
-                "value": "password",
-                "type": "text"
-              },
-              {
-                "key": "client_id",
-                "value": "3MVG9qQjGkWUbcrG2DmDIMLQMHOuTfJyoLcYtGqUKhx84cyPY1rqXiiDoRHodfpBFzqv58sE2g_jT_HmP_hSW",
-                "type": "text"
-              },
-              {
-                "key": "client_secret",
-                "value": "F5EBCAD1FEA40716299E31C5CF152A16AF79CB32B0A33D60E23B70C7D2472F84",
-                "type": "text"
-              },
-              {
-                "key": "redirect_uri",
-                "value": "https://www.test.salesforce.com",
-                "type": "text"
-              },
-              {
-                "key": "username",
-                "value": "retail.mission.api@postnord.com.pnuat ",
-                "type": "text"
-              },
-              {
-                "key": "password",
-                "value": "PostNord@123$",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": "https://test.salesforce.com/services/oauth2/token"
-          },
-          "response": []
-        },
-        {
-          "name": "Update Mission (Case) in SalesForce",
-          "_postman_id": "1230022-be5fdc8e-5a8b-44be-a700-3ab6573b9850",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{salesforce_access_token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{salesforce_instance_url}}/services/apexrest/Case/CaseComment"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "1230022-44eb9826-493f-4c90-bc90-a64cf6591c08"
     },
     {
       "name": "Cleveron",
@@ -22716,6 +22350,548 @@
         }
       ],
       "_postman_id": "1230022-1f65102f-d9c2-49ef-8e75-ee0875dc67a4"
+    },
+    {
+      "name": "Forward mail",
+      "item": [
+        {
+          "name": "login-V2",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "062649d3-4560-4f2a-bf06-fa14fc12851f",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "8d731cb2-b7de-41a5-8e67-58898a677f77",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-dc153fa1-c7f8-492d-843f-7dece0ddc89e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8",
+                "disabled": false
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": false
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1",
+                "disabled": false
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "JOPE_2",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "bde03ebe-77c3-4413-ba67-559191d84088",
+                  "key": "ssid",
+                  "value": "210478",
+                  "type": "string"
+                },
+                {
+                  "id": "f8f92f66-2cb6-4e8a-86b4-25e2f328c663",
+                  "key": "username",
+                  "value": "pelle10",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "items forwardmail",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "48e980a2-ab90-4994-912e-a265384882d4",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e81baf18-0b81-4e2f-a190-1be771965d47",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-64737adc-a442-480c-9856-9d3fc2f8e300",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/forwardmail?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "items",
+                ":itemid",
+                "forwardmail"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "91e483a4-8620-4588-b32d-7e6e8f294893",
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "events forwardmail",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "5bff6c7d-7305-4b00-9c66-3e2544b848cd",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "7972dd41-9240-4f87-a217-c2d35587293c",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-2e9d0ee5-5bed-4f05-ac44-b4ff4bc99406",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-798f5714-f2ce-445d-8e40-768e2a4a0bc4"
+    },
+    {
+      "name": "Forward mail Copy",
+      "item": [
+        {
+          "name": "login-V2",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "c6a13948-87e6-4a83-8729-07f02be6b326",
+                "exec": [
+                  "console.log(\"Login using ssid: \"+data.ssid);",
+                  "console.log(\"            user: \"+data.user);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "5b51fa51-b2d6-4843-a332-99671139267e",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "if(responseCode.code != 200){",
+                  "    console.log(\"Login failed\");",
+                  "    postman.setNextRequest(null);",
+                  "} else {",
+                  "    var responseObj = JSON.parse(responseBody);",
+                  "    console.log(\"Login got authorization key \"+responseObj.response.jwttoken.token);",
+                  "    postman.setEnvironmentVariable(\"authorization\", responseObj.response.jwttoken.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-9a5f2c2a-eac1-4fc5-a9a2-a0980fefc572",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json;charset=UTF-8",
+                "disabled": false
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}",
+                "disabled": false
+              },
+              {
+                "key": "X-Request-ID",
+                "value": "JOPE_1",
+                "disabled": false
+              },
+              {
+                "key": "X-External-Request-ID",
+                "value": "JOPE_2",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/login/:ssid/:username?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "login",
+                ":ssid",
+                ":username"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "bde03ebe-77c3-4413-ba67-559191d84088",
+                  "key": "ssid",
+                  "value": "210478",
+                  "type": "string"
+                },
+                {
+                  "id": "f8f92f66-2cb6-4e8a-86b4-25e2f328c663",
+                  "key": "username",
+                  "value": "pelle10",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "items forwardmail",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "93e8ed30-8c4a-4c3c-8620-fcbb02e91f20",
+                "exec": [
+                  "//console.log(\"Server: \"+postman.getEnvironmentVariable(\"server\"));",
+                  "console.log(\"ItemId: \"+data.itemId);",
+                  "console.log(\"Product: \"+data.productCode);",
+                  "console.log(\"Context: \"+data.context);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "5490226d-1eec-490d-9f5a-0b51af34e291",
+                "exec": [
+                  "tests[\"Check status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(responseCode.code==200){",
+                  "    console.log(\"Arrival approved\");",
+                  "}else if(responseCode.code==400){",
+                  "    console.log(\"Got response \"+responseBody);",
+                  "    tests[\"Check errror \"] = jsonData.Fault.faultCode >=0;",
+                  "}",
+                  "",
+                  "//postman.setEnvironmentVariable(\"authorization\", response.jwttoken.token);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-7324ae6d-d9b2-46f2-8bac-c9c10a3a5786",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/items/:itemid/forwardmail?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "items",
+                ":itemid",
+                "forwardmail"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "91e483a4-8620-4588-b32d-7e6e8f294893",
+                  "key": "itemid",
+                  "value": "00000000014SE",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Get information about items\n\nParameters:\n\nitemid: itemId \n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "events forwardmail",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "bf364d6c-bace-443c-a947-c1a76bb90cac",
+                "exec": [
+                  "//2016-12-13T16:25:39.611+02:00",
+                  "//2017-11-02T06:28:15+0100",
+                  "//2018-03-01T11:31:44.491Z",
+                  "postman.setEnvironmentVariable(\"currentTimeStmp\", (new Date()).toISOString());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "881299e6-c765-47ce-a8dd-bfc4fc753a7d",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1230022-0872309e-ec1f-4f19-9d69-0843888bc2b4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Device-ID",
+                "value": "{{deviceid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+              "host": [
+                "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "apikey",
+                  "value": "810f45985a2e91c7b3b95701fa8c7362"
+                }
+              ]
+            },
+            "description": "Events on items"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-2895caf1-5d0b-4233-bc5c-acc7511faf10"
     },
     {
       "name": "Add testitem copy",
