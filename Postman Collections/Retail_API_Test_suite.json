@@ -23425,6 +23425,69 @@
       "_postman_id": "1230022-4f2b28a4-67f3-4044-a6cc-e442c1b85d5b"
     },
     {
+      "name": "DepartureList",
+      "item": [
+        {
+          "name": "DepartureValueMail",
+          "_postman_id": "1230022-4b045cd5-5e45-472c-8c21-712f0cf3937a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
+        },
+        {
+          "name": "DepartureValueMail",
+          "_postman_id": "1230022-6f4251e5-6d88-46cc-a743-095efc346311",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://9w0n3tx0ge.execute-api.eu-west-1.amazonaws.com/test/items/departurevaluemail?language=en",
+              "protocol": "https",
+              "host": [
+                "9w0n3tx0ge",
+                "execute-api",
+                "eu-west-1",
+                "amazonaws",
+                "com"
+              ],
+              "path": [
+                "test",
+                "items",
+                "departurevaluemail"
+              ],
+              "query": [
+                {
+                  "key": "language",
+                  "value": "en"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "1230022-a95c02ab-f7e1-4bc5-9846-a0ab3a30319b"
+    },
+    {
       "name": "Add testitem copy",
       "event": [
         {
@@ -23590,6 +23653,88 @@
           ]
         },
         "description": "Login an user\n\nParameters:\n\nssid: Service point id. Valid characters: 0-9 Length: 6 characters \n\nusername: The user name \n\n"
+      },
+      "response": []
+    },
+    {
+      "name": "events paymentWithCash",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "d3e6b476-0a2f-47be-ab04-6f21133b01b1",
+            "exec": [
+              "//2016-12-13T16:25:39.611+02:00",
+              "postman.setEnvironmentVariable(\"currentTimeStamp\", (new Date()).toISOString());"
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "b0dc4bba-0ad0-43a1-b4ff-dba00cd69beb",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "if(responseCode.code != 200){",
+              "    console.log(\"failed\");",
+              "    postman.setNextRequest(null);",
+              "}else{",
+              "    var responseObj = JSON.parse(responseBody);",
+              "    console.log(\"Got printid \"+responseObj.eventresponse.customersessions[0].printid);",
+              "    pm.environment.set(\"printId\", responseObj.eventresponse.customersessions[0].printid);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "1230022-42ca464f-fb1f-4f82-b500-e623baeeaec5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcGFibG8ucG9zdGVuLnNlIiwiZXhwIjoxNTQwMjY4MjI5LCJzc2lkIjoiMjEwNDc4IiwidXNlciI6InBlbGxlMTAifQ.Ug4J2XW2iw9BWP7Aqa_BK4ow5kfAyL4LO7QrNpxi9CM"
+          },
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Device-ID",
+            "value": "{{deviceId}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "https://atapi2.postnord.com/rest/retail/v2i/agent/SE/events?language=en&apikey=810f45985a2e91c7b3b95701fa8c7362",
+          "host": [
+            "https://atapi2.postnord.com/rest/retail/v2i/agent/SE"
+          ],
+          "path": [
+            "events"
+          ],
+          "query": [
+            {
+              "key": "language",
+              "value": "en"
+            },
+            {
+              "key": "apikey",
+              "value": "810f45985a2e91c7b3b95701fa8c7362"
+            }
+          ]
+        }
       },
       "response": []
     }
